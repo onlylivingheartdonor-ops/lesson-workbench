@@ -1,0 +1,7 @@
+# Raw downloaded sources (large; re-fetched automatically by the ingest scripts)
+raw/
+# Working database (the committed copy lives in data/ as compressed parts)
+library.db
+library.db-*
+__pycache__/
+*.pyc
