@@ -34,14 +34,16 @@ from library import db
 from library.scripture import expand_range
 from library.textmodel import TfIdf, build_postings, cosine_top, tokens
 
-VERSE_KEY_DETAIL = "nave_verse_overlap_v1"
+VERSE_KEY_DETAIL = "nave_verse_overlap_v2"
 HEADWORD_DETAIL = "headword_match_v1"
-AI_DETAIL = "tfidf_profile+citation_overlap_v1 (statistical; not an LLM)"
+AI_DETAIL = "name_density+tfidf_profile+citation_overlap_v3 (statistical; not an LLM)"
 STRUCTURAL_REVIEW_BELOW = 0.45
 AI_REVIEW_BELOW = 0.55
 MAX_VERSE_KEY_LINKS = 10
 MAX_AI_LINKS = 5
+COMMON_WORD_SHARE = 0.15   # a word in more than 15% of entries counts as an everyday word
 
+NAME_NOISE = {"general", "scriptures", "relating", "unclassified", "instances", "figurative", "the", "of"}
 GENERIC = {"general", "scriptures", "relating", "unclassified", "instances", "figurative", "symbolical", "christ",
            "jesu", "people", "the"}
 
@@ -102,12 +104,12 @@ def main():
     links = []      # (entry_id, subject_id, method, detail, confidence, evidence)
 
     # ------------------------------------------------- pass 1a: verse overlap
-    q = """SELECT e.id, e.body, es.start_verse_id, es.end_verse_id
+    q = """SELECT e.id, e.body, es.start_verse_id, es.end_verse_id, e.entry_type
            FROM entries e JOIN works w ON w.id = e.work_id JOIN reference_types rt ON rt.id = w.reference_type_id
            JOIN entry_scripture es ON es.entry_id = e.id AND es.relation = 'about'
            WHERE rt.code = 'commentary' AND e.entry_type IN ('commentary_note', 'chapter_intro')"""
     n_vk_entries = 0
-    for eid, body, s, e in con.execute(q):
+    for eid, body, s, e, etype in con.execute(q):
         passage = expand_range(s, e, cap=200)
         if not passage:
             continue
@@ -126,7 +128,9 @@ def main():
             spec = 1.0 / (1.0 + math.log10(1 + size / 20.0))
             stems = topic_stems.get(tid) or set()
             mention = (len(stems & toks) / len(stems)) if stems else 0.0
-            conf = 0.30 + 0.25 * min(1.0, cov * 3) + 0.25 * mention + 0.20 * spec
+            if etype == "chapter_intro" and mention == 0 and size > 300:
+                continue  # a whole chapter touches many broad topics; keep only ones the intro names
+            conf = 0.25 + 0.20 * min(1.0, cov * 3) + 0.35 * mention + 0.20 * spec
             scored.append((round(conf, 3), tid, ov, mention))
         scored.sort(reverse=True)
         for conf, tid, ov, mention in scored[:MAX_VERSE_KEY_LINKS]:
@@ -181,27 +185,47 @@ def main():
         profiles[tid] += [body_of[e] for e in eids if e in body_of]
     topic_tokens = {tid: tokens(" ".join(parts)) for tid, parts in profiles.items()}
 
-    q = """SELECT e.id, e.body FROM entries e JOIN works w ON w.id = e.work_id
+    q = """SELECT e.id, e.title, e.body FROM entries e JOIN works w ON w.id = e.work_id
            JOIN reference_types rt ON rt.id = w.reference_type_id
            WHERE (rt.code IN ('dictionary', 'encyclopedia') AND e.entry_type = 'article')
               OR (rt.code = 'commentary' AND e.entry_type = 'book_intro')
               OR rt.code IN ('sermon', 'devotional')"""
-    targets = [(eid, body) for eid, body in con.execute(q) if eid not in headword_linked]
-    target_tokens = {eid: tokens(body) for eid, body in targets}
+    targets = [(eid, title, body) for eid, title, body in con.execute(q) if eid not in headword_linked]
+    target_tokens = {eid: tokens(body) for eid, _, body in targets}
     model = TfIdf()
     model.fit(list(topic_tokens.values()) + list(target_tokens.values()))
     topic_vecs = {tid: model.vector(t, top=150) for tid, t in topic_tokens.items()}
     postings = build_postings(topic_vecs)
+    # Topic name words, for "does the entry actually talk about this topic?"
+    name_stems = {}
+    by_stem = defaultdict(set)
+    for tid, name in topics.items():
+        st = {t for t in tokens(re.sub(r"\(.*?\)", " ", name)) if t not in NAME_NOISE}
+        if st:
+            name_stems[tid] = st
+            for t in st:
+                by_stem[t].add(tid)
+    # Topics named by an everyday word ("Work", "Way", "World", "Present") are only
+    # trusted when the word is in the entry's title: such words occur everywhere.
+    target_df = Counter()
+    for toks in target_tokens.values():
+        target_df.update(set(toks))
+    common = {t for t, n in target_df.items() if n > COMMON_WORD_SHARE * max(1, len(target_tokens))}
     cites = defaultdict(set)
-    ids = [eid for eid, _ in targets]
+    ids = [eid for eid, _, _ in targets]
     for i in range(0, len(ids), 900):
         chunk = ids[i:i + 900]
         for eid, s, e in con.execute(f"SELECT entry_id, start_verse_id, end_verse_id FROM entry_scripture "
                                      f"WHERE relation='cites' AND entry_id IN ({','.join('?' * len(chunk))})", chunk):
             cites[eid].update(expand_range(s, e, cap=30))
     n_ai_entries = 0
-    for eid, _ in targets:
-        vec = model.vector(target_tokens[eid], top=60)
+    for eid, title, _ in targets:
+        toks = target_tokens[eid]
+        if not toks:
+            continue
+        tf = Counter(toks)
+        title_toks = set(tokens(title))
+        vec = model.vector(toks, top=60)
         cand = dict(cosine_top(vec, postings, k=40))
         cscore = Counter()
         cv = cites.get(eid, ())
@@ -209,20 +233,39 @@ def main():
             for tid in verse_topics.get(v, ()):
                 cscore[tid] += 1.0 / math.log2(2 + len(verse_topics[v]))
         norm = math.sqrt(len(cv)) if cv else 1.0
+        named = set()
+        for t in tf:
+            named |= by_stem.get(t, set())
         scored = []
-        for tid in set(cand) | set(t for t, _ in cscore.most_common(40)):
+        per_k = 1000.0 / len(toks)
+        for tid in set(cand) | set(t for t, _ in cscore.most_common(40)) | named:
+            stems = name_stems.get(tid)
+            in_title = bool(stems) and stems <= title_toks
+            density = (min(tf.get(t, 0) for t in stems) * per_k) if stems else 0.0
             cos = cand.get(tid, 0.0)
             cit = min(1.0, cscore.get(tid, 0.0) / norm)
-            s = 0.65 * cos + 0.35 * cit
-            scored.append((s, tid, cos, cit))
+            # The entry must show some sign of discussing the topic itself:
+            # its name in the title, its name used repeatedly, or clearly similar wording.
+            if not (in_title or density >= 2.0 or cos >= 0.25):
+                continue
+            if not in_title and stems and stems <= common:
+                continue
+            s = (0.35 * in_title + 0.30 * min(1.0, density / 8.0) + 0.25 * min(1.0, cos / 0.4)
+                 + 0.10 * cit)
+            if len(topic_verses.get(tid, ())) > 1000 and not in_title:
+                s *= 0.6   # very broad topics ("God", "Jesus, the Christ") only when clearly central
+            scored.append((s, tid, cos, cit, density, in_title))
         scored.sort(reverse=True)
         kept = 0
-        for s, tid, cos, cit in scored[:MAX_AI_LINKS]:
-            conf = round(min(0.95, 0.15 + 1.3 * s), 3)
+        for s, tid, cos, cit, density, in_title in scored[:MAX_AI_LINKS]:
+            if kept and s < 0.6 * scored[0][0]:
+                break
+            conf = round(min(0.95, 0.2 + 0.8 * s), 3)
             if conf < 0.35:
                 break
             links.append((eid, tid, "ai", AI_DETAIL, conf,
-                          f"text similarity {cos:.2f}, citation overlap {cit:.2f}"))
+                          f"name in title: {'yes' if in_title else 'no'}; name used {density:.1f} times per 1,000 "
+                          f"words; text similarity {cos:.2f}; citation overlap {cit:.2f}"))
             kept += 1
         if kept:
             n_ai_entries += 1

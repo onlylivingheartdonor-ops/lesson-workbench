@@ -1,0 +1,207 @@
+{
+  "link_accuracy": {
+    "ALL|ai|all": {
+      "accuracy": 0.59,
+      "n": 72
+    },
+    "ALL|ai|high": {
+      "accuracy": 0.819,
+      "n": 36
+    },
+    "ALL|ai|low": {
+      "accuracy": 0.361,
+      "n": 36
+    },
+    "ALL|structural|all": {
+      "accuracy": 0.848,
+      "n": 66
+    },
+    "ALL|structural|high": {
+      "accuracy": 0.964,
+      "n": 42
+    },
+    "ALL|structural|low": {
+      "accuracy": 0.646,
+      "n": 24
+    },
+    "BARNES|ai|all": {
+      "accuracy": 0.7,
+      "n": 10
+    },
+    "BARNES|ai|high": {
+      "accuracy": 1.0,
+      "n": 5
+    },
+    "BARNES|ai|low": {
+      "accuracy": 0.4,
+      "n": 5
+    },
+    "BARNES|structural|all": {
+      "accuracy": 0.792,
+      "n": 12
+    },
+    "BARNES|structural|high": {
+      "accuracy": 0.917,
+      "n": 6
+    },
+    "BARNES|structural|low": {
+      "accuracy": 0.667,
+      "n": 6
+    },
+    "BOUNDS|ai|all": {
+      "accuracy": 0.562,
+      "n": 8
+    },
+    "BOUNDS|ai|high": {
+      "accuracy": 0.625,
+      "n": 4
+    },
+    "BOUNDS|ai|low": {
+      "accuracy": 0.5,
+      "n": 4
+    },
+    "CLARKE|structural|all": {
+      "accuracy": 0.833,
+      "n": 12
+    },
+    "CLARKE|structural|high": {
+      "accuracy": 1.0,
+      "n": 6
+    },
+    "CLARKE|structural|low": {
+      "accuracy": 0.667,
+      "n": 6
+    },
+    "EASTON|ai|all": {
+      "accuracy": 0.7,
+      "n": 10
+    },
+    "EASTON|ai|high": {
+      "accuracy": 0.9,
+      "n": 5
+    },
+    "EASTON|ai|low": {
+      "accuracy": 0.5,
+      "n": 5
+    },
+    "EASTON|structural|all": {
+      "accuracy": 1.0,
+      "n": 6
+    },
+    "EASTON|structural|high": {
+      "accuracy": 1.0,
+      "n": 6
+    },
+    "ISBE|ai|all": {
+      "accuracy": 0.4,
+      "n": 10
+    },
+    "ISBE|ai|high": {
+      "accuracy": 0.8,
+      "n": 5
+    },
+    "ISBE|ai|low": {
+      "accuracy": 0.0,
+      "n": 5
+    },
+    "ISBE|structural|all": {
+      "accuracy": 1.0,
+      "n": 6
+    },
+    "ISBE|structural|high": {
+      "accuracy": 1.0,
+      "n": 6
+    },
+    "JFB|structural|all": {
+      "accuracy": 0.875,
+      "n": 12
+    },
+    "JFB|structural|high": {
+      "accuracy": 0.917,
+      "n": 6
+    },
+    "JFB|structural|low": {
+      "accuracy": 0.833,
+      "n": 6
+    },
+    "MHC|structural|all": {
+      "accuracy": 0.667,
+      "n": 12
+    },
+    "MHC|structural|high": {
+      "accuracy": 0.917,
+      "n": 6
+    },
+    "MHC|structural|low": {
+      "accuracy": 0.417,
+      "n": 6
+    },
+    "MOODY|ai|all": {
+      "accuracy": 0.75,
+      "n": 8
+    },
+    "MOODY|ai|high": {
+      "accuracy": 0.75,
+      "n": 4
+    },
+    "MOODY|ai|low": {
+      "accuracy": 0.75,
+      "n": 4
+    },
+    "RYLE|ai|all": {
+      "accuracy": 0.625,
+      "n": 8
+    },
+    "RYLE|ai|high": {
+      "accuracy": 1.0,
+      "n": 4
+    },
+    "RYLE|ai|low": {
+      "accuracy": 0.25,
+      "n": 4
+    },
+    "SMITH|ai|all": {
+      "accuracy": 0.6,
+      "n": 10
+    },
+    "SMITH|ai|high": {
+      "accuracy": 0.9,
+      "n": 5
+    },
+    "SMITH|ai|low": {
+      "accuracy": 0.3,
+      "n": 5
+    },
+    "SMITH|structural|all": {
+      "accuracy": 1.0,
+      "n": 6
+    },
+    "SMITH|structural|high": {
+      "accuracy": 1.0,
+      "n": 6
+    },
+    "SPURGEON|ai|all": {
+      "accuracy": 0.375,
+      "n": 8
+    },
+    "SPURGEON|ai|high": {
+      "accuracy": 0.5,
+      "n": 4
+    },
+    "SPURGEON|ai|low": {
+      "accuracy": 0.25,
+      "n": 4
+    }
+  },
+  "scripture_link_accuracy": {
+    "text_parse": {
+      "accuracy": 0.98,
+      "n": 25
+    },
+    "quotation_match": {
+      "accuracy": 1.0,
+      "n": 25
+    }
+  },
+  "verdicts_not_matched_to_current_links": 3
+}

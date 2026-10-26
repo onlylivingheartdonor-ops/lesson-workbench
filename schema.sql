@@ -116,6 +116,7 @@ CREATE TABLE entries (
 --   method   'verse_key'     = from the work's own verse indexing
 --            'source_markup' = from reference markup in the source edition
 --            'text_parse'    = recognized in plain text by library/scripture.py
+--            'quotation_match' = the entry quotes 8+ consecutive words of this KJV verse
 CREATE TABLE entry_scripture (
     id             INTEGER PRIMARY KEY,
     entry_id       INTEGER NOT NULL REFERENCES entries(id),

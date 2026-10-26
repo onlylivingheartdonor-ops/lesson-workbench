@@ -6,7 +6,7 @@
 
 A subject search shows: the matching Nave's subject(s), linked verses (KJV
 text), commentary from each author, dictionary and encyclopedia articles,
-the original-language words most typical of the subject's verses, and
+sermons and devotional works, the original-language words most typical of the subject's verses, and
 related subjects.
 """
 
@@ -120,6 +120,19 @@ def subject_search(con, query, more):
                           AND es.review_status != 'rejected'
                           ORDER BY es.confidence DESC LIMIT ?""", (tid, 20 if more else 8)).fetchall()
     header(f"Dictionary and encyclopedia articles - {len(rows)} shown")
+    for wt, title, body, method, conf, status in rows:
+        flag = "; low confidence, awaiting review" if status == "needs_review" else ""
+        print(f"  {wt}: {title}   [{method}, confidence {conf:.2f}{flag}]")
+        print(wrap(snippet(body, 30), indent="      "))
+
+    # Sermons and devotional works
+    rows = con.execute("""SELECT w.short_title, e.title, e.body, es.method, es.confidence, es.review_status
+                          FROM entry_subjects es JOIN entries e ON e.id = es.entry_id
+                          JOIN works w ON w.id = e.work_id JOIN reference_types rt ON rt.id = w.reference_type_id
+                          WHERE es.subject_id = ? AND rt.code IN ('sermon', 'devotional')
+                          AND es.review_status != 'rejected'
+                          ORDER BY es.confidence DESC LIMIT ?""", (tid, 20 if more else 8)).fetchall()
+    header(f"Sermons and devotional works - {len(rows)} shown")
     for wt, title, body, method, conf, status in rows:
         flag = "; low confidence, awaiting review" if status == "needs_review" else ""
         print(f"  {wt}: {title}   [{method}, confidence {conf:.2f}{flag}]")

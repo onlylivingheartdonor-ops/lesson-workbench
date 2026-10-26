@@ -1,0 +1,57 @@
+====================================================================================================
+PASSAGE: Matthew 6:14
+====================================================================================================
+  KJV:
+      For if ye forgive men their trespasses, your heavenly Father will also forgive you:
+  ASV:
+      For if ye forgive men their trespasses, your heavenly Father will also forgive you.
+  BBE:
+      For if you let men have forgiveness for their sins, you will have forgiveness from your Father
+      in heaven.
+  WEB:
+      “For if you forgive men their trespasses, your heavenly Father will also forgive you.
+
+Commentary on this passage
+--------------------------
+  Matthew Henry on Matthew 6:9-15
+      The Sermon on the Mount. 9 After this manner therefore pray ye: Our Father which art in
+      heaven, Hallowed be thy name. 10 Thy kingdom come. Thy will be done in earth, as it is in
+      heaven. 11 Give us this day our daily bread. ...
+  Adam Clarke on Matthew 6:14
+      Verse 14 If ye forgive men - He who shows mercy to men receives mercy from God. For a king to
+      forgive his subjects a hundred millions of treasons against his person and authority, on this
+      one condition, that they wilt henceforth live peaceably with ...
+  Albert Barnes on Matthew 6:14
+      Verse 14. If ye forgive If ye pardon. Trespasses. Offences, faults. If ye forgive others when
+      they offend or injure you. This is constantly required in the Bible. Our Saviour says we
+      should forgive even if the offence be committed seventy times seven times, Mt ...
+  Jamieson-Fausset-Brown on Matthew 6:14
+      14. For if ye forgive men, &c.--See on Mt 6:12.
+
+Cross-references (Treasury of Scripture Knowledge)
+--------------------------------------------------
+  Matthew 6:12; Matthew 7:2; Matthew 18:21-35; Proverbs 21:13; Mark 11:25; Mark 11:26; Ephesians
+  4:32; Colossians 3:13; James 2:13; 1 John 3:10
+
+Original words (KJV with Strong's numbers)
+------------------------------------------
+  For            G1063   gar            a primary particle; properly, assigning a reason (used in ar
+  if             G1437   ean            from 1487 and 302; a conditional particle; in case that, pro
+  ye forgive     G863    aphiemi        from 575 and hiemi (to send; an intensive form of eimi, to g
+  men            G444    anthropos      from 435 and ops (the countenance; from 3700); man-faced, i.
+  their          G846    autos          from the particle au (perhaps akin to the base of 109 throug
+  trespasses     G3900   paraptoma      from 3895; a side-slip (lapse or deviation), i.e. (unintenti
+  your           G5216   humon          genitive case of 5210; of (from or concerning) you
+  heavenly       G3770   ouranios       from 3772; celestial, i.e. belonging to or coming from the s
+  Father         G3962   pater          apparently a primary word; a "father" (literally or figurati
+  will           G863    aphiemi        from 575 and hiemi (to send; an intensive form of eimi, to g
+  also           G2532   kai            apparently, a primary particle, having a copulative and some
+  forgive        G863    aphiemi        from 575 and hiemi (to send; an intensive form of eimi, to g
+  you            G5213   humin          irregular dative case of 5210; to (with or by) you
+
+Subjects that list this passage (Nave's)
+----------------------------------------
+  Jesus, the Christ > History of; Sermon > Of Jesus, “on the mount,”; Motive > Right, required;
+  Religion > True; 20,21; Charitableness > General scriptures concerning; Forgiveness > Of enemies;
+  God > Mercy of; Penitent > Promises to; Sin > Forgiveness of
+

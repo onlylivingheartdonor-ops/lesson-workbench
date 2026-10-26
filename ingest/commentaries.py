@@ -42,7 +42,7 @@ WORKS = {
         coverage="New Testament only",
         issues="The CrossWire edition covers the New Testament only; Barnes' Old Testament notes (Job, Psalms, "
                "Isaiah, Daniel) are not included. Placeholder notes ('No specific Barnes text on this verse') "
-               "were skipped. The introduction to Revelation is missing from this edition (it points to a "
+               "were skipped, as were 26 duplicated verse notes the edition places in chapter-introduction slots. The introduction to Revelation is missing from this edition (it points to a "
                "location that does not exist in the module)."),
     "JFB": dict(
         module="JFB", title="Commentary Critical and Explanatory on the Whole Bible (Jamieson, Fausset & Brown)",
@@ -100,6 +100,9 @@ def ingest(con, code, cfg, started):
         if len(re.sub(r"\W", "", text)) < 3:
             skipped["empty"] += 1
             return
+        if kind in ("book_intro", "chapter_intro") and len(text.split()) < 25:
+            skipped["title_only"] = skipped.get("title_only", 0) + 1   # e.g. just "THE BOOK OF THE PROPHET EZEKIEL"
+            return
         b, c, v = split_vid(s)
         refs = extract_refs(markup, book=b, chapter=c if c else None, stats=stats)
         if kind == "book_intro":
@@ -129,6 +132,12 @@ def ingest(con, code, cfg, started):
                     add("book_intro", vid(b, 0, 0), vid(b, 0, 0), intro, "-intro")
                 elif intro:
                     add("chapter_intro", vid(b, c, 0), vid(b, c, 0), intro, "-intro")
+        if code == "BARNES" and v == 0 and re.match(r"\s*Verse \d+", to_text(markup)):
+            # This edition repeats a verse note from the previous book in each
+            # book's first chapter-introduction slot; the note also sits in its
+            # proper place, so the copy is skipped.
+            skipped["duplicate"] = skipped.get("duplicate", 0) + 1
+            continue
         if c == 0:
             add("book_intro", s, s, markup)
         elif v == 0:

@@ -242,7 +242,7 @@ def roman_to_int(s):
 
 
 _BOOK_TOKEN = r"(?:(?:[1-3]|I{1,3})\s?)?[A-Z][a-z]+\.?"
-_NUM = r"(?:\d+|[ivxlc]+)"
+_NUM = r"(?:\d+|[ivxlc]+\b)"   # Roman numerals must be whole words ("Dan. ix. 19", not "Daniel is")
 _FREE_REF = re.compile(
     r"\b(" + _BOOK_TOKEN + r"(?:\sof\s(?:Solomon|Songs))?)\s+"          # book (allows "Song of Solomon")
     r"(" + _NUM + r")(?:[:.,]\s?(" + _NUM + r"))?"                        # chapter[:verse]
@@ -276,6 +276,8 @@ def parse_free_refs(text, default_book=None):
         vs = _to_int(m.group(3))
         if ch is None:
             continue
+        if vs is None and not m.group(2).isdigit():
+            continue  # a bare Roman numeral after a book name is too often a word ("John i...")
         if vs is None and book_last_chapter(book) == 1:  # "Jude 14" = Jude 1:14
             ch, vs = 1, ch
         # Two-letter abbreviations ("He", "Is", "Am") are only trusted with a verse.
