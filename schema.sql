@@ -365,6 +365,7 @@ CREATE TABLE perspective_summaries (
     issue_id     INTEGER NOT NULL REFERENCES contested_issues(id),
     tradition_id INTEGER NOT NULL REFERENCES traditions(id),
     summary      TEXT NOT NULL,
+    headline     TEXT,               -- one line for the slide in the all-views lesson
     key_texts    TEXT,               -- scripture references the tradition leans on
     status       TEXT NOT NULL DEFAULT 'draft',   -- 'draft', 'reviewed'
     UNIQUE (issue_id, tradition_id)

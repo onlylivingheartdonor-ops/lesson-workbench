@@ -40,7 +40,7 @@ CREDIT_TITLE = {
     "SPURGEON-SERMONS": "sermon",
 }
 SETTINGS = [
-    ("rating_min_votes", "10", "Ratings are shown and acted on only after this many votes (placeholder; Dave to set)."),
+    ("rating_min_votes", "5", "Ratings are shown and acted on only after this many votes (Dave's decision)."),
     ("rating_low_threshold", "2", "An average at or below this many stars counts as low-rated (placeholder)."),
     ("rating_high_threshold", "4.5", "An average at or above this, on an unreviewed lesson, flags it for review first."),
 ]
@@ -151,16 +151,18 @@ def load_perspectives(con, problems):
         line = line.rstrip("\n")
         if not line.strip() or line.startswith("#"):
             continue
-        issue, trad, key_texts, summary = line.split("\t")
+        issue, trad, key_texts, summary, headline = (line.split("\t") + [""])[:5]
         iid = con.execute("SELECT id FROM contested_issues WHERE code = ?", (issue,)).fetchone()
         tid = con.execute("SELECT id FROM traditions WHERE code = ?", (trad,)).fetchone()
         if not iid or not tid:
             problems.append(f"perspectives.tsv: unknown issue or tradition: {issue} {trad}")
             continue
-        con.execute("""INSERT INTO perspective_summaries(issue_id, tradition_id, summary, key_texts) VALUES (?,?,?,?)
+        con.execute("""INSERT INTO perspective_summaries(issue_id, tradition_id, summary, headline, key_texts)
+                       VALUES (?,?,?,?,?)
                        ON CONFLICT(issue_id, tradition_id) DO UPDATE SET summary = excluded.summary,
-                       key_texts = excluded.key_texts WHERE perspective_summaries.status = 'draft'""",
-                    (iid[0], tid[0], summary, key_texts))
+                       headline = excluded.headline, key_texts = excluded.key_texts
+                       WHERE perspective_summaries.status = 'draft'""",
+                    (iid[0], tid[0], summary, headline or None, key_texts))
 
 
 def check_and_build(con, path):
@@ -328,6 +330,8 @@ def ensure_schema(con):
         if name not in existing:
             start = schema.index(f"CREATE TABLE {name} ")
             con.execute(schema[start:schema.index("\n);", start) + 3])
+    if "headline" not in {r[1] for r in con.execute("PRAGMA table_info(perspective_summaries)")}:
+        con.execute("ALTER TABLE perspective_summaries ADD COLUMN headline TEXT")
     for m in re.finditer(r"CREATE INDEX (ix_lesson\w*) ON [^;]+;", schema):
         if m.group(1) not in existing:
             con.execute(m.group(0))
@@ -339,7 +343,8 @@ def main(argv):
     problems = []
     load_perspectives(con, problems)
     for key, value, note in SETTINGS:
-        con.execute("INSERT OR IGNORE INTO app_settings(key, value, note) VALUES (?,?,?)", (key, value, note))
+        con.execute("INSERT INTO app_settings(key, value, note) VALUES (?,?,?) "
+                    "ON CONFLICT(key) DO UPDATE SET value = excluded.value, note = excluded.note", (key, value, note))
     files = sorted(glob.glob(os.path.join(SOURCE_DIR, "*.txt")))
     loaded = 0
     codes = set()

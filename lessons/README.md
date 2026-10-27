@@ -2,7 +2,8 @@
 
 `source/` holds one plain-text file per lesson version. `python3 -m ingest.lessons` checks them and loads
 them into the database; `python3 tools/export_lessons.py` turns each one into slides (.pptx), a student
-handout (.docx) and teacher's notes (.docx) under `output/`.
+handout and teacher's notes (each as .docx and .pdf) under `output/`. Scripture is printed from the King James
+Version unless `--translation ASV`, `BBE` or `WEB` is given; `--no-pdf` skips the PDFs.
 
 ## File format
 
@@ -17,7 +18,7 @@ topic: Forgiveness                # the main Nave's topic
 also: Mercy; Debtor               # other Nave's topics the lesson covers
 audience: adults
 minutes: 45
-translation: KJV                  # Bible printed in the handout and slides
+translation: KJV                  # Bible the lesson is written against (export can print another)
 passage: Matthew 18:21-35
 
 == opening | 4                    # section | suggested minutes | heading (teaching points)

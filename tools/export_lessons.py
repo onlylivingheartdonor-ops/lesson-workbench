@@ -1,17 +1,22 @@
 """Export lessons from the database to the three teaching files.
 
-    python3 tools/export_lessons.py              # every lesson
-    python3 tools/export_lessons.py forgiveness  # one lesson (by code)
+    python3 tools/export_lessons.py                    # every lesson, King James Version
+    python3 tools/export_lessons.py forgiveness        # one lesson (by code)
+    python3 tools/export_lessons.py --translation WEB  # print the scripture from another Bible
+    python3 tools/export_lessons.py --no-pdf           # Word files only (faster)
 
 For each lesson, writes lessons/output/<code>/:
-  <code>-slides.pptx     title, scripture, teaching points, discussion questions
-  <code>-handout.docx    scripture, outline with fill-in blanks, discussion questions, application
-  <code>-teacher.docx    everything: background, commentator quotes with credits, timing, answers
+  <code>-slides.pptx               title, scripture, teaching points, discussion questions
+  <code>-handout.docx and .pdf     scripture, outline with fill-in blanks, discussion questions, application
+  <code>-teacher.docx and .pdf     everything: background, commentator quotes with credits, timing, answers
+In an all-views lesson on a contested point, "Where Christians differ" is also on one slide and in the
+handout. With a translation other than KJV the file names end in it (<code>-handout-WEB.docx).
 The design is deliberately plain; Dave will refine the look later.
 """
 
 import os
 import re
+import subprocess
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -37,6 +42,9 @@ SECTION_NAME = {"opening": "Opening", "scripture": "Scripture", "background": "B
                 "teaching_point": "Teaching point", "differ": "Where Christians differ",
                 "questions": "Discussion questions", "application": "Application", "prayer": "Closing prayer"}
 BLANK_LINE = "_" * 14
+TRANSLATIONS = {"KJV": "King James Version", "ASV": "American Standard Version", "BBE": "Bible in Basic English",
+                "WEB": "World English Bible"}
+DEFAULT_TRANSLATION = "KJV"     # Dave's decision: the commentators wrote about KJV wording
 
 
 # ----------------------------------------------------------------------------- data
@@ -64,7 +72,7 @@ def load(con, code):
         if kind == "differ":
             sec["views"] = []
             for code in re.findall(r"@view:(\S+)", body):
-                row = con.execute("""SELECT t.name, ps.summary, ps.key_texts FROM perspective_summaries ps
+                row = con.execute("""SELECT t.name, ps.summary, ps.key_texts, ps.headline FROM perspective_summaries ps
                                      JOIN traditions t ON t.id = ps.tradition_id
                                      WHERE ps.issue_id = ? AND t.code = ?""", (lesson["issue_id"], code)).fetchone()
                 if row:
@@ -76,6 +84,12 @@ def load(con, code):
     lesson["questions"] = con.execute("SELECT question, answer FROM lesson_questions WHERE lesson_id = ? ORDER BY position",
                                       (lesson["id"],)).fetchall()
     return lesson
+
+
+def shows_differ(sec):
+    """'Where Christians differ' goes on the slides and the handout only where the class sees it: the
+    all-views version. In a tradition's version it is hidden unless the user turns it on."""
+    return sec["kind"] == "differ" and not sec["hidden"]
 
 
 def verses(con, translation, start, end):
@@ -196,6 +210,15 @@ def make_slides(con, L, path):
         notes = sec["body"] + "".join(f"\n\n“{q}” — {c}" for q, c in sec["quotes"])
         s.notes_slide.notes_text_frame.text = notes
 
+    for sec in L["sections"]:
+        if shows_differ(sec) and sec["views"]:
+            s = base_slide(prs, "Where Christians differ", footer)
+            lines = [[(f"{name}:  ", {"color": ACCENT, "bold": True, "size": 20}),
+                      (headline or summary.split(". ")[0] + ".", {"size": 20, "space": 12})]
+                     for name, summary, _, headline in sec["views"]]
+            text_box(s, Inches(0.7), Inches(1.55), Inches(11.9), Inches(5.2), lines, size=20)
+            s.notes_slide.notes_text_frame.text = sec["body"]
+
     qs = L["questions"]
     for k in range(0, len(qs), 3):
         s = base_slide(prs, "Discuss" + (" (continued)" if k else ""), footer)
@@ -293,6 +316,13 @@ def make_handout(con, L, path):
         if sec["verses"]:
             para(doc, "Read: " + "; ".join(format_ref(a, b) for a, b in sec["verses"]), italic=True, size=10,
                  color=GREY, indent=14)
+    for sec in L["sections"]:
+        if shows_differ(sec):
+            doc.add_heading("Where Christians differ", level=1)
+            body_paras(doc, sec["body"])
+            for name, summary, _, _ in sec["views"]:
+                p = para(doc, name + ". ", bold=True)
+                p.add_run(summary)
     doc.add_heading("Discussion questions", level=1)
     for i, (q, _) in enumerate(L["questions"], 1):
         para(doc, f"{i}. {q}")
@@ -358,7 +388,7 @@ def make_teacher(con, L, path):
                 para(doc, format_ref(start, end), bold=True)
                 print_passage(doc, con, L, start, end)
         body_paras(doc, sec["body"])
-        for name, summary, key_texts in sec.get("views", []):
+        for name, summary, key_texts, _ in sec.get("views", []):
             doc.add_heading(name, level=2)
             doc.add_paragraph(summary)
             if key_texts:
@@ -409,17 +439,40 @@ def make_teacher(con, L, path):
     doc.save(path)
 
 
+def to_pdf(paths, folder):
+    """PDF copies of the Word files, made by LibreOffice so they look the same as the .docx."""
+    subprocess.run(["soffice", "--headless", "--convert-to", "pdf", "--outdir", folder, *paths],
+                   check=True, capture_output=True, timeout=300)
+
+
 def main(argv):
+    args = list(argv)
+    translation = DEFAULT_TRANSLATION
+    if "--translation" in args:
+        i = args.index("--translation")
+        translation = args[i + 1].upper() if i + 1 < len(args) else ""
+        del args[i:i + 2]
+        if translation not in TRANSLATIONS:
+            print(f"--translation must be one of: {', '.join(TRANSLATIONS)}")
+            return 2
+    pdf = "--no-pdf" not in args
+    args = [a for a in args if a != "--no-pdf"]
     con = db.connect()
-    codes = argv or [r[0] for r in con.execute("SELECT code FROM lessons ORDER BY code")]
+    codes = args or [r[0] for r in con.execute("SELECT code FROM lessons ORDER BY code")]
+    suffix = "" if translation == DEFAULT_TRANSLATION else f"-{translation}"
     for code in codes:
         L = load(con, code)
+        L["translation"] = translation
         folder = os.path.join(OUT, code)
         os.makedirs(folder, exist_ok=True)
-        make_slides(con, L, os.path.join(folder, f"{code}-slides.pptx"))
-        make_handout(con, L, os.path.join(folder, f"{code}-handout.docx"))
-        make_teacher(con, L, os.path.join(folder, f"{code}-teacher.docx"))
-    print(f"exported {len(codes)} lesson(s) to {os.path.relpath(OUT, db.ROOT)}/")
+        docs = [os.path.join(folder, f"{code}-handout{suffix}.docx"), os.path.join(folder, f"{code}-teacher{suffix}.docx")]
+        make_slides(con, L, os.path.join(folder, f"{code}-slides{suffix}.pptx"))
+        make_handout(con, L, docs[0])
+        make_teacher(con, L, docs[1])
+        if pdf:
+            to_pdf(docs, folder)
+    print(f"exported {len(codes)} lesson(s) in the {TRANSLATIONS[translation]} to {os.path.relpath(OUT, db.ROOT)}/"
+          + ("" if pdf else " (no PDFs)"))
     return 0
 
 

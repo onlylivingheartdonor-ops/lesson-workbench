@@ -2,6 +2,8 @@
 
     python3 -m ingest.ai_review status            # how much of the review list is done
     python3 -m ingest.ai_review next 120          # print the next batch to review (most-used topics first)
+        options: --top 300 (only the 300 most-used topics), --work MACLAREN (one work),
+                 --visible (that work's visible, unreviewed machine links instead of the hidden ones)
     python3 -m ingest.ai_review record FILE       # record decisions from FILE (lines "<id> A|R|F <topic name>")
     python3 -m ingest.ai_review apply             # re-apply every recorded decision (run by build.py)
     python3 -m ingest.ai_review verify            # check that every recorded decision is in effect
@@ -50,15 +52,25 @@ def save(rows):
         w.writerows(rows)
 
 
-def queue(con):
-    """Links still waiting for review, most-used topics first."""
+def queue(con, top=None, work=None, visible=False):
+    """Links waiting for review, most-used topics first. top: only the N most-used topics. work: only one
+    work. visible: the work's high-confidence links that search shows but no one has reviewed, instead of
+    the hidden low-confidence ones."""
     usage = dict(con.execute("SELECT subject_id, COUNT(*) FROM entry_subjects GROUP BY subject_id"))
-    rows = con.execute("""
+    if visible:
+        source, status = "", "es.review_status = 'unreviewed' AND es.method = 'ai'"
+    else:
+        source = "JOIN review_queue rq ON rq.entry_subject_id = es.id"
+        status = "es.review_status IN ('needs_review', 'hidden_unreviewed')"
+    rows = con.execute(f"""
         SELECT es.id, w.code, e.entry_key, s.slug, s.name, s.id, es.method, es.confidence, e.title, e.body,
                es.evidence, e.entry_type
-        FROM review_queue rq JOIN entry_subjects es ON es.id = rq.entry_subject_id
+        FROM entry_subjects es {source}
         JOIN entries e ON e.id = es.entry_id JOIN works w ON w.id = e.work_id JOIN subjects s ON s.id = es.subject_id
-        WHERE es.review_status IN ('needs_review', 'hidden_unreviewed')""").fetchall()
+        WHERE {status} AND (? IS NULL OR w.code = ?)""", (work, work)).fetchall()
+    if top:
+        keep = {sid for sid, _ in sorted(usage.items(), key=lambda kv: -kv[1])[:top]}
+        rows = [r for r in rows if r[5] in keep]
     rows.sort(key=lambda r: (-usage.get(r[5], 0), r[4], -r[7]))
     return rows
 
@@ -67,8 +79,9 @@ def snippet(body, n):
     return " ".join(body.split()[:n])
 
 
-def cmd_next(con, n):
-    rows = queue(con)[:n]
+def cmd_next(con, n, **opts):
+    waiting = queue(con, **opts)
+    rows = waiting[:n]
     last_topic = None
     for r in rows:
         es_id, code, key, slug, sname, sid, method, conf, title, body, ev, etype = r
@@ -78,12 +91,13 @@ def cmd_next(con, n):
             last_topic = sname
         n_words = 26 if etype in ("commentary_note",) else 34
         print(f"{es_id} | {title[:70]} | {snippet(body, n_words)}")
-    print(f"\n({len(rows)} shown; {len(queue(con))} waiting)")
+    print(f"\n({len(rows)} shown; {len(waiting)} waiting)")
 
 
 def cmd_record(con, path):
     rows = load()
-    done = {(r["work"], r["entry_key"], r["subject_slug"]) for r in rows}
+    # Some works have several entries under one key, so the fingerprint is part of what makes a decision unique.
+    done = {(r["work"], r["entry_key"], r["subject_slug"], r.get("entry_fingerprint", "")) for r in rows}
     names = {}
     for name, slug in con.execute("SELECT name, slug FROM subjects WHERE level='topic'"):
         names.setdefault(name.lower(), slug)
@@ -110,7 +124,7 @@ def cmd_record(con, path):
             if not fix_slug:
                 errors.append(f"{es_id}: unknown topic '{rest}'")
                 continue
-        key = tuple(row[:3])
+        key = (*row[:3], db.entry_fingerprint(row[3]))
         if key in done:
             continue
         rows.append(dict(work=row[0], entry_key=row[1], subject_slug=row[2],
@@ -247,7 +261,10 @@ def main(argv=None):
     con = db.connect()
     cmd = argv[0] if argv else "status"
     if cmd == "next":
-        cmd_next(con, int(argv[1]) if len(argv) > 1 else 100)
+        opts = dict(top=int(argv[argv.index("--top") + 1]) if "--top" in argv else None,
+                    work=argv[argv.index("--work") + 1] if "--work" in argv else None,
+                    visible="--visible" in argv)
+        cmd_next(con, int(argv[1]) if len(argv) > 1 and argv[1].isdigit() else 100, **opts)
     elif cmd == "record":
         cmd_record(con, argv[1])
     elif cmd == "apply":
