@@ -117,7 +117,7 @@ def do_import(con):
                               JOIN subjects s ON s.id = es.subject_id"""):
         index[(row[1], row[2], row[3])] = row[0]
     groups = defaultdict(list)
-    missing = 0
+    missing = restored = 0
     checker = "Claude (AI reviewer), 2026-10-26"
     for r in csv.DictReader(open(VERDICTS_CSV, encoding="utf-8")):
         v = r["verdict"].strip().lower()
@@ -132,8 +132,20 @@ def do_import(con):
         groups[("ALL", r["method"], r["band"])].append(v)
         groups[("ALL", r["method"], "all")].append(v)
         if es_id is None:
-            missing += 1
-            continue
+            # Spot-check verdicts are permanent: re-create a checked link that a re-run or re-ingest removed.
+            entry = con.execute("SELECT e.id FROM entries e JOIN works w ON w.id=e.work_id "
+                                "WHERE w.code=? AND e.entry_key=?", (r["work"], r["entry_key"])).fetchone()
+            subject = con.execute("SELECT id FROM subjects WHERE slug=?", (r["subject_slug"],)).fetchone()
+            if not entry or not subject:
+                missing += 1
+                continue
+            es_id = con.execute(
+                "INSERT INTO entry_subjects(entry_id, subject_id, method, method_detail, confidence, evidence, "
+                "review_status, created_at) VALUES (?,?,?,?,?,?,?,?)",
+                (entry[0], subject[0], r["method"], "spot_check_restored", float(r["confidence"] or 0),
+                 "Re-created from a spot-check verdict", "rejected" if v == "wrong" else "accepted",
+                 db.now())).lastrowid
+            restored += 1
         con.execute("INSERT INTO spot_checks(entry_subject_id, verdict, checker, checked_at, notes) VALUES (?,?,?,?,?)",
                     (es_id, v, r.get("checker") or checker, db.now(), r.get("notes")))
         # A checked link is no longer waiting for review.
@@ -147,7 +159,8 @@ def do_import(con):
         for r in csv.DictReader(open(REF_VERDICTS_CSV, encoding="utf-8")):
             byref[r["method"]].append(r["verdict"].strip().lower())
         ref_acc = {m: dict(zip(("accuracy", "n"), score(vs))) for m, vs in byref.items()}
-    out = dict(link_accuracy=acc, scripture_link_accuracy=ref_acc, verdicts_not_matched_to_current_links=missing)
+    out = dict(link_accuracy=acc, scripture_link_accuracy=ref_acc, verdicts_not_matched_to_current_links=missing,
+               checked_links_recreated=restored)
     db.log_ingest(con, "ingest/spot_checks.py", None, db.now(), out)
     con.commit()
     with open(os.path.join(REVIEW_DIR, "accuracy.json"), "w") as f:

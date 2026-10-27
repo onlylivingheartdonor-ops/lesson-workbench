@@ -22,6 +22,17 @@ REFERENCE_TYPES = [
 ]
 
 
+# A link a reviewer has decided on (spot check: accepted/rejected; review list: ai_accepted/ai_rejected,
+# including corrected links). These are permanent: tagging re-runs must never delete or overwrite them.
+REVIEWED_STATUSES = ("accepted", "rejected", "ai_accepted", "ai_rejected")
+REVIEWED = "review_status IN ('accepted', 'rejected', 'ai_accepted', 'ai_rejected')"
+
+
+def entry_fingerprint(body, n=12):
+    """The first words of an entry, lower-cased: identifies an entry even if a re-ingest renames it."""
+    return " ".join(re.findall(r"[a-z0-9]+", body.lower())[:n])
+
+
 def now():
     return datetime.datetime.now(datetime.timezone.utc).replace(microsecond=0).isoformat()
 

@@ -59,6 +59,12 @@ def main(argv):
             mod.main()
         print(f"    ({time.time() - t:.0f}s)")
     con = db.connect()
+    # Reviewed decisions are permanent: stop if any recorded decision is not in effect.
+    from ingest import ai_review
+    problems = ai_review.verify(con)
+    if problems:
+        sys.exit(f"{len(problems)} recorded review decisions are not in effect, e.g. {problems[0]}")
+    print("\nAll recorded review decisions are in effect.")
     con.execute("PRAGMA wal_checkpoint(TRUNCATE)")
     con.execute("VACUUM")
     con.close()

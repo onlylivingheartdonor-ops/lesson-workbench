@@ -4,6 +4,7 @@
     python3 -m ingest.ai_review next 120          # print the next batch to review (most-used topics first)
     python3 -m ingest.ai_review record FILE       # record decisions from FILE (lines "<id> A|R|F <topic name>")
     python3 -m ingest.ai_review apply             # re-apply every recorded decision (run by build.py)
+    python3 -m ingest.ai_review verify            # check that every recorded decision is in effect
 
 Decisions are kept in review/ai_reviews.csv by stable keys (work code, entry
 key, subject slug), so they survive rebuilds of the database.  In the
@@ -30,7 +31,8 @@ from library import db
 
 CSV_PATH = os.path.join(db.ROOT, "review", "ai_reviews.csv")
 FIELDS = ["work", "entry_key", "subject_slug", "decision", "fix_subject_slug", "reviewer", "reviewed_at", "batch",
-          "notes"]
+          "notes", "entry_fingerprint"]
+RESTORED = "ai_review_restored"
 REVIEWER = "Claude (AI reviewer)"
 
 
@@ -96,9 +98,9 @@ def cmd_record(con, path):
             errors.append(f"unreadable: {line}")
             continue
         es_id, dec, rest = int(m.group(1)), m.group(2), m.group(3).strip()
-        row = con.execute("""SELECT w.code, e.entry_key, s.slug FROM entry_subjects es JOIN entries e ON e.id=es.entry_id
-                             JOIN works w ON w.id=e.work_id JOIN subjects s ON s.id=es.subject_id WHERE es.id=?""",
-                          (es_id,)).fetchone()
+        row = con.execute("""SELECT w.code, e.entry_key, s.slug, e.body FROM entry_subjects es
+                             JOIN entries e ON e.id=es.entry_id JOIN works w ON w.id=e.work_id
+                             JOIN subjects s ON s.id=es.subject_id WHERE es.id=?""", (es_id,)).fetchone()
         if not row:
             errors.append(f"no link {es_id}")
             continue
@@ -108,12 +110,13 @@ def cmd_record(con, path):
             if not fix_slug:
                 errors.append(f"{es_id}: unknown topic '{rest}'")
                 continue
-        key = tuple(row)
+        key = tuple(row[:3])
         if key in done:
             continue
         rows.append(dict(work=row[0], entry_key=row[1], subject_slug=row[2],
                          decision={"A": "accept", "R": "reject", "F": "fix"}[dec], fix_subject_slug=fix_slug,
-                         reviewer=REVIEWER, reviewed_at=db.now(), batch=batch, notes=""))
+                         reviewer=REVIEWER, reviewed_at=db.now(), batch=batch, notes="",
+                         entry_fingerprint=db.entry_fingerprint(row[3])))
         done.add(key)
         added += 1
     save(rows)
@@ -123,26 +126,67 @@ def cmd_record(con, path):
     apply(con)
 
 
+class EntryIndex:
+    """Finds the entry a recorded decision is about. Usually its key is enough; but some works have
+    several entries with the same key (a long introduction split into parts), and a re-ingest can rename
+    an entry. The fingerprint (the entry's opening words, stored with the decision) settles both."""
+
+    def __init__(self, con):
+        self.by_key, self.by_print = {}, {}
+        for eid, code, key, body in con.execute("SELECT e.id, w.code, e.entry_key, e.body FROM entries e "
+                                                 "JOIN works w ON w.id=e.work_id"):
+            fp = db.entry_fingerprint(body)
+            self.by_key.setdefault((code, key), []).append((eid, fp))
+            self.by_print.setdefault((code, fp), eid)
+
+    def resolve(self, r):
+        fp = r.get("entry_fingerprint")
+        candidates = self.by_key.get((r["work"], r["entry_key"]), [])
+        if len(candidates) == 1:
+            return candidates[0][0]
+        if candidates:
+            same = [eid for eid, cfp in candidates if cfp == fp]
+            # Shared key: the fingerprint picks the entry; without one, the last entry (as before).
+            return same[0] if same else candidates[-1][0]
+        return self.by_print.get((r["work"], fp)) if fp else None   # renamed by a re-ingest
+
+
 def apply(con):
+    """Put every recorded decision into effect. Decisions are permanent: if a re-ingest or re-run removed
+    the link a decision was about, the link is re-created (accepted, or kept as rejected so the tagger can
+    never bring it back as an unreviewed link)."""
     con.execute("CREATE TABLE IF NOT EXISTS link_reviews (id INTEGER PRIMARY KEY, entry_subject_id INTEGER NOT NULL "
                 "REFERENCES entry_subjects(id), decision TEXT NOT NULL, new_subject_id INTEGER REFERENCES subjects(id), "
                 "reviewer TEXT NOT NULL, reviewed_at TEXT NOT NULL, notes TEXT)")
     rows = load()
-    index = {}
-    for es_id, code, key, slug in con.execute("""SELECT es.id, w.code, e.entry_key, s.slug FROM entry_subjects es
-            JOIN entries e ON e.id=es.entry_id JOIN works w ON w.id=e.work_id JOIN subjects s ON s.id=es.subject_id"""):
-        index[(code, key, slug)] = es_id
+    entries = EntryIndex(con)
     slug_id = dict(con.execute("SELECT slug, id FROM subjects"))
+    link_id = {(e, sub): i for i, e, sub in con.execute("SELECT id, entry_id, subject_id FROM entry_subjects")}
     con.execute("DELETE FROM entry_subjects WHERE method_detail='ai_review_fix'")
     con.execute("DELETE FROM link_reviews")
-    stale = 0
+    orphaned, restored, fingerprints_added = 0, Counter(), 0
     counts = Counter()
     for r in rows:
-        es_id = index.get((r["work"], r["entry_key"], r["subject_slug"]))
-        if es_id is None:
-            stale += 1
-            continue
         dec = r["decision"]
+        entry_id = entries.resolve(r)
+        es_id = link_id.get((entry_id, slug_id.get(r["subject_slug"])))
+        subject_id = slug_id.get(r["subject_slug"])
+        if es_id is None:
+            if entry_id is None or subject_id is None:
+                orphaned += 1          # the entry or topic itself no longer exists
+                continue
+            es_id = con.execute(
+                "INSERT INTO entry_subjects(entry_id, subject_id, method, method_detail, confidence, evidence, "
+                "review_status, created_at) VALUES (?,?,?,?,?,?,?,?)",
+                (entry_id, subject_id, "ai", RESTORED, 0.9 if dec == "accept" else 0.0,
+                 f"Re-created from {r['reviewer']}'s decision ({dec}) of {r['reviewed_at'][:10]}",
+                 "ai_accepted" if dec == "accept" else "ai_rejected", r["reviewed_at"])).lastrowid
+            restored[dec] += 1
+        if not r.get("entry_fingerprint"):
+            body = con.execute("SELECT e.body FROM entry_subjects es JOIN entries e ON e.id=es.entry_id "
+                               "WHERE es.id=?", (es_id,)).fetchone()[0]
+            r["entry_fingerprint"] = db.entry_fingerprint(body)
+            fingerprints_added += 1
         new_sid = slug_id.get(r["fix_subject_slug"]) if dec == "fix" else None
         con.execute("UPDATE entry_subjects SET review_status=? WHERE id=?",
                     ("ai_accepted" if dec == "accept" else "ai_rejected", es_id))
@@ -151,19 +195,45 @@ def apply(con):
                     "VALUES (?,?,?,?,?,?)", (es_id, dec, new_sid, r["reviewer"], r["reviewed_at"], r.get("notes")))
         if dec == "fix" and new_sid:
             entry_id = con.execute("SELECT entry_id FROM entry_subjects WHERE id=?", (es_id,)).fetchone()[0]
+            con.execute("DELETE FROM entry_subjects WHERE entry_id=? AND subject_id=? AND NOT " + db.REVIEWED,
+                        (entry_id, new_sid))
             con.execute("INSERT OR IGNORE INTO entry_subjects(entry_id, subject_id, method, method_detail, confidence, "
                         "evidence, review_status, created_at) VALUES (?,?,?,?,?,?,?,?)",
                         (entry_id, new_sid, "ai", "ai_review_fix", 0.9,
                          f"Corrected by {r['reviewer']} from '{r['subject_slug']}'", "ai_accepted", r["reviewed_at"]))
         counts[dec] += 1
+    if fingerprints_added:
+        save(rows)
     # Dave's decision (second report): the review covers the most-used topics only; every
     # low-confidence link still unreviewed is hidden from search, kept for a later pass.
     hidden = con.execute("UPDATE entry_subjects SET review_status='hidden_unreviewed' "
                          "WHERE review_status='needs_review'").rowcount
     con.commit()
-    print(f"applied {sum(counts.values())} review decisions {dict(counts)}; {stale} no longer match a link; "
-          f"{hidden} unreviewed low-confidence links hidden")
-    return dict(counts=dict(counts), stale=stale, hidden=hidden)
+    print(f"applied {sum(counts.values())} review decisions {dict(counts)}; re-created {sum(restored.values())} "
+          f"links that a re-run or re-ingest had removed {dict(restored)}; {orphaned} decisions whose entry no "
+          f"longer exists; {hidden} unreviewed low-confidence links hidden")
+    return dict(counts=dict(counts), restored=dict(restored), orphaned=orphaned, hidden=hidden)
+
+
+def verify(con):
+    """Check that every recorded decision is in effect. Returns a list of problems (empty = all good)."""
+    problems = []
+    entries = EntryIndex(con)
+    slug_id = dict(con.execute("SELECT slug, id FROM subjects"))
+    status = {(e, sub): st for e, sub, st in con.execute("SELECT entry_id, subject_id, review_status "
+                                                          "FROM entry_subjects")}
+    for r in load():
+        entry_id = entries.resolve(r)
+        if entry_id is None:
+            continue               # orphaned: the entry itself is gone (reported by apply)
+        k = (r["work"], r["entry_key"], r["subject_slug"])
+        want = "ai_accepted" if r["decision"] == "accept" else "ai_rejected"
+        have = status.get((entry_id, slug_id.get(r["subject_slug"])), "missing")
+        if have != want:
+            problems.append(f"{k}: decision {r['decision']} but link is {have}")
+        if r["decision"] == "fix" and status.get((entry_id, slug_id.get(r["fix_subject_slug"]))) != "ai_accepted":
+            problems.append(f"{k}: corrected link to {r['fix_subject_slug']} is missing")
+    return problems
 
 
 def status(con):
@@ -182,6 +252,12 @@ def main(argv=None):
         cmd_record(con, argv[1])
     elif cmd == "apply":
         return apply(con)
+    elif cmd == "verify":
+        problems = verify(con)
+        print(f"{len(problems)} decisions not in effect")
+        for p in problems[:20]:
+            print("  ", p)
+        return 1 if problems else 0
     else:
         status(con)
 

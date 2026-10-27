@@ -36,6 +36,7 @@ from library.textmodel import TfIdf, build_postings, cosine_top, tokens
 
 VERSE_KEY_DETAIL = "nave_verse_overlap_v2"
 HEADWORD_DETAIL = "headword_match_v1"
+REVIEWED = db.REVIEWED
 AI_DETAIL = "name_density+tfidf_profile+citation_overlap_v3 (statistical; not an LLM)"
 STRUCTURAL_REVIEW_BELOW = 0.45
 AI_REVIEW_BELOW = 0.55
@@ -74,7 +75,10 @@ def main():
     now = db.now()
 
     # ------------------------------------------------------------------ reset
-    keep = "method='manual' OR method_detail='nave_topic_entry'"
+    # Reviewed links are permanent (Dave's rule): a re-run never deletes or re-scores a link that a
+    # reviewer has accepted, rejected or corrected, and INSERT OR IGNORE below cannot overwrite it.
+    # ai_review.apply and spot_checks import re-create any reviewed link a work re-ingest removed.
+    keep = ("method='manual' OR method_detail='nave_topic_entry' OR " + REVIEWED)
     con.execute(f"DELETE FROM spot_checks WHERE entry_subject_id IN (SELECT id FROM entry_subjects WHERE NOT ({keep}))")
     con.execute(f"DELETE FROM link_reviews WHERE entry_subject_id IN (SELECT id FROM entry_subjects WHERE NOT ({keep}))")
     con.execute("DELETE FROM review_queue")

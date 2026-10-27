@@ -203,5 +203,6 @@
       "n": 25
     }
   },
-  "verdicts_not_matched_to_current_links": 14
+  "verdicts_not_matched_to_current_links": 0,
+  "checked_links_recreated": 0
 }
