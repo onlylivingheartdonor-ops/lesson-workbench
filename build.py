@@ -29,7 +29,8 @@ STEPS = [
     ("Broadus on Matthew (archive.org scan)", "ingest.broadus"),
     ("Lutheran sources (Project Gutenberg; Luther on Galatians from archive.org)", "ingest.lutheran"),
     ("Early Pentecostal writings, before 1931 (archive.org scans)", "ingest.pentecostal"),
-    ("Author tradition tags, proposed traditions, contested topics", "ingest.traditions"),
+    ("Author tradition tags, approved traditions, contested topics", "ingest.traditions"),
+    ("Top-level categories and the placement of Nave's topics under them", "ingest.categories"),
     ("Subject tagging and related subjects", "ingest.tagging"),
     ("Review-list decisions (AI reviewer)", "ingest.ai_review"),
     ("Spot-check results", "ingest.spot_checks"),
@@ -50,7 +51,8 @@ def main(argv):
         elif module == "ingest.ai_review":
             mod.main(["apply"])
         elif module in ("ingest.commentaries", "ingest.dictionaries", "ingest.devotional", "ingest.barnes_ot",
-                        "ingest.spurgeon", "ingest.maclaren", "ingest.broadus", "ingest.lutheran", "ingest.pentecostal"):
+                        "ingest.spurgeon", "ingest.maclaren", "ingest.broadus", "ingest.lutheran", "ingest.pentecostal",
+                        "ingest.categories"):
             mod.main([])
         else:
             mod.main()
