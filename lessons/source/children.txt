@@ -1,0 +1,56 @@
+code: children
+family: children
+version: single
+title: Teach Them Diligently
+big_idea: Faith is passed to the next generation when God's word is first in our own hearts and then woven into everyday family life.
+topic: Children
+also: Parents; Family; Instruction
+audience: adults
+minutes: 45
+translation: KJV
+passage: Deuteronomy 6:4-9
+
+== opening | 4
+Ask: "Who taught you about God when you were young? Was it more by what they said or by how they lived?" Let several people share. Encourage grandparents, aunts and uncles, Sunday School teachers and godparents, as well as parents, to see themselves in today's lesson.
+note: Some class members may be grieving children who have wandered from faith, or may not have children. Emphasize that every Christian has a part in passing on the faith, and that God's grace is greater than our failures.
+
+== scripture | 3
+Read the passage aloud. Explain that verses 4-5 are called the Shema, from the Hebrew word for "Hear."
+
+== background | 5
+Deuteronomy records Moses' final speeches to Israel just before they entered the Promised Land. A whole new generation had grown up in the wilderness. Moses knew that once they were settled and prosperous, they could easily forget God (6:10-12).
+
+Verses 4-5 became the central confession of Israel's faith, recited daily by faithful Jews to this day. Jesus called verse 5 "the first and great commandment" (Matthew 22:37-38). Verses 6-9 describe how this faith is to be passed down: not just in formal lessons, but at home, on the road, at bedtime and at breakfast.
+
+== point | 7 | Love God with everything
+"Hear, O Israel: The LORD our God is one LORD: and thou shalt love the LORD thy God with all thine heart, and with all thy soul, and with all thy might" (vv. 4-5). Before parenting advice comes the foundation: there is one God, and he deserves our whole love. We cannot pass on what we do not have.
+verses: Deuteronomy 6:4-5; Matthew 22:37-38; Mark 12:29-30
+quote: 20508 | A brief summary of religion, containing the first principles of faith and obedience
+blank: The LORD our God is one ____. | LORD
+blank: Love the LORD thy God with all thine heart, soul, and ____. | might
+
+== point | 7 | God's word first in our own hearts
+"And these words ... shall be in thine heart" (v. 6). Teaching children begins with the teacher's own heart. Children quickly sense whether faith is real to us or just a Sunday habit. Adam Clarke puts it simply:
+verses: Deuteronomy 6:6; Psalm 119:11; 2 Timothy 1:5
+quote: 27521 | For where else can love be? If it be not in the heart, it exists not.
+blank: These words shall be in thine ____. | heart
+blank: We cannot pass on a faith we do not ____. | have
+
+== point | 7 | Teach diligently in everyday life
+"Thou shalt teach them diligently unto thy children, and shalt talk of them when thou sittest in thine house, and when thou walkest by the way, and when thou liest down, and when thou risest up" (v. 7). Clarke notes the Hebrew word for "teach diligently" means to repeat again and again, the way a blade is sharpened. Faith is passed on mostly in ordinary moments: meals, car rides, bedtimes and daily conversation.
+verses: Deuteronomy 6:7-9; Proverbs 22:6; Ephesians 6:4
+quote: 27522 | to repeat, iterate, or do a thing again and again; hence to whet or sharpen any instrument
+blank: Thou shalt teach them ____ unto thy children. | diligently
+blank: Faith is passed on mostly in ____ moments. | ordinary (everyday)
+
+== questions | 7
+q: Why do you think the command to love God comes before the command to teach children? | We can only pass on what is real in us; love for God is the source of faithful teaching.
+q: What are the "sitting, walking, lying down, rising up" moments in a family's life today? | Meals, drives to school, bedtime, mornings, holidays, chores.
+q: What helped faith become real to you as a child, and what did not? | Answers will vary; often example, warmth and honest answers matter more than lectures.
+q: How can those without children at home take part in passing on the faith? | Teaching Sunday School, mentoring, praying for children by name, being a godly example, supporting parents.
+
+== application | 3
+Choose one "everyday moment" this week to talk about God naturally with a child or young person in your life: a story at bedtime, a question in the car, a prayer at a meal. If you have no children at home, write to or pray for a child or young person by name each day.
+
+== prayer | 2
+Lord our God, you are the one Lord. Teach us to love you with all our heart, soul and might. Put your words deep in our hearts, and give us wisdom and patience to pass them on to our children and grandchildren in everyday life. Where we have failed, cover our failures with your grace, and draw the next generation to yourself. Amen.

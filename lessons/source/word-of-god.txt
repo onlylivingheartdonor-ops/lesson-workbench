@@ -1,0 +1,57 @@
+code: word-of-god
+family: word-of-god
+version: single
+title: Thy Word Is a Lamp
+big_idea: God's word is to be loved, pondered and obeyed; it gives wisdom for life and light for each step of the way.
+topic: Word of God
+also: Scriptures; Meditation; Instruction
+audience: adults
+minutes: 45
+translation: KJV
+passage: Psalm 119:97-105
+
+== opening | 4
+Ask: "What book, other than the Bible, has influenced you most? Why?" Then ask: "What would you say to someone who asked why you read the Bible?" Today we listen to a psalm-writer who could not stop talking about how much he loved God's word.
+
+== scripture | 3
+Read the passage aloud. Ask the class to listen for the different words used for God's word: law, commandments, testimonies, precepts, word.
+
+== background | 5
+Psalm 119 is the longest chapter in the Bible: 176 verses in 22 sections of 8 verses, one for each letter of the Hebrew alphabet. In the original, every verse in a section begins with the same letter. Almost every verse mentions God's word under one name or another.
+
+Today's verses come from the section beginning with the letter Mem (vv. 97-104) and the first verse of the Nun section (v. 105). The writer is unnamed. Some have suggested David or Daniel, but the psalm itself does not say.
+note: "Law" here (Hebrew torah) means more than rules. It means God's instruction, everything he has taught his people.
+
+== point | 7 | Love God's word and keep it near
+"O how love I thy law! it is my meditation all the day" (v. 97). The writer does not merely tolerate Scripture; he loves it, and that love shows in how often he thinks about it. Meditation means turning God's word over in the mind throughout the day, as a cow chews its cud.
+verses: Psalm 119:97; Psalm 1:1-2; Joshua 1:8
+quote: 34308 | This is one of the strongest marks of a gracious and pious heart, cast in the mould of obedience.
+blank: O how love I thy law! it is my ____ all the day. | meditation
+blank: Meditation means turning God's word over in the ____ throughout the day. | mind
+
+== point | 7 | God's word gives wisdom for life
+The writer says God's word has made him wiser than his enemies, his teachers and the elders (vv. 98-100). This is not pride; the wisdom is not his own. Real understanding of God, ourselves and life comes from God's word, and it grows as we obey it (vv. 101-104). To the one who loves it, it is "sweeter than honey."
+verses: Psalm 119:98-104; 2 Timothy 3:15-17; James 1:22-25
+quote: 34314 | Spiritual knowledge increases while we tread in the path of obedience. Obedience is the grand means of growth and instruction.
+quote: 22204 | There is such a thing as a spiritual taste
+blank: Through thy precepts I get ____. | understanding
+blank: Spiritual knowledge grows as we ____ God's word. | obey
+
+== point | 7 | A lamp for each step
+"Thy word is a lamp unto my feet, and a light unto my path" (v. 105). In the ancient world a small oil lamp lit only a few steps ahead. God's word does not always show us the whole road at once, but it gives enough light for the next step, and then the next.
+verses: Psalm 119:105; Proverbs 6:23; 2 Peter 1:19
+quote: 59741 | Not only does the Word of God inform us of His will, but, as a light on a path in darkness, it shows us how to follow the right and avoid the wrong way.
+blank: Thy word is a ____ unto my feet. | lamp
+blank: God's word gives enough light for the ____ step. | next
+
+== questions | 7
+q: What is the difference between reading the Bible and meditating on it? | Reading takes in the words; meditating lingers, reflects, applies and prays them through the day.
+q: The writer says Scripture made him wiser than his teachers. In what ways can God's word give wisdom that education alone cannot? | It reveals God, our hearts, right and wrong, and the purpose of life; it gives wisdom for living, not just information.
+q: Why do you think the writer links obedience with understanding (vv. 100-104)? | We learn God's word most deeply by doing it; disobedience dulls understanding.
+q: When has God's word been a "lamp" for a next step in your life? | Answers will vary.
+
+== application | 3
+Choose one verse from today's passage. Write it on a card, and read it at breakfast, lunch and bedtime every day this week. Also set a regular daily time and place to read Scripture, even if it is just one chapter.
+
+== prayer | 2
+Lord, thank you for your word, a lamp to our feet and a light to our path. Give us a love for it like the psalmist's. Help us meditate on it through the day, obey it, and find it sweeter than honey. Light our next step, and lead us in your way. In Jesus' name, Amen.

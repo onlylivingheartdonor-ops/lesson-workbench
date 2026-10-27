@@ -10,6 +10,7 @@ and the lesson loader checks it word for word.
 """
 
 import os
+import re
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -26,16 +27,33 @@ def author_of(con, entry_id):
     return " & ".join(r[0] for r in rows)
 
 
-def show(con, rows, words):
+def henry_notes(body, n=6):
+    """Matthew Henry's short 'Note, ...' sayings, which make good quotations."""
+    text = " ".join(body.split())
+    return re.findall(r"Note, ([^.;]{15,260}[.;])", text)[:n]
+
+
+def show(con, rows, words, works=None):
     for eid, code, title, body in rows:
+        if works and code not in works:
+            continue
+        if code == "MHC":
+            # Skip Henry's reprint of the verses (numbered lines) before his comment.
+            paras = [p for p in body.split("\n\n") if p.strip()]
+            paras = [p for p in paras if not re.match(r"^\d+ ", p.strip())]
+            body = "\n\n".join(paras[1:] if len(paras) > 1 else paras)
         text = " ".join(body.split())
         cut = " ".join(text.split()[:words])
         print(f"\n[{eid}] {code} | {author_of(con, eid)} | {title}\n    {cut}{' ...' if len(text.split()) > words else ''}")
+        if code == "MHC":
+            for note in henry_notes(body):
+                print(f"      NOTE: Note, {note}")
 
 
 def main(argv):
     con = db.connect()
     words = int(argv[argv.index("--words") + 1]) if "--words" in argv else 160
+    works = set(argv[argv.index("--works") + 1].split(",")) if "--works" in argv else None
     if "--entry" in argv:
         eid = int(argv[argv.index("--entry") + 1])
         code, title, body = con.execute("""SELECT w.code, e.title, e.body FROM entries e JOIN works w ON w.id = e.work_id
@@ -52,7 +70,7 @@ def main(argv):
             WHERE es.relation = 'about' AND es.start_verse_id <= ? AND es.end_verse_id >= ?
               AND r.code IN ('commentary') AND e.entry_type != 'book_intro'
             ORDER BY w.code, e.sort_order""", (end, start)).fetchall()
-        show(con, rows, words)
+        show(con, rows, words, works)
         print(f"\n===== Sermons, expositions and devotional works citing {format_ref(start, end)}")
         rows = con.execute("""
             SELECT e.id, w.code, e.title, e.body FROM entry_scripture es
@@ -61,7 +79,7 @@ def main(argv):
             WHERE es.start_verse_id <= ? AND es.end_verse_id >= ?
               AND r.code IN ('sermon', 'devotional', 'doctrinal')
             GROUP BY e.id ORDER BY COUNT(*) DESC LIMIT 12""", (end, start)).fetchall()
-        show(con, rows, words)
+        show(con, rows, words, works)
     if "--topic" in argv:
         topic = argv[argv.index("--topic") + 1]
         print(f"\n===== Sermons and devotional entries tagged '{topic}'")
@@ -72,7 +90,7 @@ def main(argv):
             WHERE s.level = 'topic' AND s.name = ? AND es.review_status NOT IN {HIDDEN}
               AND r.code IN ('sermon', 'devotional', 'doctrinal')
             ORDER BY es.confidence DESC LIMIT 12""", (topic,)).fetchall()
-        show(con, rows, words)
+        show(con, rows, words, works)
     return 0
 
 

@@ -1,0 +1,57 @@
+code: resurrection
+family: resurrection
+version: single
+title: But Now Is Christ Risen
+big_idea: Christianity stands or falls on the resurrection of Jesus, and because he is risen, our faith is not in vain and death is not the end.
+topic: Resurrection
+also: Jesus, the Christ; Death; Immortality; Hope
+audience: adults
+minutes: 45
+translation: KJV
+passage: 1 Corinthians 15:12-22
+
+== opening | 4
+Ask: "If someone could prove that Jesus did not rise from the dead, what would be left of Christianity?" Some will say his teaching and his example. Then tell them Paul's surprising answer: without the resurrection, nothing is left. This lesson is ideal for Easter but belongs to every Sunday, since every Sunday celebrates the resurrection.
+
+== scripture | 3
+Read the passage aloud. Read verse 20 with extra emphasis.
+
+== background | 5
+Some in the Corinthian church were saying "there is no resurrection of the dead" (v. 12). Greek thinking often treated the body as a prison and hoped for the soul's escape from it; a bodily resurrection seemed crude or impossible. Paul answers in the longest discussion of resurrection in the Bible.
+
+In verses 1-11 he summarizes the gospel and lists witnesses of the risen Jesus: Peter, the Twelve, more than five hundred at once (most of whom were still alive and could be asked), James, all the apostles and Paul himself. Then in verses 12-19 he follows the logic: if the dead do not rise, Christ did not rise either.
+
+== point | 7 | If Christ is not raised, everything collapses
+Paul is brutally honest. If Christ is not risen, preaching is empty, faith is empty, the apostles are liars, we are still in our sins, and believers who have died are lost (vv. 14-18). If our hope in Christ is for this life only, we are of all people most to be pitied. Christianity is not just good advice; it stands on an event in history.
+verses: 1 Corinthians 15:12-19; Romans 4:25; Acts 17:31
+quote: 43861 | Our whole doctrine is useless, nugatory and false.
+quote: 51251 | their faith was vain, because, if Christ was not raised up, they were yet unpardoned sinners.
+blank: If Christ be not risen, then is our preaching ____. | vain
+blank: If Christ be not raised, ye are yet in your ____. | sins
+
+== point | 7 | But now is Christ risen
+Verse 20 turns the whole chapter: "But now is Christ risen from the dead." Paul has looked into the abyss of a world without the resurrection, and he steps back onto solid ground. The tomb was empty, and many witnesses saw the risen Lord. Everything Paul feared in verses 14-19 is reversed.
+verses: 1 Corinthians 15:20; Luke 24:1-8; 1 Corinthians 15:3-8
+quote: 51254 | This language is the bursting forth of a full heart and of overpowering conviction.
+blank: But now is Christ ____ from the dead. | risen
+blank: Christianity rests on an ____ in history. | event
+
+== point | 7 | The firstfruits: death is not the end
+Christ is the "firstfruits of them that slept." The firstfruits were the first sheaf of the harvest, offered to God as a pledge that the whole harvest would follow. Jesus' resurrection guarantees ours. Death came through Adam; life comes through Christ. That is why believers who die are said to have "fallen asleep."
+verses: 1 Corinthians 15:20-22; John 11:25-26; 1 Thessalonians 4:13-14
+quote: 43867 | Mortality came by Adam, immortality by Christ; so sure as all have been subjected to natural death by Adam, so sure shall all be raised again by Christ Jesus.
+quote: 68333 | In Christ's case the term used is death, to assure us of the reality of His suffering; in our case, sleep, to give us consolation
+blank: Christ is become the ____ of them that slept. | firstfruits
+blank: As in Adam all die, even so in Christ shall all be made ____. | alive
+
+== questions | 7
+q: Why does Paul say we would be "most miserable" if our hope in Christ were for this life only? | We would have given up much for a hope that was false, and believers who died would simply be gone.
+q: Why does it matter that the resurrection was bodily, not just spiritual? | It means God redeems the whole person and the physical world; death is defeated, not just escaped.
+q: What does "firstfruits" tell us about our own future? | Jesus' resurrection is the first part of the harvest that guarantees the rest; ours will follow.
+q: How should the resurrection change the way Christians grieve? | We still grieve, but "not as others which have no hope" (1 Thessalonians 4:13).
+
+== application | 3
+Think of one fear or grief that the resurrection speaks to. Write 1 Corinthians 15:20 on a card and put it where you will see it daily. This week, tell someone why you believe Jesus rose from the dead.
+
+== prayer | 2
+Risen Lord Jesus, thank you that you are not in the grave. Because you live, our faith is not in vain and our sins are forgiven. Because you are the firstfruits, death is not the end for those who belong to you. Fill us with living hope and the courage to share it. Alleluia, Amen.

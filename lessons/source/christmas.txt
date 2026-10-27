@@ -1,0 +1,59 @@
+code: christmas
+family: christmas
+version: single
+title: Good Tidings of Great Joy
+big_idea: At Christmas God came to us in humility, a Saviour born for ordinary people, bringing glory to God and peace to all who receive him.
+topic: Incarnation
+also: Jesus, the Christ; Bethlehem; Shepherd; Angel (a Spirit); Advent
+audience: adults
+minutes: 45
+translation: KJV
+passage: Luke 2:1-20
+
+== opening | 4
+Ask: "What is your favourite Christmas memory?" Let several people share. Then ask: "If you were planning the arrival of the King of the universe, how would you arrange it?" Contrast our ideas (palaces, press, crowds) with what God actually did.
+
+== scripture | 3
+Read the passage aloud. This is a good passage for several readers, or for the class to read together.
+
+== background | 5
+Luke, a careful historian (1:1-4), anchors the birth of Jesus in real history: the reign of Caesar Augustus and a census that brought Joseph and Mary from Nazareth to Bethlehem, the town of David. Centuries earlier the prophet Micah had foretold that the ruler of Israel would come from Bethlehem (Micah 5:2).
+
+The "manger" was a feeding trough for animals. Shepherds were ordinary working men, often looked down upon and unable to keep many religious rules because of their work. Yet they were the first to hear the news.
+note: Barnes discusses a historical question about the census under Cyrenius (Quirinius) in verse 2. If someone asks, the honest answer is that scholars have proposed several solutions; Luke is otherwise a careful and reliable historian.
+
+== point | 7 | God came in humility
+The Son of God was born in a borrowed place and laid in a feeding trough, because "there was no room for them in the inn." The sign given to the shepherds was not a crown but a baby wrapped in cloths, lying in a manger. God came low, so that no one would be too low to come to him.
+verses: Luke 2:1-7; Philippians 2:6-8; 2 Corinthians 8:9
+quote: 66593 | The sign was to consist, it seems, solely in the overpowering contrast between the things just said of Him and the lowly condition in which they would find Him
+quote: 40793 | It is by humility that Christ comes to reign
+blank: She laid him in a ____, because there was no room for them in the inn. | manger
+blank: God came ____ so that no one would be too low to come to him. | low
+
+== point | 7 | Good tidings for ordinary people
+The first announcement went to shepherds on a night shift. "Fear not: for, behold, I bring you good tidings of great joy, which shall be to all people. For unto you is born this day in the city of David a Saviour, which is Christ the Lord" (vv. 10-11). Three titles: Saviour, Christ (the promised Messiah) and Lord. The good news is for everyone, starting with ordinary people at work.
+verses: Luke 2:8-12; Isaiah 9:6; Matthew 1:21
+quote: 40791 | I am not come to declare the judgments of the Lord, but his merciful loving-kindness, the subject being a matter of great joy.
+quote: 24159 | We are not out of the way of divine visits when we are sensibly employed in an honest calling, and abide with God in it.
+blank: I bring you good tidings of great ____, which shall be to all people. | joy
+blank: Unto you is born this day a ____, which is Christ the Lord. | Saviour
+
+== point | 7 | Glory to God, and peace on earth
+The angels praised: "Glory to God in the highest, and on earth peace, good will toward men" (v. 14). The shepherds went with haste, found the baby, and then told everyone. They returned "glorifying and praising God." Mary "kept all these things, and pondered them in her heart." Christmas calls for both responses: to tell, and to treasure.
+verses: Luke 2:13-20; John 1:14; Romans 5:1
+quote: 40795 | The design of God, in the incarnation, was to manifest the hidden glories of his nature, and to reconcile men to each other and to himself.
+quote: 24159 | The truths of Christ are worth keeping
+blank: Glory to God in the highest, and on earth ____. | peace
+blank: Mary kept all these things, and ____ them in her heart. | pondered
+
+== questions | 7
+q: Why do you think God chose such humble circumstances for the birth of his Son? | To identify with the poor and lowly, to show that his kingdom is not like earthly kingdoms, and to make him approachable by all.
+q: Why might God have announced the birth first to shepherds? | The good news is for ordinary, overlooked people; God honours the humble.
+q: What do the three titles Saviour, Christ and Lord each tell us about Jesus? | Saviour: he rescues us from sin. Christ: he is the promised Messiah. Lord: he is God and King.
+q: The shepherds told others; Mary pondered. Which comes more naturally to you this Christmas, and how could you practise the other? | Answers will vary.
+
+== application | 3
+This Christmas season, set aside time each day to "ponder" one part of the Christmas story, as Mary did. Then, like the shepherds, share the good news with one person: invite them to a Christmas service, or tell them what Jesus' coming means to you.
+
+== prayer | 2
+Glory to God in the highest! Lord Jesus, you came to us in humility, born in a manger, announced to shepherds. Thank you for coming as our Saviour, the Christ, the Lord. Give us joy like the shepherds' and wonder like Mary's. Let your peace and good will fill our hearts and homes this season. Amen.

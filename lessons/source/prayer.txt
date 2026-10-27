@@ -1,0 +1,59 @@
+code: prayer
+family: prayer
+version: single
+title: Teach Us to Pray
+big_idea: Prayer is not a performance for others or a speech to inform God, but a child talking honestly with a Father who already knows and cares.
+topic: Prayer
+also: Lord's Prayer; Hypocrisy
+audience: adults
+minutes: 45
+translation: KJV
+passage: Matthew 6:5-15
+
+== opening | 4
+Ask: "When you were a child, how did you learn to pray? Who taught you, and what did they teach you to say?" Let several people share. Then point out that even the disciples, who had prayed all their lives, asked Jesus, "Lord, teach us to pray" (Luke 11:1). Today Jesus teaches us how.
+note: Some class members may feel awkward praying aloud. Reassure the class that nobody will be asked to pray aloud today unless they volunteer.
+
+== scripture | 3
+Read the passage aloud. Invite the class to say the Lord's Prayer (verses 9-13) together when the reader reaches it.
+
+== background | 5
+These verses sit in the middle of the Sermon on the Mount (Matthew 5-7). In chapter 6 Jesus takes three practices every devout Jew of his day took seriously: giving to the poor, prayer, and fasting. For each one he warns against doing it "to be seen of men" and teaches doing it for the Father "which seeth in secret."
+
+Barnes explains that the "closet" (v. 6) was a private room. Many Jewish houses had a small upper room where a person could pray alone. The "vain repetitions" of the heathen (v. 7) were long prayers that piled up names and phrases, as though the gods had to be worn down or reminded. Jesus' own prayer, which we call the Lord's Prayer, is striking for how short and simple it is.
+
+== point | 7 | Pray to your Father, not to an audience
+The hypocrites prayed on street corners so that people would admire them. They got what they wanted, the admiration, and that was all they got. Jesus calls us into a private room with the door shut. Public prayer is not wrong, since Jesus prayed in public too. The question is who we are really talking to.
+verses: Matthew 6:5-6; Mark 1:35; Psalm 62:8
+quote: 39540 | Prayer is the most secret intercourse of the soul with God, and as it were the conversation of one heart with another.
+blank: The hypocrites prayed to be ____ of men. | seen
+blank: Jesus says to pray to your ____ which is in secret. | Father
+
+== point | 7 | Pray simply, trusting a Father who knows
+We do not pray to give God information. "Your Father knoweth what things ye have need of, before ye ask him" (v. 8). That does not make prayer pointless. It frees us from trying to impress God with many words. Prayer changes us. It humbles us, reminds us that we depend on him, and lifts our hearts toward him.
+verses: Matthew 6:7-8; Luke 11:11-13; Philippians 4:6-7
+quote: 39542 | Prayer is not designed to inform God, but to give man a sight of his misery; to humble his heart, to excite his desire, to inflame his faith, to animate his hope, to raise his soul from earth to heaven
+quote: 94883 | We shall come with hope and familiar confidence, for 'your heavenly Father knoweth what things ye have need of.'
+blank: God does not need many words, because he already ____ what we need. | knows
+blank: Prayer is not to inform God but to change our ____. | hearts
+
+== point | 7 | Pray the pattern Jesus gave: God first, then our needs
+The Lord's Prayer begins with God: his name, his kingdom, his will. Only then does it turn to us: daily bread, forgiveness, and protection from temptation. That order is a good school for all our praying. Notice too that it says "our" and "us" all the way through. Even alone in the closet, we pray as members of God's family.
+verses: Matthew 6:9-13; Luke 11:1-4; 1 John 5:14
+quote: 46296 | This passage contains the Lord's prayer, a composition unequalled for comprehensiveness and for beauty.
+quote: 46298 | This petition implies our dependence on God for the supply of our wants.
+blank: The Lord's Prayer begins with God's name, kingdom, and ____. | will
+blank: Asking for daily bread reminds us that we ____ on God every day. | depend
+note: Verses 14-15 return to forgiveness. If the class wants more on this, see the Forgiveness lesson on Matthew 18.
+
+== questions | 7
+q: Why is praying "to be seen" so tempting, even in church? | We care what people think of us; public prayer can quietly become a way to look spiritual. The cure is to remember who we are speaking to.
+q: If God already knows what we need, why pray at all? | Prayer is relationship, not information. It expresses trust, humbles us, aligns our desires with God's, and God has chosen to work through his children's prayers.
+q: Which part of the Lord's Prayer do you find easiest to pray, and which hardest? | Answers will vary. Many find "thy will be done" or "forgive us ... as we forgive" hardest.
+q: How could the order of the Lord's Prayer (God first, then our needs) change your own prayers this week? | Beginning with praise and God's purposes puts our requests in perspective and guards against treating God as a vending machine.
+
+== application | 3
+Choose a "closet" this week: a quiet place and a set time, even five minutes. Shut the door, and pray the Lord's Prayer slowly, one line at a time. After each line, add your own words about what that line means for you today.
+
+== prayer | 2
+Our Father in heaven, thank you that we may come to you as children. Teach us to pray, not to be seen or to impress, but to talk honestly with you. Hallowed be your name. Your kingdom come, your will be done in our lives. Give us today what we need, forgive us as we forgive, and keep us from evil. In Jesus' name, Amen.

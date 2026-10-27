@@ -1,0 +1,58 @@
+code: neighbor
+family: neighbor
+version: single
+title: Who Is My Neighbour?
+big_idea: Jesus turns the question "Who is my neighbour?" into "Will I be a neighbour?", calling us to show mercy to anyone in need, across every boundary.
+topic: Neighbor
+also: Kindness; Samaria; Charitableness; Love
+audience: adults
+minutes: 45
+translation: KJV
+passage: Luke 10:25-37
+
+== opening | 4
+Ask: "Who are the people you find it hardest to help or to love?" (Do not ask for names; ask for kinds of people.) Then point out that the lawyer in today's story asked Jesus where the edges of his duty were. Jesus answered with a story that removed the edges.
+
+== scripture | 3
+Read the passage aloud, with a narrator, the lawyer and Jesus.
+
+== background | 5
+The lawyer was an expert in the law of Moses. He tested Jesus with the greatest question: "What shall I do to inherit eternal life?" Jesus let him answer from the law: love God with everything (Deuteronomy 6:5) and your neighbour as yourself (Leviticus 19:18). Then the lawyer, "willing to justify himself," asked, "And who is my neighbour?"
+
+The road from Jerusalem down to Jericho dropped steeply through rocky desert and was notorious for robbers. The priest and the Levite were religious professionals. Samaritans and Jews despised each other; John 4:9 says the Jews had "no dealings" with them.
+
+== point | 7 | The question behind the question
+The lawyer wanted to know how small his circle of duty could be. "Who is my neighbour?" can be a way of asking, "Whom am I allowed not to love?" Jesus does not answer with a definition. He tells a story that exposes the question.
+verses: Luke 10:25-29; Leviticus 19:18; Matthew 22:37-40
+quote: 24204 | Many ask good questions with a design rather to justify themselves than to inform themselves
+quote: 48124 | Desirous to appear blameless, or to vindicate himself, and show that he had kept the law.
+blank: He, willing to ____ himself, said, "And who is my neighbour?" | justify
+blank: "Who is my neighbour?" can mean, "Whom am I allowed not to ____?" | love
+
+== point | 7 | Mercy crosses every boundary
+The priest and the Levite saw the wounded man and "passed by on the other side." We are not told why; perhaps fear, hurry or religious rules. Then came a Samaritan, the last person the audience expected to be the hero. He "had compassion," and it cost him: his oil and wine, his donkey, his time, his money, and a promise to pay more.
+verses: Luke 10:30-35; Galatians 6:10; 1 John 3:17-18
+quote: 41044 | to show that he was a person from whom a Jew had no right to expect any help or relief
+quote: 66746 | the wine to cleanse the wounds, the oil to assuage their smartings
+blank: The priest and the Levite passed by on the other ____. | side
+blank: When the Samaritan saw him, he had ____ on him. | compassion
+
+== point | 7 | Go and do likewise
+Jesus ends with his own question: "Which now of these three ... was neighbour unto him?" The lawyer could not bring himself to say "the Samaritan," only "he that shewed mercy." Jesus replied, "Go, and do thou likewise." The question is no longer "Who qualifies as my neighbour?" but "Whom can I be a neighbour to?"
+verses: Luke 10:36-37; Micah 6:8; James 2:14-17
+quote: 66748 | Turning the question from, "Whom am I to love as my neighbour?" to "Who is the man that shows that love?"
+quote: 24204 | It is the duty of every one of us, in our places, and according to our ability, to succour, help, and relieve all that are in distress and necessity
+blank: He that shewed ____ on him was neighbour. | mercy
+blank: Go, and do thou ____. | likewise
+
+== questions | 7
+q: Why do you think Jesus made a Samaritan the hero of the story? | To shatter the lawyer's limits; mercy can come from the least expected person, and must go to anyone.
+q: What reasons might the priest and Levite have had for passing by? What reasons do we give? | Fear, hurry, ritual purity, "someone else will help." Today: busyness, danger, not my problem, discomfort.
+q: What did the Samaritan's mercy cost him? What does mercy usually cost us? | Time, money, comfort, risk, inconvenience.
+q: Who are the "wounded travellers" in our community, and how could our class be a neighbour to them? | Answers will vary: lonely elderly, refugees, families in crisis, the sick, the poor.
+
+== application | 3
+This week, look for one person in need whom you would normally "pass by," and stop. Offer practical help: a meal, a ride, a visit, or your time. As a class, consider one way to show mercy together this month.
+
+== prayer | 2
+Lord Jesus, you crossed every boundary to rescue us when we were wounded and helpless. Forgive us for passing by on the other side. Give us hearts of compassion and hands willing to help, whatever it costs. Make us neighbours to everyone in need, so that we go and do likewise. Amen.

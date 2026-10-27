@@ -1,0 +1,59 @@
+code: love
+family: love
+version: single
+title: The More Excellent Way
+big_idea: Without love, even our greatest gifts and sacrifices count for nothing; love is patient, kind and lasting, because it reflects God himself.
+topic: Love
+also: Charity; Kindness; Patience
+audience: adults
+minutes: 45
+translation: KJV
+passage: 1 Corinthians 13:1-13
+
+== opening | 4
+Most of us have heard this chapter read at weddings. Ask: "Where else in life do these verses need to be lived out?" (At home on a bad day, at work, in church business meetings, with difficult neighbours.) Explain that Paul first wrote these words to a quarrelling church, not to a bride and groom.
+
+== scripture | 3
+Read the passage aloud. Note that the King James Version uses "charity" for the Greek word agape; modern translations say "love."
+
+== background | 5
+The church in Corinth was gifted but divided. Chapters 12 and 14 deal with spiritual gifts, which some Corinthians were using to show off and to rank one another. Chapter 13 stands between them. Paul does not say the gifts are bad. He says that without love they are empty.
+
+The old English word "charity" once meant love in its fullest sense, love for God and for others, not only giving to the poor. Adam Clarke points out that verse 3 shows this: a person could give away everything and still lack "charity."
+quote: 43799 | This is a proof that charity, in our sense of the word, is not what the apostle means
+note: Verses 8-10 ("tongues, they shall cease ... when that which is perfect is come") are read differently by Christians when it comes to spiritual gifts today; the church has a separate lesson on that question. For this lesson, keep the focus where Paul puts it: love outlasts every gift.
+
+== point | 7 | Without love, nothing else counts
+Paul names the most impressive things he can think of: speaking in every language, prophecy, knowledge, mountain-moving faith, giving everything away, even martyrdom. Without love, each one is just noise or nothing. God measures our lives not by how impressive they are but by how much love is in them.
+verses: 1 Corinthians 13:1-3; Matthew 22:37-40; 1 John 4:7-8
+quote: 43797 | Charity, or love to God and man, the sum and substance of all true religion
+blank: Without love, I am as sounding brass or a tinkling ____. | cymbal
+blank: Without love, even great gifts profit me ____. | nothing
+
+== point | 7 | Love is shown in how we treat people
+Verses 4-7 describe what love does, and it is very practical. It is patient and kind. It does not envy or boast, and it is not rude or self-seeking. It is not quickly angered and keeps no record of wrongs. Barnes notes that every description has to do with how we behave toward other people. A good exercise is to put your own name in place of "charity" and read the verses honestly.
+verses: 1 Corinthians 13:4-7; Romans 12:9-10; Colossians 3:12-14
+quote: 51183 | His illustrations are all drawn from its effect in regulating our conduct towards others, or our intercourse with them.
+quote: 68268 | Love makes allowances for the falls of others
+blank: Love suffers long and is ____. | kind
+blank: Love is seen in how we ____ other people. | treat
+
+== point | 7 | Love never fails
+Gifts are for this life. One day we will see God "face to face" (v. 12), and partial knowledge will give way to full knowledge. Faith and hope matter now, but love is the greatest, because God is love and love will last forever. Investing in love is investing in what lasts.
+verses: 1 Corinthians 13:8-13; 1 John 4:16; Romans 8:38-39
+quote: 43804 | This love never falleth off, because it bears, believes, hopes, and endures all things
+quote: 51187 | It is valuable, and is to be sought, because it will always abide
+blank: Charity never ____. | faileth (fails)
+blank: The greatest of faith, hope and charity is ____. | charity (love)
+
+== questions | 7
+q: Why do you think Paul put this chapter in the middle of a discussion about spiritual gifts? | Because the Corinthians were using gifts to compete; Paul shows that love must govern every gift.
+q: Read verses 4-7 with your own name in place of "charity." Which line is hardest to say truthfully? | Answers will vary; encourage honesty rather than embarrassment.
+q: Love "thinketh no evil" (v. 5) and keeps no record of wrongs. How is that different from ignoring wrongdoing? | It means not storing up grudges or assuming the worst; it does not mean calling evil good or refusing to address real harm.
+q: Why is love greater than faith and hope? | Faith and hope serve us in this life until we see God; love is the life of heaven itself and reflects God's own nature.
+
+== application | 3
+Choose one line from verses 4-7 that you most need. Write it on a card and carry it with you. Each evening this week, ask: "Where did I practice this today, and where did I fail?" Then thank God for his love that never fails you.
+
+== prayer | 2
+God of love, you loved us first and sent your Son for us. Forgive us for gifts used without love and words spoken without kindness. Make us patient, kind and humble. Teach us to keep no record of wrongs, and fill us with the love that never fails. In Jesus' name, Amen.

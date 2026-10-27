@@ -1,0 +1,59 @@
+code: fellowship
+family: fellowship
+version: single
+title: They Continued Stedfastly
+big_idea: The first church was devoted to God's word, fellowship, breaking of bread and prayer; it shared with those in need, praised God together, and God added to their number.
+topic: Fellowship
+also: Church; Liberality; Praise
+audience: adults
+minutes: 45
+translation: KJV
+passage: Acts 2:42-47
+
+== opening | 4
+Ask: "What first drew you to this church, and what keeps you here?" Let several people answer. Often the answer to the first is a person or a welcome, and to the second, relationships. Today we look at the very first church, just days old, and what it devoted itself to.
+
+== scripture | 3
+Read the passage aloud.
+
+== background | 5
+Acts 2 describes the day of Pentecost, fifty days after Jesus' resurrection. The Holy Spirit came upon the disciples, Peter preached, and about three thousand people believed (2:41). Suddenly there was a large new community of believers in Jerusalem, many of them visitors from other lands.
+
+Verses 42-47 describe the life of that first church. Luke presents it as a pattern of what Spirit-filled community looks like, though Acts goes on to show the church's problems too (5:1-11; 6:1).
+note: "Breaking of bread" (vv. 42, 46) probably included both shared meals and the Lord's Supper. Christians understand the Lord's Supper in different ways; a separate lesson deals with that. Note too that the sharing of goods was voluntary (Acts 5:4); it was love responding to need, not a law.
+
+== point | 7 | Devoted to the essentials
+"They continued stedfastly in the apostles' doctrine and fellowship, and in breaking of bread, and in prayers" (v. 42). Four things marked the first church: learning God's word, sharing life together, eating together around Christ, and praying together. "Stedfastly" means they kept at it, not just on special occasions.
+verses: Acts 2:42-43; Hebrews 10:24-25; 1 John 1:3
+quote: 42275 | They received it, retained it, and acted on its principles.
+quote: 24408 | Those who have given up their names to Christ must make conscience of hearing his word
+blank: They continued stedfastly in the apostles' ____ and fellowship. | doctrine
+blank: They continued in breaking of bread, and in ____. | prayers
+
+== point | 7 | Sharing with those in need
+"All that believed were together, and had all things common" (v. 44). They sold possessions and goods to help "as every man had need." Fellowship was not just warm feelings on Sunday; it reached into wallets and homes. A church family looks after its members.
+verses: Acts 2:44-45; Acts 4:32-35; 1 John 3:17-18
+quote: 49523 | they sold as much as was necessary in order to procure the means of providing for the wants of each other.
+quote: 24408 | It becomes Christians to be open-hearted and open-handed
+blank: They parted their goods to all, as every man had ____. | need
+blank: Christian fellowship reaches into our ____ and homes. | wallets
+
+== point | 7 | Praising God, and God added
+They met daily, in the temple and from house to house. They ate "with gladness and singleness of heart, praising God." They had favour with outsiders, and "the Lord added to the church daily such as should be saved" (v. 47). Notice who did the adding: the Lord. The church's part was to be the church; God brought the growth.
+verses: Acts 2:46-47; John 13:35; 1 Corinthians 3:6-7
+quote: 42279 | As the fountain whence they had derived all their spiritual and temporal blessings; seeing him in all things, and magnifying the work of his mercy.
+quote: 24408 | It is God's work to add souls to the church
+blank: They did eat their meat with gladness and ____ of heart. | singleness
+blank: The ____ added to the church daily such as should be saved. | Lord
+
+== questions | 7
+q: Which of the four things in verse 42 is strongest in our church? Which needs the most attention? | Answers will vary; encourage honest, constructive discussion.
+q: What does "fellowship" mean beyond coffee after the service? | Sharing life: meals, burdens, prayer, material help, accountability, encouragement.
+q: How can our church care for members' practical needs today? | Meals, transport, benevolence funds, visiting, helping with jobs or repairs.
+q: Why do you think outsiders looked favourably on this church? | Their joy, generosity, unity and sincerity were attractive and different.
+
+== application | 3
+Choose one way this week to strengthen fellowship: invite someone from church for a meal, check on someone who has been absent, or pray with another believer. Ask God to show you one practical need in the church family you can help meet.
+
+== prayer | 2
+Lord, thank you for your church. Make us a people who continue stedfastly in your word, in fellowship, in breaking of bread and in prayer. Open our hearts and hands to one another's needs. Fill us with gladness and praise, and add to our number those who are being saved. In Jesus' name, Amen.
