@@ -34,6 +34,7 @@ STEPS = [
     ("Subject tagging and related subjects", "ingest.tagging"),
     ("Review-list decisions (AI reviewer)", "ingest.ai_review"),
     ("Spot-check results", "ingest.spot_checks"),
+    ("Lessons (lessons/source) and perspective summaries", "ingest.lessons"),
 ]
 
 
@@ -52,7 +53,7 @@ def main(argv):
             mod.main(["apply"])
         elif module in ("ingest.commentaries", "ingest.dictionaries", "ingest.devotional", "ingest.barnes_ot",
                         "ingest.spurgeon", "ingest.maclaren", "ingest.broadus", "ingest.lutheran", "ingest.pentecostal",
-                        "ingest.categories"):
+                        "ingest.categories", "ingest.lessons"):
             mod.main([])
         else:
             mod.main()

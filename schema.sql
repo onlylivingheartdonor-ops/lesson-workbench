@@ -353,3 +353,152 @@ CREATE VIEW entry_authors AS
     SELECT e.id, wa.author_id
     FROM entries e JOIN work_authors wa ON wa.work_id = e.work_id
     WHERE NOT EXISTS (SELECT 1 FROM section_authors sa WHERE sa.work_id = e.work_id);
+
+-- ---------------------------------------------------------------------------
+-- Lessons (Phase 1: data model and the first batch; web features come later)
+-- ---------------------------------------------------------------------------
+
+-- Fair, original-words summaries of each approved tradition's view on a contested point.
+-- Used by the "Where Christians differ" section and by tradition-specific lesson versions.
+CREATE TABLE perspective_summaries (
+    id           INTEGER PRIMARY KEY,
+    issue_id     INTEGER NOT NULL REFERENCES contested_issues(id),
+    tradition_id INTEGER NOT NULL REFERENCES traditions(id),
+    summary      TEXT NOT NULL,
+    key_texts    TEXT,               -- scripture references the tradition leans on
+    status       TEXT NOT NULL DEFAULT 'draft',   -- 'draft', 'reviewed'
+    UNIQUE (issue_id, tradition_id)
+);
+
+-- One row per lesson version. Versions of one lesson share a family_code: an uncontested
+-- lesson has one version ('single'); a contested one has an 'all_views' version and one
+-- 'tradition' version per approved tradition.
+CREATE TABLE lessons (
+    id               INTEGER PRIMARY KEY,
+    code             TEXT NOT NULL UNIQUE,     -- e.g. 'forgiveness', 'baptism--lutheran'
+    family_code      TEXT NOT NULL,
+    version_kind     TEXT NOT NULL,            -- 'single', 'all_views', 'tradition'
+    tradition_id     INTEGER REFERENCES traditions(id),     -- set for 'tradition' versions
+    contested_issue_id INTEGER REFERENCES contested_issues(id),
+    title            TEXT NOT NULL,
+    big_idea         TEXT NOT NULL,
+    topic_subject_id INTEGER NOT NULL REFERENCES subjects(id),   -- the main Nave's topic
+    audience         TEXT NOT NULL,            -- 'adults', 'teens', ...
+    length_minutes   INTEGER NOT NULL,
+    translation_work_id INTEGER NOT NULL REFERENCES works(id),   -- Bible used for printed scripture
+    status           TEXT NOT NULL DEFAULT 'draft',   -- 'draft' (AI, unreviewed), 'reviewed', 'shared'
+    visibility       TEXT NOT NULL DEFAULT 'private', -- 'private' until reviewed and promoted
+    origin           TEXT NOT NULL,            -- 'batch' (Phase 1), 'live' (generated in the app), 'user_edit'
+    owner_user_id    INTEGER,                  -- NULL for library lessons; the user for live and edited ones
+    parent_lesson_id INTEGER REFERENCES lessons(id),   -- for a user's private edited copy
+    generated_by     TEXT NOT NULL,            -- 'ai' or 'dave' or 'user'
+    source_file      TEXT,                     -- lessons/source/<code>.txt for batch lessons
+    created_at       TEXT NOT NULL,
+    updated_at       TEXT NOT NULL,
+    reviewed_at      TEXT,
+    review_note      TEXT
+);
+CREATE INDEX ix_lessons_topic ON lessons(topic_subject_id, status);
+CREATE INDEX ix_lessons_family ON lessons(family_code);
+
+-- Other topics a lesson covers (so "show existing lessons on this topic" finds it).
+CREATE TABLE lesson_topics (
+    lesson_id  INTEGER NOT NULL REFERENCES lessons(id),
+    subject_id INTEGER NOT NULL REFERENCES subjects(id),
+    PRIMARY KEY (lesson_id, subject_id)
+);
+
+-- The template sections, in order. kind is one of: 'opening', 'scripture', 'background',
+-- 'teaching_point', 'differ', 'questions', 'application', 'prayer'. (Title and big idea live
+-- on the lesson row.) default_hidden marks a "Where Christians differ" section in a tradition
+-- version: hidden unless the user turns it on.
+CREATE TABLE lesson_sections (
+    id             INTEGER PRIMARY KEY,
+    lesson_id      INTEGER NOT NULL REFERENCES lessons(id),
+    kind           TEXT NOT NULL,
+    position       INTEGER NOT NULL,
+    heading        TEXT,
+    body           TEXT NOT NULL,
+    minutes        INTEGER,              -- suggested timing, for the teacher's notes
+    teacher_note   TEXT,                 -- extra notes shown only in the teacher's notes
+    default_hidden INTEGER NOT NULL DEFAULT 0
+);
+CREATE INDEX ix_lesson_sections_lesson ON lesson_sections(lesson_id, position);
+
+-- Scripture used by a lesson: the main passage, and the supporting verses of each teaching point.
+CREATE TABLE lesson_scripture (
+    id             INTEGER PRIMARY KEY,
+    lesson_id      INTEGER NOT NULL REFERENCES lessons(id),
+    section_id     INTEGER REFERENCES lesson_sections(id),
+    role           TEXT NOT NULL,        -- 'main', 'supporting'
+    start_verse_id INTEGER NOT NULL,
+    end_verse_id   INTEGER NOT NULL,
+    ref_text       TEXT NOT NULL
+);
+CREATE INDEX ix_lesson_scripture_lesson ON lesson_scripture(lesson_id);
+CREATE INDEX ix_lesson_scripture_range ON lesson_scripture(start_verse_id, end_verse_id);
+
+-- Commentator quotations. quote_text must appear word for word in the entry's text
+-- (the loader refuses a lesson whose quote it cannot find); author_id is the entry's
+-- actual author (for Jamieson-Fausset-Brown, the author of that section).
+CREATE TABLE lesson_quotes (
+    id         INTEGER PRIMARY KEY,
+    lesson_id  INTEGER NOT NULL REFERENCES lessons(id),
+    section_id INTEGER NOT NULL REFERENCES lesson_sections(id),
+    entry_id   INTEGER NOT NULL REFERENCES entries(id),
+    author_id  INTEGER REFERENCES authors(id),
+    quote_text TEXT NOT NULL,
+    credit     TEXT NOT NULL             -- e.g. 'Matthew Henry, Commentary on the Whole Bible, on Matthew 18:21-35'
+);
+
+-- Fill-in blanks for the student handout outline, with the answers for the teacher.
+CREATE TABLE lesson_blanks (
+    id         INTEGER PRIMARY KEY,
+    lesson_id  INTEGER NOT NULL REFERENCES lessons(id),
+    section_id INTEGER NOT NULL REFERENCES lesson_sections(id),
+    position   INTEGER NOT NULL,
+    sentence   TEXT NOT NULL,            -- with ____ where the blank goes
+    answer     TEXT NOT NULL
+);
+
+-- Discussion questions, with suggested answers for the teacher.
+CREATE TABLE lesson_questions (
+    id        INTEGER PRIMARY KEY,
+    lesson_id INTEGER NOT NULL REFERENCES lessons(id),
+    position  INTEGER NOT NULL,
+    question  TEXT NOT NULL,
+    answer    TEXT
+);
+
+-- Users' ratings (empty until the web app). A low rating asks for a one-click reason.
+CREATE TABLE lesson_ratings (
+    id         INTEGER PRIMARY KEY,
+    lesson_id  INTEGER NOT NULL REFERENCES lessons(id),
+    user_id    INTEGER NOT NULL,
+    stars      INTEGER NOT NULL CHECK (stars BETWEEN 1 AND 5),
+    reason     TEXT CHECK (reason IN ('doctrinally_off', 'too_shallow', 'wrong_age_group',
+                                      'reference_errors', 'other')),
+    comment    TEXT,
+    created_at TEXT NOT NULL,
+    UNIQUE (lesson_id, user_id)
+);
+
+-- The monthly fix cycle (empty until the web app): low-rated lessons with their reasons and a
+-- drafted fix for Dave; high-rated unreviewed lessons flagged for review and promotion.
+CREATE TABLE lesson_fix_cycle (
+    id              INTEGER PRIMARY KEY,
+    run_month       TEXT NOT NULL,       -- 'YYYY-MM'
+    lesson_id       INTEGER NOT NULL REFERENCES lessons(id),
+    kind            TEXT NOT NULL,       -- 'low_rated_fix', 'high_rated_review'
+    reason_counts   TEXT,                -- JSON: {"too_shallow": 4, ...}
+    draft_lesson_id INTEGER REFERENCES lessons(id),
+    status          TEXT NOT NULL DEFAULT 'open',   -- 'open', 'approved', 'rejected'
+    decided_at      TEXT
+);
+
+-- Settings the lesson features read (e.g. the minimum number of ratings before they count).
+CREATE TABLE app_settings (
+    key   TEXT PRIMARY KEY,
+    value TEXT NOT NULL,
+    note  TEXT
+);

@@ -1,0 +1,62 @@
+code: forgiveness
+family: forgiveness
+version: single
+title: Forgiven People Forgive
+big_idea: Because God has forgiven us a debt we could never pay, we forgive others from the heart, again and again.
+topic: Forgiveness
+also: Mercy; Debtor; Malice
+audience: adults
+minutes: 45
+translation: KJV
+passage: Matthew 18:21-35
+
+== opening | 4
+Ask the class: "Is there a limit to how many times you should forgive the same person for the same thing?" Let a few people answer honestly. Most of us have a number in mind, even if we have never said it out loud. Peter had a number too, and he thought it was a generous one. Today we will hear what Jesus said to him.
+note: Keep this light and do not ask anyone to name a person who has hurt them. The aim is only to bring our private "limits" into the open.
+
+== scripture | 3
+Read the passage aloud, or use three readers: a narrator, Peter, and Jesus (who also speaks for the king).
+
+== background | 5
+Matthew 18 is a chapter about life together among Jesus' followers. It opens with the disciples arguing over who would be greatest (18:1). Jesus answers with a little child, a warning against causing others to stumble, the parable of the lost sheep, and steps for going to a brother who has sinned against you (18:15-20). Peter's question grows out of that teaching: if I must go to my brother and forgive him, how often?
+
+Both Albert Barnes and Adam Clarke note that the Jewish teachers of the day held that a man should be forgiven three times but not a fourth. Peter more than doubled that and added one, offering seven, the number of completeness. Jesus answered with "seventy times seven", which is not a new limit to count up to but a way of saying "do not keep count at all."
+
+The amounts in the parable are deliberately enormous. A talent was a very large sum, about six thousand days' wages for a labourer, so ten thousand talents was a debt no servant could ever repay. A "penny" (Greek denarius) was one day's wage, so a hundred pence was a real but manageable debt of a few months' pay. The first debt is beyond counting; the second is small beside it.
+note: If someone asks, the selling of the wife and children (v. 25) reflects the debt laws of the ancient world. Barnes cautions against pressing every detail of a parable; the story exists to teach one main truth about forgiveness.
+
+== point | 7 | Forgiveness does not keep count
+Peter wanted to know where forgiveness could stop. Jesus' answer removes the stopping point. The question "How often must I forgive?" already assumes that forgiveness will run out some day. Jesus tells us to stop keeping the score.
+verses: Matthew 18:21-22; Luke 17:3-4; Colossians 3:13
+quote: 24008 | There is something of ill-nature in scoring up the injuries we forgive, as if we would allow ourselves to be revenged when the measure is full.
+blank: Jesus told Peter to forgive not seven times, but ____ times seven. | seventy
+blank: Forgiveness that keeps ____ is waiting for the day it can stop. | count
+
+== point | 7 | We have been forgiven a debt we could never pay
+The first servant could not pay, and he could never have paid. His promise, "I will pay thee all," was hopeless. The king did not give him more time; he cancelled the whole debt out of compassion. That is the picture of what God has done for us in Christ. Our debt of sin was beyond our power to repay, and God forgave it freely.
+verses: Matthew 18:23-27; Psalm 103:10-12; Ephesians 1:7; Romans 5:8
+quote: 39966 | so is it impossible for a sinner, infinitely indebted to Divine justice, ever to pay a mite out of the talent.
+blank: The servant owed a debt he could ____ repay. | never
+blank: The king forgave the whole debt because he was moved with ____. | compassion
+
+== point | 7 | Forgiven people forgive from the heart
+The same servant walked out and seized a man who owed him a small sum. What makes the story shocking is that he had just been forgiven so much. Jesus says that forgiveness received and forgiveness given belong together. We forgive because we have been forgiven, and we forgive "from the heart" (v. 35), not only with our words.
+verses: Matthew 18:28-35; Ephesians 4:32; Matthew 6:14-15
+quote: 39971 | God teaches us what to do to a fellow-sinner, by what He does to us.
+quote: 46747 | From your hearts. That is, not merely in words, but really and truly to feel and act towards him as if he had not offended us.
+blank: We forgive others because God has first ____ us. | forgiven
+blank: Jesus asks us to forgive from the ____, not only in words. | heart
+note: Some in the class may have suffered real abuse. Forgiving from the heart means giving up revenge and the right to repay. It does not mean pretending no harm was done, refusing to report a crime, or trusting someone who is still dangerous. Jesus himself speaks of rebuke and repentance (Luke 17:3). Barnes, on verse 21, says forgiveness is "to declare that we will not harbour malice," which is a decision we can make even while trust is slowly rebuilt.
+
+== questions | 7
+q: Why do you think Peter offered the number seven? What does that tell us about how we usually think of forgiveness? | He thought he was being generous (more than double the common teaching of three times). It shows we often treat forgiveness as a limited supply that eventually runs out.
+q: Compare the two debts in the story. What is Jesus teaching by making the first one so huge? | Our sin against God is beyond anything we could repay; what others owe us is small by comparison. Seeing the size of our own debt changes how we treat others' debts.
+q: The servant was forgiven but did not become forgiving. How can a person receive mercy and stay unmerciful? | He did not let the king's mercy change his heart; he treated it as good luck rather than grace. Forgiveness that has really reached us shows itself in how we treat others.
+q: What is the difference between forgiving someone and trusting them again? | Forgiving means giving up revenge and the claim to repayment, from the heart. Trust may take time to rebuild and depends on the other person's repentance and changed behaviour.
+q: What makes forgiving "from the heart" hard, and what helps? | Hurt, pride, and replaying the wrong make it hard. Remembering how much we have been forgiven, praying for the person, and asking God for help make it possible.
+
+== application | 3
+This week, think of one person you have been "keeping score" against. Pray for them by name each day. Ask God to help you let go of the debt in your heart. If it is right and safe to do so, take one step toward peace: a kind word, a note, or a phone call.
+
+== prayer | 2
+Gracious Father, we owed you a debt we could never pay, and you forgave it all for Jesus' sake. Forgive us for the times we have kept score against others. Soften our hearts, so that we forgive as we have been forgiven, not only with our words but from the heart. Give us wisdom where trust must be rebuilt, and courage to seek peace. In Jesus' name, Amen.
