@@ -34,7 +34,7 @@ WORKS = {
                               "was a standard Methodist reference for a century."))],
         coverage="Whole Bible", issues=None),
     "BARNES": dict(
-        module="Barnes", title="Barnes' Notes on the New Testament", short="Albert Barnes",
+        module="Barnes", title="Barnes' Notes on the New Testament", short="Albert Barnes (NT)",
         original_date="1832-1853",
         authors=[("Albert Barnes", "author", dict(sort_name="Barnes, Albert", born="1798", died="1870",
                   description="American Presbyterian pastor (Philadelphia); his popular Notes were written for "

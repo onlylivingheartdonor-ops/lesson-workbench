@@ -58,6 +58,7 @@ def clear_work(con, work_id):
     es_ids = f"SELECT id FROM entry_subjects WHERE entry_id IN ({entry_ids})"
     con.execute(f"DELETE FROM spot_checks WHERE entry_subject_id IN ({es_ids})", (work_id,))
     con.execute(f"DELETE FROM review_queue WHERE entry_subject_id IN ({es_ids})", (work_id,))
+    con.execute(f"DELETE FROM link_reviews WHERE entry_subject_id IN ({es_ids})", (work_id,))
     con.execute(f"DELETE FROM entry_subjects WHERE entry_id IN ({entry_ids})", (work_id,))
     con.execute(f"DELETE FROM entry_scripture WHERE entry_id IN ({entry_ids})", (work_id,))
     con.execute("UPDATE strongs SET entry_id=NULL WHERE entry_id IN (SELECT id FROM entries WHERE work_id=?)", (work_id,))
@@ -71,8 +72,29 @@ def clear_work(con, work_id):
     con.execute("DELETE FROM work_authors WHERE work_id=?", (work_id,))
 
 
+# Works whose digital edition descends from CCEL's texts.  Dave's decision
+# (2026-10-27): keep them for now, but replace them before launch.
+REPLACE_BEFORE_LAUNCH = {
+    "MHC": "CrossWire edition prepared from CCEL's text. Candidate independent sources: archive.org scans of the "
+           "printed Exposition, e.g. the Duke Divinity School set expositionofoldn11henr ... expositionofoldn61henr "
+           "(early 18th-century printing; long-s type makes OCR harder) or a 19th-century American edition.",
+    "JFB": "CrossWire edition prepared from CCEL's text (ccel.org/ccel/j/jamieson/jfb). Candidate independent source: "
+           "the one-volume Commentary Critical and Explanatory, Princeton Theological Seminary scan "
+           "commentarycritic00jami (1873, marked NOT_IN_COPYRIGHT).",
+    "NAVE": "CrossWire edition prepared from CCEL's XML (ccel.org/ccel/n/nave/bible.xml). Candidate independent "
+            "sources: Princeton scan navestopicalbibl00nave or University of Toronto scan "
+            "topicalbibledige00naveuoft (both 1903, marked NOT_IN_COPYRIGHT).",
+    "EASTON": "CrossWire edition prepared from CCEL's text. Candidate independent source: Library of Congress scan "
+              "illustratedbible00east (1893 edition; LoC 'unaware of any copyright restrictions'); the 1897 third "
+              "edition would need a further search.",
+}
+
+
 def upsert_work(con, code, title, ref_type, authors, license_status, **fields):
     """Create or reset a work. `authors` is a list of (name, role, author-fields dict)."""
+    if code in REPLACE_BEFORE_LAUNCH:
+        fields.setdefault("launch_status", "replace before launch")
+        fields.setdefault("launch_note", REPLACE_BEFORE_LAUNCH[code])
     rt = ref_type_id(con, ref_type)
     cols = ["title", "reference_type_id", "license_status", "date_ingested"] + list(fields)
     vals = [title, rt, license_status, now()] + list(fields.values())
@@ -82,7 +104,7 @@ def upsert_work(con, code, title, ref_type, authors, license_status, **fields):
         clear_work(con, wid)
         # reset optional columns too so stale values do not linger
         for c in ("short_title", "original_date", "edition", "source_name", "source_url", "license_evidence",
-                  "attribution_text", "coverage", "known_issues", "ingest_script"):
+                  "attribution_text", "coverage", "known_issues", "launch_status", "launch_note", "ingest_script"):
             con.execute(f"UPDATE works SET {c}=NULL WHERE id=?", (wid,))
         con.execute(f"UPDATE works SET {', '.join(c + '=?' for c in cols)} WHERE id=?", vals + [wid])
     else:

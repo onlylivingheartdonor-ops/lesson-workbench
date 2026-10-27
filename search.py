@@ -97,10 +97,10 @@ def subject_search(con, query, more):
         print(wrap(kjv(con, s, e), indent="      "))
 
     # Commentary
-    rows = con.execute("""SELECT w.code, w.short_title, e.title, e.body, es.method, es.confidence
+    rows = con.execute("""SELECT w.code, w.short_title, e.title, e.body, es.method, es.confidence, es.review_status
                           FROM entry_subjects es JOIN entries e ON e.id = es.entry_id
                           JOIN works w ON w.id = e.work_id JOIN reference_types rt ON rt.id = w.reference_type_id
-                          WHERE es.subject_id = ? AND rt.code = 'commentary' AND es.review_status != 'rejected'
+                          WHERE es.subject_id = ? AND rt.code = 'commentary' AND es.review_status NOT IN ('rejected', 'ai_rejected')
                           ORDER BY es.confidence DESC, e.word_count""", (tid,)).fetchall()
     per = {}
     for r in rows:
@@ -108,8 +108,9 @@ def subject_search(con, query, more):
     header(f"Commentary - {len(rows)} linked notes from {len(per)} authors")
     for code, lst in per.items():
         print(f"  {lst[0][1]}  ({len(lst)} notes)")
-        for _, _, title, body, method, conf in lst[: (4 if more else 2)]:
-            print(f"    - {title}   [{method}, confidence {conf:.2f}]")
+        for _, _, title, body, method, conf, status in lst[: (4 if more else 2)]:
+            flag = {"needs_review": "; awaiting review", "ai_accepted": "; AI-reviewed"}.get(status, "")
+            print(f"    - {title}   [{method}, confidence {conf:.2f}{flag}]")
             print(wrap(snippet(body), indent="        "))
 
     # Dictionaries / encyclopedia
@@ -117,11 +118,11 @@ def subject_search(con, query, more):
                           FROM entry_subjects es JOIN entries e ON e.id = es.entry_id
                           JOIN works w ON w.id = e.work_id JOIN reference_types rt ON rt.id = w.reference_type_id
                           WHERE es.subject_id = ? AND rt.code IN ('dictionary', 'encyclopedia')
-                          AND es.review_status != 'rejected'
+                          AND es.review_status NOT IN ('rejected', 'ai_rejected')
                           ORDER BY es.confidence DESC LIMIT ?""", (tid, 20 if more else 8)).fetchall()
     header(f"Dictionary and encyclopedia articles - {len(rows)} shown")
     for wt, title, body, method, conf, status in rows:
-        flag = "; low confidence, awaiting review" if status == "needs_review" else ""
+        flag = {"needs_review": "; low confidence, awaiting review", "ai_accepted": "; AI-reviewed"}.get(status, "")
         print(f"  {wt}: {title}   [{method}, confidence {conf:.2f}{flag}]")
         print(wrap(snippet(body, 30), indent="      "))
 
@@ -130,11 +131,11 @@ def subject_search(con, query, more):
                           FROM entry_subjects es JOIN entries e ON e.id = es.entry_id
                           JOIN works w ON w.id = e.work_id JOIN reference_types rt ON rt.id = w.reference_type_id
                           WHERE es.subject_id = ? AND rt.code IN ('sermon', 'devotional')
-                          AND es.review_status != 'rejected'
+                          AND es.review_status NOT IN ('rejected', 'ai_rejected')
                           ORDER BY es.confidence DESC LIMIT ?""", (tid, 20 if more else 8)).fetchall()
     header(f"Sermons and devotional works - {len(rows)} shown")
     for wt, title, body, method, conf, status in rows:
-        flag = "; low confidence, awaiting review" if status == "needs_review" else ""
+        flag = {"needs_review": "; low confidence, awaiting review", "ai_accepted": "; AI-reviewed"}.get(status, "")
         print(f"  {wt}: {title}   [{method}, confidence {conf:.2f}{flag}]")
         print(wrap(snippet(body, 30), indent="      "))
 

@@ -21,7 +21,8 @@ def main():
     con = sqlite3.connect(DB_PATH)
     works = con.execute("""SELECT w.id, w.code, w.title, rt.name, w.original_date, w.edition, w.source_name,
                                   w.source_url, w.license_status, w.license_evidence, w.attribution_required,
-                                  w.attribution_text, w.coverage, w.known_issues, w.date_ingested
+                                  w.attribution_text, w.coverage, w.known_issues, w.date_ingested,
+                                  w.launch_status, w.launch_note
                            FROM works w JOIN reference_types rt ON rt.id = w.reference_type_id
                            ORDER BY rt.id, w.code""").fetchall()
     os.makedirs(os.path.join(ROOT, "docs"), exist_ok=True)
@@ -30,7 +31,7 @@ def main():
            "none requires attribution. Raw files are not kept in the repository; the URLs below are where "
            "the ingest scripts download them from, and the SHA-256 checksums identify the exact files used.", ""]
     for (wid, code, title, rtype, odate, edition, sname, surl, lic, ev, attr, attr_text, cov, issues,
-         ingested) in works:
+         ingested, launch, launch_note) in works:
         authors = ", ".join(r[0] for r in con.execute(
             "SELECT a.name FROM work_authors wa JOIN authors a ON a.id = wa.author_id WHERE wa.work_id = ? "
             "ORDER BY wa.position", (wid,)))
@@ -46,6 +47,7 @@ def main():
                 f"| Attribution required | {'Yes: ' + cell(attr_text) if attr else 'No'} |",
                 f"| Coverage | {cell(cov)} |",
                 f"| Known issues | {cell(issues) or 'None noted'} |",
+                f"| Launch status | {('**' + cell(launch).upper() + '** - ' + cell(launch_note)) if launch else 'OK to launch'} |",
                 f"| Ingested | {ingested} |", "",
                 "| Raw file | Downloaded from | Retrieved | Bytes | SHA-256 |", "|---|---|---|---|---|"]
         for fn, url, when, size, sha in con.execute(

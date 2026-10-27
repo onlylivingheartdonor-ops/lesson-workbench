@@ -41,6 +41,8 @@ CREATE TABLE works (
     attribution_text     TEXT,                      -- must be displayed if attribution_required = 1
     coverage             TEXT,                      -- e.g. 'Whole Bible', 'New Testament only'
     known_issues         TEXT,
+    launch_status        TEXT,                      -- e.g. 'replace before launch' (see launch_note)
+    launch_note          TEXT,                      -- why, and candidate replacement sources
     ingest_script        TEXT,
     date_ingested        TEXT
 );
@@ -174,7 +176,8 @@ CREATE TABLE entry_subjects (
     method_detail TEXT NOT NULL,
     confidence    REAL NOT NULL,
     evidence      TEXT,
-    review_status TEXT NOT NULL DEFAULT 'unreviewed',  -- 'unreviewed', 'needs_review', 'accepted', 'rejected'
+    review_status TEXT NOT NULL DEFAULT 'unreviewed',  -- 'unreviewed', 'needs_review', 'accepted', 'rejected',
+                                                       -- 'ai_accepted', 'ai_rejected' (see link_reviews)
     created_at    TEXT NOT NULL,
     UNIQUE (entry_id, subject_id)
 );
@@ -233,6 +236,18 @@ CREATE TABLE review_queue (
     created_at       TEXT NOT NULL
 );
 
+-- Decisions from reviewing links on the review list (by an AI reviewer or a person).
+--   decision 'accept' | 'reject' | 'fix' (link was wrong; new_subject_id is the right subject)
+CREATE TABLE link_reviews (
+    id               INTEGER PRIMARY KEY,
+    entry_subject_id INTEGER NOT NULL REFERENCES entry_subjects(id),
+    decision         TEXT NOT NULL,
+    new_subject_id   INTEGER REFERENCES subjects(id),
+    reviewer         TEXT NOT NULL,
+    reviewed_at      TEXT NOT NULL,
+    notes            TEXT
+);
+
 -- Results of tagging spot checks.
 CREATE TABLE spot_checks (
     id               INTEGER PRIMARY KEY,
@@ -272,5 +287,6 @@ CREATE INDEX ix_entries_parent ON entries(parent_id);
 CREATE INDEX ix_strongs_entry ON strongs(entry_id);
 CREATE INDEX ix_review_queue_es ON review_queue(entry_subject_id);
 CREATE INDEX ix_spot_checks_es ON spot_checks(entry_subject_id);
+CREATE INDEX ix_link_reviews_es ON link_reviews(entry_subject_id);
 CREATE INDEX ix_provenance_work ON provenance(work_id);
 CREATE INDEX ix_bible_text_verse ON bible_text(verse_id);

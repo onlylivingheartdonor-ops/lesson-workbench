@@ -17,12 +17,16 @@ from library import db
 STEPS = [
     ("Bibles (KJV, ASV, BBE, WEB) + KJV Strong's word links", "ingest.bibles"),
     ("Strong's Hebrew and Greek dictionaries", "ingest.strongs"),
+    ("Thayer's Greek Lexicon supplement (31 missing Strong's numbers)", "ingest.thayer"),
     ("Nave's Topical Bible", "ingest.naves"),
     ("Treasury of Scripture Knowledge", "ingest.tsk"),
     ("Commentaries (Henry, Clarke, Barnes, JFB)", "ingest.commentaries"),
     ("Dictionaries and encyclopedia (Easton, Smith, ISBE)", "ingest.dictionaries"),
+    ("Barnes' Old Testament notes (archive.org scans)", "ingest.barnes_ot"),
     ("Sermons and devotional works (Project Gutenberg)", "ingest.devotional"),
+    ("Spurgeon's sermons, selection (archive.org scans)", "ingest.spurgeon"),
     ("Subject tagging and related subjects", "ingest.tagging"),
+    ("Review-list decisions (AI reviewer)", "ingest.ai_review"),
     ("Spot-check results", "ingest.spot_checks"),
 ]
 
@@ -38,7 +42,10 @@ def main(argv):
         mod = __import__(module, fromlist=["main"])
         if module == "ingest.spot_checks":
             mod.main(["import"])
-        elif module in ("ingest.commentaries", "ingest.dictionaries", "ingest.devotional"):
+        elif module == "ingest.ai_review":
+            mod.main(["apply"])
+        elif module in ("ingest.commentaries", "ingest.dictionaries", "ingest.devotional", "ingest.barnes_ot",
+                        "ingest.spurgeon"):
             mod.main([])
         else:
             mod.main()

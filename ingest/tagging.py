@@ -76,6 +76,7 @@ def main():
     # ------------------------------------------------------------------ reset
     keep = "method='manual' OR method_detail='nave_topic_entry'"
     con.execute(f"DELETE FROM spot_checks WHERE entry_subject_id IN (SELECT id FROM entry_subjects WHERE NOT ({keep}))")
+    con.execute(f"DELETE FROM link_reviews WHERE entry_subject_id IN (SELECT id FROM entry_subjects WHERE NOT ({keep}))")
     con.execute("DELETE FROM review_queue")
     con.execute(f"DELETE FROM entry_subjects WHERE NOT ({keep})")
     con.execute("DELETE FROM subject_relations WHERE relation IN ('shared_verses', 'co_occurrence')")

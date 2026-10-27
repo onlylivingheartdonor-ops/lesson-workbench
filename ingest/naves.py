@@ -81,6 +81,8 @@ def main():
     con.execute(f"DELETE FROM category_topics WHERE topic_id IN ({sub_ids})", (wid,))
     con.execute(f"DELETE FROM spot_checks WHERE entry_subject_id IN (SELECT id FROM entry_subjects WHERE subject_id IN ({sub_ids}))", (wid,))
     con.execute(f"DELETE FROM review_queue WHERE entry_subject_id IN (SELECT id FROM entry_subjects WHERE subject_id IN ({sub_ids}))", (wid,))
+    con.execute(f"DELETE FROM link_reviews WHERE entry_subject_id IN (SELECT id FROM entry_subjects WHERE subject_id IN ({sub_ids}) OR id IN (SELECT id FROM entry_subjects WHERE subject_id IN ({sub_ids})))", (wid, wid))
+    con.execute(f"DELETE FROM link_reviews WHERE new_subject_id IN ({sub_ids})", (wid,))
     con.execute(f"DELETE FROM entry_subjects WHERE subject_id IN ({sub_ids})", (wid,))
     con.execute("UPDATE subjects SET parent_id=NULL WHERE source_work_id=?", (wid,))
     con.execute("DELETE FROM subjects WHERE source_work_id=?", (wid,))
