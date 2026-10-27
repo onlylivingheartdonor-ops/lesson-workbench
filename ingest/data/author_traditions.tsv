@@ -1,0 +1,25 @@
+# Author tradition tags.  Columns: author name (exactly as in the authors table) | descriptive tradition tag |
+# filter tradition code(s) from ingest/data/traditions.tsv, comma-separated, or '-' for none | note.
+# Translation committees and editors of Bible translations get no tag ('-' in column 2).
+King James Version translators	-	-	Translation committee; not tagged.
+American Revision Committee	-	-	Translation committee; not tagged.
+Samuel Henry Hooke	-	-	Translator (Bible in Basic English); not tagged.
+Michael Paul Johnson	-	-	Editor of a Bible translation (World English Bible); not tagged.
+James Strong	Methodist	wesleyan	Methodist layman and professor at Drew Theological Seminary (Methodist). His concordance and dictionaries are reference lists and rarely take sides.
+Joseph Henry Thayer	Congregationalist	-	Congregationalist minister; professor at Andover and Harvard. Lexicon entries only; no filter tradition.
+Orville J. Nave	Methodist	wesleyan	Methodist Episcopal minister and army chaplain. Nave's is an index of verses and rarely takes sides.
+R. A. Torrey	Nondenominational evangelical	-	Ordained Congregationalist; worked with Moody (Moody Bible Institute, Moody Church). Edited the cross-references only.
+John Canne	English Separatist (Independent) Puritan	-	Pastor of the Separatist "Ancient Church" in Amsterdam. Cross-references only.
+Matthew Henry	Presbyterian (English Puritan Nonconformist)	reformed	English Presbyterian minister (Chester, then Hackney); Calvinist in theology.
+Adam Clarke	Methodist (Wesleyan/Arminian)	wesleyan	Wesleyan Methodist preacher, three times president of the Methodist Conference; Arminian in theology.
+Albert Barnes	Presbyterian (American, New School)	reformed	Pastor of First Presbyterian Church, Philadelphia; New School Presbyterian (a moderate Calvinist).
+Robert Jamieson	Presbyterian (Church of Scotland)	reformed	Minister in the Church of Scotland; wrote Genesis to Esther in JFB.
+Andrew Robert Fausset	Anglican (evangelical)	anglican	Church of England clergyman (born in Ireland); wrote Job to Malachi in JFB.
+David Brown	Presbyterian (Free Church of Scotland)	reformed	Free Church of Scotland minister and principal of its Aberdeen college; wrote the Gospels to Revelation in JFB.
+Matthew George Easton	Presbyterian (Free Church of Scotland)	reformed	Free Church of Scotland minister.
+William Smith	Congregationalist (English Nonconformist layman)	-	Raised and trained as an English Independent (Congregationalist); a classical scholar. His dictionary had many contributors from several churches; no filter tradition.
+James Orr	Presbyterian (Scottish United Presbyterian)	reformed	General editor of the ISBE. The ISBE had about 200 contributors from many churches, so the tag describes the editor, not every article.
+E. M. Bounds	Methodist (Methodist Episcopal Church, South)	wesleyan	Methodist Episcopal Church, South, minister and Confederate chaplain.
+J. C. Ryle	Anglican (evangelical, Reformed)	anglican	First Bishop of Liverpool; evangelical Anglican, Calvinist in theology.
+D. L. Moody	Nondenominational evangelical	-	Lay evangelist; a member of a Congregational church, but deliberately nondenominational in his preaching. No filter tradition proposed (see the traditions proposal).
+C. H. Spurgeon	Reformed Baptist (Particular Baptist)	baptist	Pastor of the Metropolitan Tabernacle, London; Calvinist (Particular) Baptist. On election and predestination his view is the Reformed one.

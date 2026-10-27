@@ -20,7 +20,28 @@ CREATE TABLE authors (
     sort_name   TEXT,
     born        TEXT,
     died        TEXT,
-    description TEXT
+    description TEXT,
+    tradition      TEXT,   -- descriptive tag, e.g. 'Methodist (Wesleyan/Arminian)'; NULL for translation committees
+    tradition_note TEXT    -- why the tag was assigned
+);
+
+-- The small set of traditions used by the tradition filter.  status is
+-- 'proposed' until Dave approves the set, then 'approved'.
+CREATE TABLE traditions (
+    id          INTEGER PRIMARY KEY,
+    code        TEXT NOT NULL UNIQUE,
+    name        TEXT NOT NULL,
+    description TEXT,
+    status      TEXT NOT NULL DEFAULT 'proposed',
+    sort_order  INTEGER
+);
+
+-- Which filter tradition(s) an author's views count toward.
+CREATE TABLE author_traditions (
+    author_id    INTEGER NOT NULL REFERENCES authors(id),
+    tradition_id INTEGER NOT NULL REFERENCES traditions(id),
+    note         TEXT,
+    PRIMARY KEY (author_id, tradition_id)
 );
 
 -- One row per work (a Bible translation, a commentary, a dictionary ...).
@@ -141,7 +162,8 @@ CREATE TABLE subjects (
     parent_id      INTEGER REFERENCES subjects(id),
     source_work_id INTEGER REFERENCES works(id),
     source_key     TEXT,
-    description    TEXT
+    description    TEXT,
+    contested      INTEGER NOT NULL DEFAULT 0  -- 1 = Christian traditions genuinely differ on this subject
 );
 
 -- Which top-level categories a Nave's topic sits under (many-to-many).

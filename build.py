@@ -25,6 +25,7 @@ STEPS = [
     ("Barnes' Old Testament notes (archive.org scans)", "ingest.barnes_ot"),
     ("Sermons and devotional works (Project Gutenberg)", "ingest.devotional"),
     ("Spurgeon's sermons, selection (archive.org scans)", "ingest.spurgeon"),
+    ("Author tradition tags, proposed traditions, contested topics", "ingest.traditions"),
     ("Subject tagging and related subjects", "ingest.tagging"),
     ("Review-list decisions (AI reviewer)", "ingest.ai_review"),
     ("Spot-check results", "ingest.spot_checks"),
