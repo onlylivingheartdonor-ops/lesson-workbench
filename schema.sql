@@ -44,6 +44,17 @@ CREATE TABLE author_traditions (
     PRIMARY KEY (author_id, tradition_id)
 );
 
+-- For multi-author works where different authors wrote different books (JFB):
+-- entries about Bible books book_from..book_to belong to this author.
+CREATE TABLE section_authors (
+    work_id   INTEGER NOT NULL REFERENCES works(id),
+    author_id INTEGER NOT NULL REFERENCES authors(id),
+    book_from INTEGER NOT NULL,
+    book_to   INTEGER NOT NULL,
+    source    TEXT,
+    PRIMARY KEY (work_id, book_from)
+);
+
 -- One row per work (a Bible translation, a commentary, a dictionary ...).
 -- License and provenance fields are required by the content rules.
 CREATE TABLE works (
@@ -164,6 +175,22 @@ CREATE TABLE subjects (
     source_key     TEXT,
     description    TEXT,
     contested      INTEGER NOT NULL DEFAULT 0  -- 1 = Christian traditions genuinely differ on this subject
+);
+
+-- Points where Christian traditions genuinely differ, and the Nave's topics each one
+-- touches: scope 'whole' (the topic itself is disputed; subjects.contested = 1) or
+-- 'part' (mostly common ground; only the disputed point needs "Where Christians differ").
+CREATE TABLE contested_issues (
+    id          INTEGER PRIMARY KEY,
+    code        TEXT NOT NULL UNIQUE,
+    name        TEXT NOT NULL,
+    description TEXT
+);
+CREATE TABLE contested_issue_topics (
+    issue_id   INTEGER NOT NULL REFERENCES contested_issues(id),
+    subject_id INTEGER NOT NULL REFERENCES subjects(id),
+    scope      TEXT NOT NULL,
+    PRIMARY KEY (issue_id, subject_id)
 );
 
 -- Which top-level categories a Nave's topic sits under (many-to-many).
@@ -312,3 +339,17 @@ CREATE INDEX ix_spot_checks_es ON spot_checks(entry_subject_id);
 CREATE INDEX ix_link_reviews_es ON link_reviews(entry_subject_id);
 CREATE INDEX ix_provenance_work ON provenance(work_id);
 CREATE INDEX ix_bible_text_verse ON bible_text(verse_id);
+
+-- The author actually responsible for each entry: the section author where a work
+-- is divided by Bible book (section_authors), otherwise every author of the work.
+CREATE VIEW entry_authors AS
+    SELECT e.id AS entry_id, sa.author_id
+    FROM entries e
+    JOIN entry_scripture es ON es.entry_id = e.id AND es.relation = 'about'
+    JOIN section_authors sa ON sa.work_id = e.work_id
+         AND es.start_verse_id / 1000000 BETWEEN sa.book_from AND sa.book_to
+    GROUP BY e.id, sa.author_id
+    UNION
+    SELECT e.id, wa.author_id
+    FROM entries e JOIN work_authors wa ON wa.work_id = e.work_id
+    WHERE NOT EXISTS (SELECT 1 FROM section_authors sa WHERE sa.work_id = e.work_id);

@@ -1,15 +1,15 @@
-# Nave's topics PROPOSED as contested (Christian traditions genuinely differ). Dave to confirm.
-# Columns: exact Nave's topic name | what the disagreement is about
-Baptism	Who should be baptized (believers only, or infants too), how (immersion, pouring, sprinkling) and what it does.
-Lord's Supper	What the bread and cup are (memorial, spiritual presence, real presence) and who may take them.
-Predestination	Whether God chooses who will be saved unconditionally (Reformed) or on foreseen faith (Wesleyan/Arminian).
-Election	Same disagreement as Predestination.
-Perseverance	Whether a true believer can finally fall away ("once saved, always saved").
-Apostasy	Same disagreement as Perseverance: can a genuine believer lose salvation?
-Perfection	Whether Christians can reach "entire sanctification" or Christian perfection in this life (Wesleyan view).
-Sanctification	Whether sanctification is gradual only, or also includes a second definite work (Wesleyan and Holiness view).
-Millennium	Premillennial, postmillennial and amillennial readings of the thousand years.
-Antichrist	Who or what the Antichrist is and when he appears; ties to end-times views.
-Tongues (the Gift)	Whether speaking in tongues continues today and whether it marks baptism in the Holy Spirit.
-Sabbath	Whether the Sabbath command carries over to Sunday (the Lord's Day) and how strictly.
-Lord's Day	Same disagreement as Sabbath.
+# Contested points APPROVED by Dave (second decisions, 2026-10-27): where Christian traditions genuinely differ.
+# Columns: code | name | what the disagreement is about | Nave's topics, each followed by :whole or :part, separated by ';'
+#   :whole  the topic as a whole is the disputed point (subjects.contested = 1; lessons on it get a version per tradition)
+#   :part   the topic is mostly common ground; only a lesson that reaches the disputed point needs "Where Christians differ"
+baptism	Baptism	Who should be baptized (believers only, or infants too), how (immersion, pouring, sprinkling) and what baptism does.	Baptism:whole
+lords-supper	The Lord's Supper	What the bread and cup are (memorial, spiritual presence, real presence) and who may take them.	Lord's Supper:whole
+election	Predestination and election	Whether God chooses who will be saved unconditionally (Reformed, Lutheran in part) or on foreseen faith (Wesleyan/Arminian).	Predestination:whole;Election:whole
+perseverance	Can a believer fall away?	Whether a true believer can finally fall away ("once saved, always saved").	Perseverance:whole;Apostasy:whole
+perfection	Christian perfection	Whether Christians can reach entire sanctification or Christian perfection in this life (Wesleyan and Holiness view).	Perfection:whole;Sanctification:whole
+end-times	The end times	Premillennial, postmillennial and amillennial readings of the thousand years, and who or what the Antichrist is.	Millennium:whole;Antichrist:whole
+sabbath	Sabbath and Lord's Day	Whether the Sabbath command carries over to Sunday (the Lord's Day) and how strictly it should be kept.	Sabbath:whole;Lord's Day:whole
+spiritual-gifts	Spiritual gifts today	Whether the miraculous gifts (tongues, prophecy, healing) continue today, and whether tongues mark baptism in the Holy Spirit.	Tongues (the Gift):whole;Gifts from God:part;Miracles:part;Holy Spirit:part;Prophecy:part;Sick, the:part
+women-leadership	Women in church leadership	Whether women may serve as pastors, elders or preachers.	Women:part;Prophetesses:part;Deaconess:part;Minister, Christian:part;Elder:part;Bishop:part
+creation	Creation and the age of the earth	Whether the days of Genesis 1 are ordinary days (a young earth) or long ages, and how Genesis relates to science.	Creation:part;Earth:part
+divorce	Divorce and remarriage	When, if ever, divorce is allowed, and whether a divorced person may remarry.	Divorce:whole;Marriage:part;Adultery:part

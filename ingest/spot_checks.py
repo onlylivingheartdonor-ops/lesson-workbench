@@ -166,7 +166,7 @@ def export_queue(con):
         w = csv.writer(f)
         w.writerow(["work", "entry", "subject", "method", "confidence", "evidence", "reason"])
         w.writerows(rows)
-    print(f"wrote {len(rows)} links awaiting review to {QUEUE_CSV}")
+    print(f"wrote {len(rows)} unreviewed (hidden) low-confidence links to {QUEUE_CSV}")
 
 
 def main(argv=None):

@@ -13,6 +13,9 @@ database:
   * fix     -> the link is 'ai_rejected' and a corrected link to the right
                topic is added (method 'ai', method_detail 'ai_review_fix',
                review_status 'ai_accepted')
+Links on the review list that have no recorded decision are set to
+'hidden_unreviewed' (search does not show them); `next` still lists them,
+most-used topics first, for a later review pass.
 Every decision is also a row in link_reviews.  The reviewer is recorded as
 "Claude (AI reviewer)": these are an AI model's judgements, not a person's.
 """
@@ -53,7 +56,7 @@ def queue(con):
                es.evidence, e.entry_type
         FROM review_queue rq JOIN entry_subjects es ON es.id = rq.entry_subject_id
         JOIN entries e ON e.id = es.entry_id JOIN works w ON w.id = e.work_id JOIN subjects s ON s.id = es.subject_id
-        WHERE es.review_status = 'needs_review'""").fetchall()
+        WHERE es.review_status IN ('needs_review', 'hidden_unreviewed')""").fetchall()
     rows.sort(key=lambda r: (-usage.get(r[5], 0), r[4], -r[7]))
     return rows
 
@@ -153,9 +156,14 @@ def apply(con):
                         (entry_id, new_sid, "ai", "ai_review_fix", 0.9,
                          f"Corrected by {r['reviewer']} from '{r['subject_slug']}'", "ai_accepted", r["reviewed_at"]))
         counts[dec] += 1
+    # Dave's decision (second report): the review covers the most-used topics only; every
+    # low-confidence link still unreviewed is hidden from search, kept for a later pass.
+    hidden = con.execute("UPDATE entry_subjects SET review_status='hidden_unreviewed' "
+                         "WHERE review_status='needs_review'").rowcount
     con.commit()
-    print(f"applied {sum(counts.values())} review decisions {dict(counts)}; {stale} no longer match a link")
-    return dict(counts=dict(counts), stale=stale)
+    print(f"applied {sum(counts.values())} review decisions {dict(counts)}; {stale} no longer match a link; "
+          f"{hidden} unreviewed low-confidence links hidden")
+    return dict(counts=dict(counts), stale=stale, hidden=hidden)
 
 
 def status(con):

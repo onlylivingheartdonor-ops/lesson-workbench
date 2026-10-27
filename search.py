@@ -100,7 +100,7 @@ def subject_search(con, query, more):
     rows = con.execute("""SELECT w.code, w.short_title, e.title, e.body, es.method, es.confidence, es.review_status
                           FROM entry_subjects es JOIN entries e ON e.id = es.entry_id
                           JOIN works w ON w.id = e.work_id JOIN reference_types rt ON rt.id = w.reference_type_id
-                          WHERE es.subject_id = ? AND rt.code = 'commentary' AND es.review_status NOT IN ('rejected', 'ai_rejected')
+                          WHERE es.subject_id = ? AND rt.code = 'commentary' AND es.review_status NOT IN ('rejected', 'ai_rejected', 'hidden_unreviewed')
                           ORDER BY es.confidence DESC, e.word_count""", (tid,)).fetchall()
     per = {}
     for r in rows:
@@ -118,7 +118,7 @@ def subject_search(con, query, more):
                           FROM entry_subjects es JOIN entries e ON e.id = es.entry_id
                           JOIN works w ON w.id = e.work_id JOIN reference_types rt ON rt.id = w.reference_type_id
                           WHERE es.subject_id = ? AND rt.code IN ('dictionary', 'encyclopedia')
-                          AND es.review_status NOT IN ('rejected', 'ai_rejected')
+                          AND es.review_status NOT IN ('rejected', 'ai_rejected', 'hidden_unreviewed')
                           ORDER BY es.confidence DESC LIMIT ?""", (tid, 20 if more else 8)).fetchall()
     header(f"Dictionary and encyclopedia articles - {len(rows)} shown")
     for wt, title, body, method, conf, status in rows:
@@ -131,7 +131,7 @@ def subject_search(con, query, more):
                           FROM entry_subjects es JOIN entries e ON e.id = es.entry_id
                           JOIN works w ON w.id = e.work_id JOIN reference_types rt ON rt.id = w.reference_type_id
                           WHERE es.subject_id = ? AND rt.code IN ('sermon', 'devotional')
-                          AND es.review_status NOT IN ('rejected', 'ai_rejected')
+                          AND es.review_status NOT IN ('rejected', 'ai_rejected', 'hidden_unreviewed')
                           ORDER BY es.confidence DESC LIMIT ?""", (tid, 20 if more else 8)).fetchall()
     header(f"Sermons and devotional works - {len(rows)} shown")
     for wt, title, body, method, conf, status in rows:

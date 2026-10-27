@@ -1,12 +1,12 @@
-"""Author tradition tags, the (proposed) filter traditions, and contested-topic flags.
+"""Author tradition tags, the approved filter traditions, section authors, and contested points.
 
     python3 -m ingest.traditions
 
-Reads three hand-maintained files in ingest/data/:
-  traditions.tsv          the filter traditions (status 'proposed' until Dave approves;
-                          an 'approved' status already in the database is kept)
+Reads hand-maintained files in ingest/data/:
+  traditions.tsv          the filter traditions and their status (all five approved by Dave)
   author_traditions.tsv   a descriptive tag per author, plus the filter tradition(s) it counts toward
-  contested_topics.tsv    Nave's topics where Christian traditions genuinely differ
+  section_authors.tsv     which author wrote which Bible books of a multi-author work (JFB)
+  contested_topics.tsv    points where traditions genuinely differ, and the Nave's topics each touches
 Run after every other ingest step (build.py does this), because the other steps create the authors.
 """
 
@@ -33,11 +33,15 @@ def ensure_schema(con):
             con.execute(f"ALTER TABLE authors ADD COLUMN {col} TEXT")
     if "contested" not in {r[1] for r in con.execute("PRAGMA table_info(subjects)")}:
         con.execute("ALTER TABLE subjects ADD COLUMN contested INTEGER NOT NULL DEFAULT 0")
-    con.execute("""CREATE TABLE IF NOT EXISTS traditions (id INTEGER PRIMARY KEY, code TEXT NOT NULL UNIQUE,
-                   name TEXT NOT NULL, description TEXT, status TEXT NOT NULL DEFAULT 'proposed', sort_order INTEGER)""")
-    con.execute("""CREATE TABLE IF NOT EXISTS author_traditions (author_id INTEGER NOT NULL REFERENCES authors(id),
-                   tradition_id INTEGER NOT NULL REFERENCES traditions(id), note TEXT,
-                   PRIMARY KEY (author_id, tradition_id))""")
+    existing = {r[0] for r in con.execute("SELECT name FROM sqlite_master")}
+    schema = open(os.path.join(db.ROOT, "schema.sql"), encoding="utf-8").read()
+    for name in ("traditions", "author_traditions", "section_authors", "contested_issues",
+                 "contested_issue_topics", "entry_authors"):
+        if name in existing:
+            continue
+        kind = "VIEW" if name == "entry_authors" else "TABLE"
+        start = schema.index(f"CREATE {kind} {name} ")
+        con.execute(schema[start:schema.index(";", start)])
 
 
 def main():
@@ -46,11 +50,11 @@ def main():
     problems = []
 
     codes = []
-    for pos, (code, name, desc) in enumerate(rows("traditions.tsv"), start=1):
+    for pos, (code, name, status, desc) in enumerate(rows("traditions.tsv"), start=1):
         codes.append(code)
-        con.execute("""INSERT INTO traditions(code, name, description, sort_order) VALUES (?,?,?,?)
+        con.execute("""INSERT INTO traditions(code, name, description, status, sort_order) VALUES (?,?,?,?,?)
                        ON CONFLICT(code) DO UPDATE SET name=excluded.name, description=excluded.description,
-                       sort_order=excluded.sort_order""", (code, name, desc, pos))
+                       status=excluded.status, sort_order=excluded.sort_order""", (code, name, desc, status, pos))
     con.execute("DELETE FROM author_traditions")
     con.execute(f"DELETE FROM traditions WHERE code NOT IN ({','.join('?' * len(codes))})", codes)
     trad_id = dict(con.execute("SELECT code, id FROM traditions"))
@@ -74,16 +78,43 @@ def main():
         if aid not in tagged:
             problems.append(f"author has no row in author_traditions.tsv: {name}")
 
+    con.execute("DELETE FROM section_authors")
+    sections = 0
+    for code, name, b1, b2, source in rows("section_authors.tsv"):
+        work = con.execute("SELECT id FROM works WHERE code=?", (code,)).fetchone()
+        author = con.execute("SELECT id FROM authors WHERE name=?", (name,)).fetchone()
+        if not work or not author:
+            problems.append(f"section author row not matched: {code} {name}")
+            continue
+        con.execute("INSERT INTO section_authors(work_id, author_id, book_from, book_to, source) VALUES (?,?,?,?,?)",
+                    (work[0], author[0], int(b1), int(b2), source))
+        sections += 1
+
     con.execute("UPDATE subjects SET contested=0")
-    contested = 0
-    for name, _why in rows("contested_topics.tsv"):
-        n = con.execute("UPDATE subjects SET contested=1 WHERE level='topic' AND name=?", (name,)).rowcount
-        if not n:
-            problems.append(f"contested topic not found: {name}")
-        contested += n
+    con.execute("DELETE FROM contested_issue_topics")
+    con.execute("DELETE FROM contested_issues")
+    issues = whole = part = 0
+    for code, name, desc, topics in rows("contested_topics.tsv"):
+        iid = con.execute("INSERT INTO contested_issues(code, name, description) VALUES (?,?,?)",
+                          (code, name, desc)).lastrowid
+        issues += 1
+        for item in topics.split(";"):
+            topic, scope = item.rsplit(":", 1)
+            sid = con.execute("SELECT id FROM subjects WHERE level='topic' AND name=?", (topic,)).fetchone()
+            if not sid:
+                problems.append(f"{code}: Nave's topic not found: {topic}")
+                continue
+            con.execute("INSERT INTO contested_issue_topics(issue_id, subject_id, scope) VALUES (?,?,?)",
+                        (iid, sid[0], scope))
+            if scope == "whole":
+                con.execute("UPDATE subjects SET contested=1 WHERE id=?", (sid[0],))
+                whole += 1
+            else:
+                part += 1
     con.commit()
 
-    print(f"traditions: {len(codes)} ({', '.join(codes)}); authors tagged: {len(tagged)}; contested topics: {contested}")
+    print(f"traditions: {', '.join(codes)}; authors tagged: {len(tagged)}; JFB sections: {sections}; "
+          f"contested points: {issues} ({whole} whole topics, {part} partly contested topics)")
     for p in problems:
         print("  PROBLEM:", p)
     return 1 if problems else 0

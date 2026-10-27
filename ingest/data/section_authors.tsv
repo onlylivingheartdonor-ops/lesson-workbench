@@ -1,0 +1,6 @@
+# Which author wrote which books of a multi-author work. Columns: work code | author name | first book | last book | source
+# Book numbers: 1 Genesis ... 17 Esther, 18 Job ... 39 Malachi, 40 Matthew ... 45 Romans, 46 1 Corinthians ... 66 Revelation.
+JFB	Robert Jamieson	1	17	Title pages, 1866 Lippincott edition (archive.org commentarycritic01jami..05jami): vols 1-2 Genesis-Esther by Robert Jamieson
+JFB	Andrew Robert Fausset	18	39	Same edition: vols 3-4 Job-Malachi by A. R. Fausset
+JFB	David Brown	40	45	Same edition: vol 5 Matthew-John and vol 6 Acts-Romans by David Brown
+JFB	Andrew Robert Fausset	46	66	Same edition: vol 6 1 Corinthians-Revelation by A. R. Fausset
