@@ -109,20 +109,35 @@ def refs_of(text, problems, where):
     return out
 
 
+def tidy_entry_title(t):
+    """Clean scanning marks out of a chapter title for a credit line."""
+    t = re.sub(r" [(]part \d+ of \d+[)]", "", t)
+    t = re.sub(r"\b(The|A|An)\. ", r"\1 ", t)                      # "The. Promise" (OCR)
+    t = re.sub(r"\b[IVXLC][ivxlc]+\b", lambda m: m.group(0).upper(), t)   # "Xxxiii" -> "XXXIII"
+    return t.strip(" —-:")
+
+
 def credit_for(con, entry_id):
     row = con.execute("""SELECT w.title, w.code, e.title, r.code FROM entries e JOIN works w ON w.id = e.work_id
                          JOIN reference_types r ON r.id = w.reference_type_id WHERE e.id = ?""", (entry_id,)).fetchone()
     wtitle, wcode, etitle, rtype = row
-    authors = con.execute("""SELECT a.id, a.name FROM entry_authors ea JOIN authors a ON a.id = ea.author_id
-                             WHERE ea.entry_id = ? ORDER BY a.id""", (entry_id,)).fetchall()
+    roles = dict(con.execute("""SELECT wa.author_id, wa.role FROM work_authors wa JOIN entries e ON e.work_id = wa.work_id
+                                WHERE e.id = ?""", (entry_id,)))
+    everyone = con.execute("""SELECT a.id, a.name FROM entry_authors ea JOIN authors a ON a.id = ea.author_id
+                              WHERE ea.entry_id = ? ORDER BY a.id""", (entry_id,)).fetchall()
+    # Translators are credited after the title ("tr. ..."), not as authors.
+    authors = [a for a in everyone if roles.get(a[0]) != "translator"] or everyone
+    translators = [a[1] for a in everyone if roles.get(a[0]) == "translator" and a not in authors]
     about = con.execute("""SELECT MIN(start_verse_id), MAX(end_verse_id) FROM entry_scripture
                            WHERE entry_id = ? AND relation = 'about'""", (entry_id,)).fetchone()
     names = " and ".join(a[1] for a in authors)
     wtitle = CREDIT_TITLE.get(wcode, wtitle)
+    if translators:
+        wtitle += f" (tr. {' and '.join(translators)})"
     if rtype == "commentary" and about[0]:
         where = "on " + re.sub(r"^Psalms (\d+)(?!-\d+$)", r"Psalm \1", format_ref(about[0], about[1]))
     else:
-        where = f"“{re.sub(r' [(]part \d+ of \d+[)]', '', etitle)}”"
+        where = f"“{tidy_entry_title(etitle)}”"
     credit = f"{names}, sermon {where}" if wtitle == "sermon" else f"{names}, {wtitle}, {where}"
     return (authors[0][0] if len(authors) == 1 else None), credit
 

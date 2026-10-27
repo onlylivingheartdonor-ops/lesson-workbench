@@ -43,7 +43,7 @@ Linked verses (Nave's) - 46 references
   Matthew 6:12               [Of enemies] 
       And forgive us our debts, as we forgive our debtors.
 
-Commentary - 260 linked notes from 4 authors
+Commentary - 289 linked notes from 6 authors
 --------------------------------------------
   Jamieson-Fausset-Brown  (75 notes)
     - Jamieson-Fausset-Brown on Matthew 6:14   [structural, confidence 0.91]
@@ -51,11 +51,20 @@ Commentary - 260 linked notes from 4 authors
     - Jamieson-Fausset-Brown on Proverbs 19:11   [structural, confidence 0.91]
         11. (Compare Pr 14:29; 16:32). This inculcation of a forgiving spirit shows that true
         religion is always the same (Mt 5:22-24).
-  Albert Barnes  (62 notes)
-    - Albert Barnes on Matthew 6:15   [structural, confidence 0.91]
+  Albert Barnes (NT)  (62 notes)
+    - Albert Barnes (NT) on Matthew 6:15   [structural, confidence 0.91]
         Verse 15. (d) "forgive your trespasses" Eph 4:31, Jas 2:13
-    - Albert Barnes on Luke 17:4   [structural, confidence 0.91]
+    - Albert Barnes (NT) on Luke 17:4   [structural, confidence 0.91]
         Verse 4. (c) "thou shalt forgive him" Mt 6:12,14, Col 3:13
+  John A. Broadus  (19 notes)
+    - John A. Broadus on Matthew 18:18-22   [structural, confidence 0.91]
+        phyl. ) Of course all this rests on the supposi tion that we believe the man sincerely re
+        pente. (Luke n: 4.) Otherwise we are not bound to forgive even once, in the full sense of
+        restor ing to confidence ...
+    - John A. Broadus on Matthew 5:7   [structural, confidence 0.91]
+        7. Merciful. The original word includes j also the idea of compassion, as in Heb. 2: 17; j
+        Prov. 14: 21, and' implies a desire to remove the evils which excite compassion. It thus
+        denotes not only mercy to the ...
   Adam Clarke  (92 notes)
     - Adam Clarke on Romans 12:14   [structural, confidence 0.91]
         Verse 14 Bless them which persecute you - Ευλογειτε, Give good words, or pray for them that
@@ -65,7 +74,7 @@ Commentary - 260 linked notes from 4 authors
         Verse 13 That in thy stead he might have ministered unto me - As Philemon was one of Paul's
         converts, he became thereby his spiritual father, and had a right to his services when in
         need. This was a strong ...
-  Matthew Henry  (31 notes)
+  Matthew Henry  (30 notes)
     - Matthew Henry on Proverbs 19:11   [structural, confidence 0.91]
         11 The discretion of a man deferreth his anger; and it is his glory to pass over a
         transgression. A wise man will observe these two rules about his anger: 1. Not to be over-
@@ -74,8 +83,17 @@ Commentary - 260 linked notes from 4 authors
         Forgiveness of Enemies. 21 If thine enemy be hungry, give him bread to eat; and if he be
         thirsty, give him water to drink: 22 For thou shalt heap coals of fire upon his head, and
         the Lord shall reward ...
+  Alexander Maclaren  (11 notes)
+    - Forgiveness and Retribution (part 1 of 2) (Psalm xcix. 8)   [ai, confidence 0.83]
+        'Thou wast a God that forgavest them, though Thou tookest vengeance of their inventions.'--
+        PSALM xcix. 8. When the prophet Isaiah saw the great vision which called him to service, he
+        heard from the lips of the seraphim around the Throne ...
+    - 'forgive Us Our Debts' (Matt. vi. 12)   [ai, confidence 0.81]
+        'Forgive us our debts, as we forgive our debtors.'--MATT. vi. 12. The sequence of the
+        petitions in the second half of the Lord's Prayer suggests that every man who needs to pray
+        for daily bread needs also to pray for ...
 
-Dictionary and encyclopedia articles - 8 shown
+Dictionary and encyclopedia articles - 7 shown
 ----------------------------------------------
   ISBE: Forgiveness   [structural, confidence 0.95]
       for-giv'-nes (kaphar, nasa', calach; apoluein charizesthai, aphesis paresis): 1. Etymology 2.
@@ -87,37 +105,32 @@ Dictionary and encyclopedia articles - 8 shown
   ISBE: Remission of Sins   [ai, confidence 0.64]
       re-mish'-un (aphesis, paresis): The two Greek words, of which the latter occurs only in Ro
       3:25, were translated by the same English word in the King James Version. In the ...
-  ISBE: Frankly   [ai, confidence 0.52; low confidence, awaiting review]
+  ISBE: Frankly   [ai, confidence 0.52; AI-reviewed]
       frank'-li (charizomai): "Frankly" in the sense of "freely," "readily," "graciously," occurs
       only in the translation of charizomai, properly "to gratify," "to do that which is grateful or
       pleasing," "to forgive" ...
-  ISBE: Bind; Bound   [ai, confidence 0.52; low confidence, awaiting review]
-      bind (deo): There are a number of Hebrew words used to express this word in its various
-      meanings, 'alam (Ge 37:7), 'acar (Ge 42:24), qashar (De 6:8). It sometimes means ...
-  ISBE: Blot   [ai, confidence 0.50; low confidence, awaiting review]
-      blot (mum, contracted from me'um, "spot"): Occurs in the sense of scorn (Pr 9:7). In Job 31:7
-      (the King James Version) it is used figuratively of a moral defect; the ...
-  Easton's: Blot   [ai, confidence 0.50; low confidence, awaiting review]
+  Easton's: Blot   [ai, confidence 0.49; AI-reviewed]
       A stain or reproach (Job 31:7; Prov. 9:7). To blot out sin is to forgive it (Ps. 51:1, 9; Isa.
       44:22; Acts 3:19). Christ’s blotting out the handwriting of ordinances ...
-  ISBE: Comfortably   [ai, confidence 0.50; low confidence, awaiting review]
-      kum'-fer-ta-bli (`al lebh, "to the heart"): "To speak to the heart," i.e. to speak kindly, to
-      console, to comfort, is the ordinary Hebrew expression for wooing: e.g. Boaz spake "to ...
+  ISBE: Aloft   [ai, confidence 0.48; AI-reviewed]
+      a-loft' (epano): Only in 1 Esdras 8:92. Meaning obscure. The statement following a confession
+      of sin means probably that Israel in penitence returning to the Lord, is exultant in the ...
+  ISBE: Absolution   [ai, confidence 0.48; AI-reviewed]
+      ab-so-lu'-shun (translation of verbs luo, "loose," etc., and aphiemi, "release," "give up,"
+      etc.): Not a Biblical, but an ecclesiastical term, used to designate the official act
+      described in Mt 16:19: ...
 
-Sermons and devotional works - 4 shown
+Sermons and devotional works - 3 shown
 --------------------------------------
-  D. L. Moody, Prevailing Prayer: Forgiveness (part 2 of 2)   [ai, confidence 0.84]
+  D. L. Moody, Prevailing Prayer: Forgiveness (part 2 of 2)   [ai, confidence 0.83]
       Dear friend, is this the reason why your prayers are not answered? Is there some friend, some
       member of your family, some one in the church, you have not forgiven? ...
   D. L. Moody, Prevailing Prayer: Forgiveness (part 1 of 2)   [ai, confidence 0.79]
       The next thing is perhaps the most difficult of all to deal with--FORGIVENESS. I believe this
       is keeping more people from having power with God than any other thing--they are ...
-  D. L. Moody, The Way to God and How to Find It: Assurance of Salvation (part 2 of 4)   [ai, confidence 0.50; low confidence, awaiting review]
-      The fifth thing worth knowing, and the best of all, is "Beloved, _now_." Notice the word
-      "Now." It does not say when you come to die. "Beloved, _now_ are we ...
-  J. C. Ryle, Practical Religion: Self-Inquiry (part 2 of 5)   [ai, confidence 0.49; low confidence, awaiting review]
-      It is hard to imagine a life more unworthy of an immortal creature than such a life as I have
-      just described, for it reduces a man to the level ...
+  Carrie Judd Montgomery, Secrets of Victory: Chapter 16: Some of the Hindrances to Healing (part 2 of 2)   [ai, confidence 0.54; AI-reviewed]
+      No matter how far in the past such a thing has been, it must be confessed, and put under the
+      blood, and confession must be made, if possible, to the ...
 
 Original-language words typical of these verses (Strong's)
 ----------------------------------------------------------
@@ -131,8 +144,8 @@ Original-language words typical of these verses (Strong's)
 Related subjects
 ----------------
   Nave's 'See also': Enemy; Justification; Penitent; Sin
-  Discussed together in commentaries/dictionaries: Lord's Prayer (7); Mercy (4); Enemy (4); Kingdom
-  of Heaven (5); Kindness (4); Longsuffering (3); Sin (13); Prayer (11)
+  Discussed together in commentaries/dictionaries: Lord's Prayer (10); Pity (3); Mercy (5); Creditor
+  (3); Trespass (3); Sin (19); Kingdom of Heaven (6); Prayer (15)
   Share many verses: Good for Evil (15); Enemy (23); Miriam (13); Charitableness (23); Penny (15);
   Creditor (14); Sermon (24); Clemency (6)
 

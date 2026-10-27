@@ -1,0 +1,68 @@
+code: spiritual-gifts--lutheran
+family: spiritual-gifts
+version: tradition:lutheran
+issue: spiritual-gifts
+title: Gifts of the Spirit
+big_idea: The one Spirit gives every believer gifts for the common good; Lutherans teach that the Spirit works chiefly through the Word and Sacraments, and test every claimed experience by the Word.
+topic: Gifts from God
+also: Holy Spirit; Tongues (the Gift); Charism; Church
+audience: adults
+minutes: 45
+translation: KJV
+passage: 1 Corinthians 12:1-11
+
+== opening | 4
+Ask: "If you could ask God for one spiritual gift, what would it be, and why?" Let people answer. Then ask: "How do you know what gifts God has given you?" Today we look at Paul's teaching on spiritual gifts. All Christians share most of it, though they differ about some of the gifts today.
+
+== scripture | 3
+Read the passage aloud. Ask the class to listen for how many times Paul says "the same Spirit."
+
+== background | 5
+The church at Corinth was richly gifted (1:7) but proud and divided. Some prized spectacular gifts, especially speaking in tongues, as signs of spiritual superiority. Chapters 12-14 correct this. Chapter 12 teaches that all the gifts come from one Spirit for the good of the whole body; chapter 13 says that love matters more than any gift; chapter 14 gives practical rules for orderly worship.
+
+Paul uses several words for the gifts: "spiritual gifts" (v. 1), "gifts" (Greek charismata, gifts of grace, v. 4), "administrations" or ministries (v. 5), and "operations" or workings (v. 6). The list in verses 8-10 includes wisdom, knowledge, faith, healing, miracles, prophecy, discerning of spirits, tongues and interpretation.
+
+== point | 7 | The Spirit leads us to confess Jesus as Lord
+Paul begins with a test: "no man can say that Jesus is the Lord, but by the Holy Ghost" (v. 3). The Spirit's first and greatest work is to bring people to honour Jesus. Any claimed spiritual experience that does not exalt Christ is not from the Holy Spirit.
+verses: 1 Corinthians 12:1-3; John 16:13-14; 1 John 4:1-3
+quote: 51152 | The design of the passage is to give them some simple general guide by which they could at once recognize the operations of the Spirit of God
+blank: No man can say that Jesus is the Lord, but by the Holy ____. | Ghost (Spirit)
+blank: The Spirit's first work is to ____ Jesus. | honour (glorify)
+
+== point | 7 | One Spirit, many gifts, for the common good
+"There are diversities of gifts, but the same Spirit" (v. 4). Every believer is given some "manifestation of the Spirit ... to profit withal," that is, for the common good (v. 7). Gifts are not trophies to display but tools to serve others. No one has every gift, and no one has none.
+verses: 1 Corinthians 12:4-7; Romans 12:4-8; 1 Peter 4:10-11
+quote: 43781 | Whatever gifts God has bestowed, or in what various ways soever the Spirit of God may have manifested himself, it is all for the common benefit of the Church.
+quote: 24652 | Gifts and graces, charismata and charis, greatly differ.
+blank: There are diversities of gifts, but the same ____. | Spirit
+blank: Gifts are given for the common ____. | good
+
+== point | 9 | The Spirit comes through the Word and Sacraments
+Lutherans teach that the Holy Spirit is given through the means God has appointed: the preaching of the Word and the Sacraments. Through these he creates faith and keeps us in it (Romans 10:17). Luther warned against "enthusiasts" who claimed that the Spirit spoke to them directly, apart from or above Scripture. Extraordinary gifts are not denied as impossible, but they are not expected as the normal Christian life, they are not signs of a higher class of Christians, and they must never be set beside or above the Word. God gives all believers gifts to serve their neighbours in their callings. Christians pray for the sick and trust God's good will. Since the 1960s a charismatic movement has existed among some Lutherans, but this is not the church's historic teaching.
+verses: Romans 10:17; 1 Corinthians 14:33, 40; 2 Timothy 3:16-17; Luke 16:29-31
+quote: 97146 | For through the Word and Sacraments, as through instruments, the Holy Ghost is given, who works faith
+quote: 97123 | It is through the Word of God and the Sacraments that the Holy Spirit does His work in us.
+blank: Faith cometh by hearing, and hearing by the ____ of God. | word
+blank: The Holy Ghost is given through the Word and ____. | Sacraments
+note: The first quotation is Article V of the Augsburg Confession (1530); the second is from Joseph Stump's explanation of Luther's Small Catechism. In the Small Catechism, Luther confesses that "the Holy Ghost has called me through the Gospel, enlightened me by His gifts."
+
+== differ | 0 | Where Christians differ
+Christians agree that the Holy Spirit gives gifts to every believer for the good of the church; that the Spirit leads us to confess Jesus as Lord; that gifts must be used in love and in good order (1 Corinthians 14:40); that God hears and answers prayer for the sick; and that every claim to speak for God must be tested by Scripture. They differ over whether the more extraordinary gifts listed in verses 8-10 (prophecy, tongues, interpretation, gifts of healing and miracles) continue in the church today in the same way as in the apostles' time, and over whether there is a "baptism in the Holy Spirit" after conversion, marked by speaking in tongues. Here are the main views of the five traditions, each described as its own teachers would describe it. Within most traditions, individual churches and believers vary.
+view: baptist
+view: wesleyan
+view: reformed
+view: lutheran
+view: pentecostal
+note: This topic can stir strong feelings, especially for anyone who has been hurt by excesses or by dismissive attitudes. Keep the discussion focused on Scripture and on love (1 Corinthians 13), and describe each view as its own members would.
+
+== questions | 6
+q: What do all Christians agree about spiritual gifts, according to this passage? | They come from the one Spirit; every believer has some; they are for the common good; the Spirit leads us to confess Jesus as Lord; they must be used in love.
+q: Why do Lutherans insist that the Spirit works through the Word and Sacraments? | Because Scripture ties the Spirit's work to God's Word (Romans 10:17) and promises; this gives certainty, so faith rests on God's promise rather than on feelings or claimed private revelations.
+q: What gifts has God given you, and how could you use one this week to serve others? | Answers will vary: teaching, encouragement, hospitality, giving, helping, leadership, prayer, mercy.
+q: How can we hold our own convictions about the gifts while loving believers who see this differently? | By grounding our view in Scripture, describing others fairly, refusing pride or suspicion, and remembering that love is the more excellent way.
+
+== application | 2
+Be present for the Word and Sacrament this Sunday, expecting the Holy Spirit to work through them. Each day, read a portion of Scripture and pray Luther's explanation of the Third Article, thanking God that the Spirit has called you by the Gospel.
+
+== prayer | 2
+Holy Spirit, you call, gather and enlighten your church through the Gospel. Keep us in the true faith through your Word and Sacraments. Give us gifts to serve our neighbours, and keep us from trusting anything above your Word. Amen.

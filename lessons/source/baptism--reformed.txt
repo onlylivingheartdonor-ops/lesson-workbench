@@ -1,0 +1,69 @@
+code: baptism--reformed
+family: baptism
+version: tradition:reformed
+issue: baptism
+title: Baptized into Christ
+big_idea: Jesus commanded baptism for his disciples; Presbyterian and Reformed churches receive it as the sign and seal of God's covenant of grace, given to believers and their children.
+topic: Baptism
+also: Jesus, the Christ; Regeneration; Church
+audience: adults
+minutes: 45
+translation: KJV
+passage: Matthew 28:18-20; Romans 6:3-4
+
+== opening | 4
+Ask the class, if they are comfortable sharing: "Do you remember your baptism, or have you been told about it? What do you remember, or what were you told?" Some will remember a river or a baptistry; others were baptized as babies and have only photographs. Some may not have been baptized at all. Explain that baptism is something Jesus commanded, and today we look at what it means.
+note: Be gentle with anyone who has not been baptized or whose experience differs from the class's. The goal is understanding, not embarrassment.
+
+== scripture | 3
+Read both passages aloud: first Jesus' command (Matthew 28:18-20), then Paul's explanation of what baptism means (Romans 6:3-4).
+
+== background | 5
+Matthew 28:18-20, often called the Great Commission, are Jesus' last words in Matthew's Gospel. With all authority in heaven and earth, he sends his followers to make disciples of all nations, "baptizing them in the name of the Father, and of the Son, and of the Holy Ghost," and teaching them to obey all he commanded.
+
+In Romans 6 Paul answers a question: if we are saved by grace, should we keep on sinning? His answer points to baptism. Those baptized into Christ were baptized into his death, and they are to walk in "newness of life." Christians in every tradition treasure these verses, even where they understand baptism's details differently.
+
+== point | 7 | Commanded by Christ for his disciples
+Baptism was not invented by the church. Jesus himself commanded it, as part of making disciples of all nations, in the name of the Father, the Son and the Holy Spirit. Christians of every tradition baptize because Jesus told us to, and they use these words.
+verses: Matthew 28:18-20; Acts 2:41; Acts 8:12
+quote: 97127 | Baptism consists in applying water to a person "in the name of the Father and of the Son and of the Holy Ghost," as Christ has commanded.
+blank: Baptize them in the name of the Father, and of the Son, and of the Holy ____. | Ghost (Spirit)
+blank: Christians baptize because ____ commanded it. | Jesus
+
+== point | 7 | Baptized into Christ's death and resurrection
+Paul says that "so many of us as were baptized into Jesus Christ were baptized into his death" (Romans 6:3). Baptism is about union with Christ: belonging to him, sharing in what his death and resurrection accomplished, and being marked as his.
+verses: Romans 6:3-4; Galatians 3:27; Colossians 2:12
+quote: 67769 | sealed with the seal of heaven, and as it were formally entered and articled, to all the benefits and all the obligations of Christian discipleship
+quote: 43228 | To be baptized into Christ, is to receive the doctrine of Christ crucified
+blank: So many of us as were baptized into Jesus Christ were baptized into his ____. | death
+blank: Baptism speaks of our ____ with Christ. | union
+
+== point | 9 | Baptism: the sign and seal of God's covenant
+Presbyterian and Reformed churches teach that baptism is a sacrament, a sign and seal of God's covenant of grace. In the Old Testament, God gave circumcision as the covenant sign to Abraham and his children (Genesis 17:7-12). In the New Testament, baptism takes its place (Colossians 2:11-12), and the promise is still "unto you, and to your children" (Acts 2:39). So believers are baptized, and so are their children; whole households were baptized when parents believed (Acts 16:15, 33). Sprinkling or pouring is usual. Baptism does not automatically make anyone a Christian: the grace it signifies is received by faith, and the baptized child is raised to trust Christ personally.
+verses: Genesis 17:7; Colossians 2:11-12; Acts 2:39; Acts 16:14-15; 1 Corinthians 7:14
+quote: 47483 | And so, too, the question respecting infant baptism is not so much whether a parent OUGHT to devote his children to God in this ordinance, as whether he MAY do it.
+quote: 68109 | Infant baptism tacitly superseded infant circumcision
+blank: Baptism is a sign and ____ of God's covenant. | seal
+blank: The promise is unto you, and to your ____. | children
+note: Albert Barnes, the Presbyterian commentator, calls presenting children for baptism "an inestimable privilege." Interestingly, he also cautions (on Acts 2:39) that that verse should not be used on its own as proof of infant baptism; the Reformed case rests on the whole covenant pattern of Scripture.
+
+== differ | 0 | Where Christians differ
+Christians agree that Jesus commanded baptism, that it is done with water in the name of the Father, Son and Holy Spirit, that it is linked with repentance, faith, forgiveness and union with Christ, and that true baptism is not repeated. They differ on three questions: who should be baptized (believers only, or also the children of believers), how (immersion, or also pouring and sprinkling), and what baptism does (a means through which God gives grace, a sign and seal of his covenant, or an act of obedience that testifies to grace already received). Here are the main views of the five traditions, each described as its own teachers describe it. Sincere, Bible-believing Christians hold each of them.
+view: baptist
+view: wesleyan
+view: reformed
+view: lutheran
+view: pentecostal
+note: Encourage the class to describe other traditions' views as their own members would. Many Christians from these traditions worship and serve together and recognise one another as brothers and sisters in Christ.
+
+== questions | 6
+q: What do all Christians agree about baptism, according to today's passages? | Jesus commanded it; it is done in the name of the Father, Son and Holy Spirit; it is linked with discipleship, faith and union with Christ; it calls us to new life.
+q: Why do Reformed churches connect baptism with circumcision? | Both are signs of God's one covenant of grace; circumcision was given to believers' children, and Colossians 2:11-12 links the two, so baptism is also given to believers' children.
+q: What does Romans 6 say baptism should mean for the way we live this week? | We have died to sin with Christ and been raised to walk in newness of life; we live as people who belong to him.
+q: How can we hold our own convictions about baptism while showing love to Christians who practise it differently? | By being clear about what Scripture teaches as we understand it, listening carefully, describing others fairly, and remembering that we share one Lord and one faith.
+
+== application | 2
+If you were baptized as a child, thank God this week for his covenant faithfulness to you and your family, and make sure your own faith rests on Christ. If you have children or grandchildren, pray for them by name as children of the covenant.
+
+== prayer | 2
+Faithful God, you keep covenant with your people and their children. Thank you for the sign and seal of baptism. Help us trust in Christ, the one baptism points to, and raise our children to know and love you. Amen.

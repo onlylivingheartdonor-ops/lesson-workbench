@@ -189,8 +189,8 @@ def main():
     q = """SELECT e.id, e.title, e.body FROM entries e JOIN works w ON w.id = e.work_id
            JOIN reference_types rt ON rt.id = w.reference_type_id
            WHERE (rt.code IN ('dictionary', 'encyclopedia') AND e.entry_type = 'article')
-              OR (rt.code = 'commentary' AND e.entry_type = 'book_intro')
-              OR rt.code IN ('sermon', 'devotional')"""
+              OR (rt.code = 'commentary' AND e.entry_type IN ('book_intro', 'exposition'))
+              OR rt.code IN ('sermon', 'devotional', 'doctrinal')"""
     targets = [(eid, title, body) for eid, title, body in con.execute(q) if eid not in headword_linked]
     target_tokens = {eid: tokens(body) for eid, _, body in targets}
     model = TfIdf()

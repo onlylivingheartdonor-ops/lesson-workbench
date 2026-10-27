@@ -333,7 +333,9 @@ def make_teacher(con, L, path):
             n += 1
         label = f"Teaching point {n}: {sec['heading']}" if sec["kind"] == "teaching_point" else SECTION_NAME[sec["kind"]]
         cells = t.add_row().cells
-        cells[0].text, cells[1].text = label, f"{sec['minutes']} min"
+        hidden = sec["kind"] == "differ" and sec["hidden"]
+        cells[0].text = label + (" (hidden by default; optional)" if hidden else "")
+        cells[1].text = "optional" if hidden and not sec["minutes"] else f"{sec['minutes']} min"
     cells = t.add_row().cells
     cells[0].text, cells[1].text = "Total", f"{sum(s['minutes'] or 0 for s in L['sections'])} min"
 

@@ -1,0 +1,67 @@
+code: spiritual-gifts
+family: spiritual-gifts
+version: all_views
+issue: spiritual-gifts
+title: Gifts of the Spirit
+big_idea: The one Spirit gives every believer gifts for the common good and leads us to confess Jesus as Lord; Christians share this while differing honestly over whether the extraordinary gifts continue today.
+topic: Gifts from God
+also: Holy Spirit; Tongues (the Gift); Charism; Church
+audience: adults
+minutes: 45
+translation: KJV
+passage: 1 Corinthians 12:1-11
+
+== opening | 4
+Ask: "If you could ask God for one spiritual gift, what would it be, and why?" Let people answer. Then ask: "How do you know what gifts God has given you?" Today we look at Paul's teaching on spiritual gifts. All Christians share most of it, though they differ about some of the gifts today.
+
+== scripture | 3
+Read the passage aloud. Ask the class to listen for how many times Paul says "the same Spirit."
+
+== background | 5
+The church at Corinth was richly gifted (1:7) but proud and divided. Some prized spectacular gifts, especially speaking in tongues, as signs of spiritual superiority. Chapters 12-14 correct this. Chapter 12 teaches that all the gifts come from one Spirit for the good of the whole body; chapter 13 says that love matters more than any gift; chapter 14 gives practical rules for orderly worship.
+
+Paul uses several words for the gifts: "spiritual gifts" (v. 1), "gifts" (Greek charismata, gifts of grace, v. 4), "administrations" or ministries (v. 5), and "operations" or workings (v. 6). The list in verses 8-10 includes wisdom, knowledge, faith, healing, miracles, prophecy, discerning of spirits, tongues and interpretation.
+
+== point | 6 | The Spirit leads us to confess Jesus as Lord
+Paul begins with a test: "no man can say that Jesus is the Lord, but by the Holy Ghost" (v. 3). The Spirit's first and greatest work is to bring people to honour Jesus. Any claimed spiritual experience that does not exalt Christ is not from the Holy Spirit.
+verses: 1 Corinthians 12:1-3; John 16:13-14; 1 John 4:1-3
+quote: 51152 | The design of the passage is to give them some simple general guide by which they could at once recognize the operations of the Spirit of God
+blank: No man can say that Jesus is the Lord, but by the Holy ____. | Ghost (Spirit)
+blank: The Spirit's first work is to ____ Jesus. | honour (glorify)
+
+== point | 6 | One Spirit, many gifts, for the common good
+"There are diversities of gifts, but the same Spirit" (v. 4). Every believer is given some "manifestation of the Spirit ... to profit withal," that is, for the common good (v. 7). Gifts are not trophies to display but tools to serve others. No one has every gift, and no one has none.
+verses: 1 Corinthians 12:4-7; Romans 12:4-8; 1 Peter 4:10-11
+quote: 43781 | Whatever gifts God has bestowed, or in what various ways soever the Spirit of God may have manifested himself, it is all for the common benefit of the Church.
+quote: 24652 | Gifts and graces, charismata and charis, greatly differ.
+blank: There are diversities of gifts, but the same ____. | Spirit
+blank: Gifts are given for the common ____. | good
+
+== point | 4 | The Spirit gives as he wills, and love is the more excellent way
+"All these worketh that one and the selfsame Spirit, dividing to every man severally as he will" (v. 11). The Spirit decides who receives which gift, so there is no room for pride or envy. Paul goes on to show "a more excellent way" (12:31): love, without which every gift is empty (13:1-3).
+verses: 1 Corinthians 12:11; 1 Corinthians 12:31; 1 Corinthians 13:1-3
+quote: 51160 | All these are to be traced to him.
+quote: 43796 | A man may possess the best of all these gifts, and yet be deficient in what is essentially necessary to his salvation, for he may be without that love
+blank: The Spirit divides to every man severally as he ____. | will
+blank: Without ____, every gift is empty. | love
+
+== differ | 8 | Where Christians differ
+Christians agree that the Holy Spirit gives gifts to every believer for the good of the church; that the Spirit leads us to confess Jesus as Lord; that gifts must be used in love and in good order (1 Corinthians 14:40); that God hears and answers prayer for the sick; and that every claim to speak for God must be tested by Scripture. They differ over whether the more extraordinary gifts listed in verses 8-10 (prophecy, tongues, interpretation, gifts of healing and miracles) continue in the church today in the same way as in the apostles' time, and over whether there is a "baptism in the Holy Spirit" after conversion, marked by speaking in tongues. Here are the main views of the five traditions, each described as its own teachers would describe it. Within most traditions, individual churches and believers vary.
+view: baptist
+view: wesleyan
+view: reformed
+view: lutheran
+view: pentecostal
+note: This topic can stir strong feelings, especially for anyone who has been hurt by excesses or by dismissive attitudes. Keep the discussion focused on Scripture and on love (1 Corinthians 13), and describe each view as its own members would.
+
+== questions | 5
+q: What do all Christians agree about spiritual gifts, according to this passage? | They come from the one Spirit; every believer has some; they are for the common good; the Spirit leads us to confess Jesus as Lord; they must be used in love.
+q: Why do sincere Christians reading the same chapter reach different conclusions about tongues, prophecy and healing today? | Scripture does not state directly when or whether these gifts would cease; Christians weigh texts such as Hebrews 2:3-4 and Ephesians 2:20 against Acts 2:39 and 1 Corinthians 14 differently, and their churches' experience differs.
+q: How can we hold our own convictions about the gifts while loving believers who see this differently? | By grounding our view in Scripture, describing others fairly, refusing pride or suspicion, and remembering that love is the more excellent way.
+q: What gifts has God given you, and how could you use one this week to serve others? | Answers will vary: teaching, encouragement, hospitality, giving, helping, leadership, prayer, mercy.
+
+== application | 2
+Find out what your own church teaches about spiritual gifts and why. Ask God to show you the gifts he has given you, and use one this week to serve others in love. Pray for unity among Christians who see this question differently.
+
+== prayer | 2
+Holy Spirit, thank you for giving gifts to your church and for leading us to confess Jesus as Lord. Help us use every gift you give in love and for the common good. Where your people differ, give us humility, patience and a shared desire to honour Christ. Amen.

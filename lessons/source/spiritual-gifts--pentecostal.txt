@@ -1,0 +1,68 @@
+code: spiritual-gifts--pentecostal
+family: spiritual-gifts
+version: tradition:pentecostal
+issue: spiritual-gifts
+title: Gifts of the Spirit
+big_idea: The one Spirit gives every believer gifts for the common good; Pentecostals teach that all these gifts continue today and that believers should seek the baptism in the Holy Spirit, with speaking in tongues.
+topic: Gifts from God
+also: Holy Spirit; Tongues (the Gift); Charism; Church
+audience: adults
+minutes: 45
+translation: KJV
+passage: 1 Corinthians 12:1-11
+
+== opening | 4
+Ask: "If you could ask God for one spiritual gift, what would it be, and why?" Let people answer. Then ask: "How do you know what gifts God has given you?" Today we look at Paul's teaching on spiritual gifts. All Christians share most of it, though they differ about some of the gifts today.
+
+== scripture | 3
+Read the passage aloud. Ask the class to listen for how many times Paul says "the same Spirit."
+
+== background | 5
+The church at Corinth was richly gifted (1:7) but proud and divided. Some prized spectacular gifts, especially speaking in tongues, as signs of spiritual superiority. Chapters 12-14 correct this. Chapter 12 teaches that all the gifts come from one Spirit for the good of the whole body; chapter 13 says that love matters more than any gift; chapter 14 gives practical rules for orderly worship.
+
+Paul uses several words for the gifts: "spiritual gifts" (v. 1), "gifts" (Greek charismata, gifts of grace, v. 4), "administrations" or ministries (v. 5), and "operations" or workings (v. 6). The list in verses 8-10 includes wisdom, knowledge, faith, healing, miracles, prophecy, discerning of spirits, tongues and interpretation.
+
+== point | 7 | The Spirit leads us to confess Jesus as Lord
+Paul begins with a test: "no man can say that Jesus is the Lord, but by the Holy Ghost" (v. 3). The Spirit's first and greatest work is to bring people to honour Jesus. Any claimed spiritual experience that does not exalt Christ is not from the Holy Spirit.
+verses: 1 Corinthians 12:1-3; John 16:13-14; 1 John 4:1-3
+quote: 51152 | The design of the passage is to give them some simple general guide by which they could at once recognize the operations of the Spirit of God
+blank: No man can say that Jesus is the Lord, but by the Holy ____. | Ghost (Spirit)
+blank: The Spirit's first work is to ____ Jesus. | honour (glorify)
+
+== point | 7 | One Spirit, many gifts, for the common good
+"There are diversities of gifts, but the same Spirit" (v. 4). Every believer is given some "manifestation of the Spirit ... to profit withal," that is, for the common good (v. 7). Gifts are not trophies to display but tools to serve others. No one has every gift, and no one has none.
+verses: 1 Corinthians 12:4-7; Romans 12:4-8; 1 Peter 4:10-11
+quote: 43781 | Whatever gifts God has bestowed, or in what various ways soever the Spirit of God may have manifested himself, it is all for the common benefit of the Church.
+quote: 24652 | Gifts and graces, charismata and charis, greatly differ.
+blank: There are diversities of gifts, but the same ____. | Spirit
+blank: Gifts are given for the common ____. | good
+
+== point | 9 | All the gifts are for today
+Pentecostals believe that every gift in this list (wisdom, knowledge, faith, healing, miracles, prophecy, discerning of spirits, tongues and interpretation) is for the church today, because nothing in Scripture says they would cease before Christ returns. On the day of Pentecost Peter said the promise of the Spirit was "unto you, and to your children, and to all that are afar off" (Acts 2:39). Classical Pentecostals teach a baptism in the Holy Spirit, distinct from and usually after conversion, which gives power for witness (Acts 1:8). In Acts it is marked by speaking in other tongues (Acts 2:4; 10:46; 19:6). Believers are encouraged to seek it, to pray for the sick expecting God to heal, and to use every gift in love and good order.
+verses: Acts 1:8; Acts 2:4, 38-39; Acts 10:44-46; Acts 19:1-6; Mark 16:17-18
+quote: 98620 | When you have the full baptism of the Holy Spirit you are satisfied.
+quote: 98620 | His blessed Presence will permeate your whole being
+blank: The promise is unto you, and to your children, and to all that are ____ off. | afar
+blank: Ye shall receive ____, after that the Holy Ghost is come upon you. | power
+note: Carrie Judd Montgomery, a teacher on divine healing who was baptized in the Spirit in 1908, wrote these words in her chapter "The Promise of the Father." The wider charismatic movement welcomes all the gifts but does not always teach tongues as the necessary first sign of Spirit baptism.
+
+== differ | 0 | Where Christians differ
+Christians agree that the Holy Spirit gives gifts to every believer for the good of the church; that the Spirit leads us to confess Jesus as Lord; that gifts must be used in love and in good order (1 Corinthians 14:40); that God hears and answers prayer for the sick; and that every claim to speak for God must be tested by Scripture. They differ over whether the more extraordinary gifts listed in verses 8-10 (prophecy, tongues, interpretation, gifts of healing and miracles) continue in the church today in the same way as in the apostles' time, and over whether there is a "baptism in the Holy Spirit" after conversion, marked by speaking in tongues. Here are the main views of the five traditions, each described as its own teachers would describe it. Within most traditions, individual churches and believers vary.
+view: baptist
+view: wesleyan
+view: reformed
+view: lutheran
+view: pentecostal
+note: This topic can stir strong feelings, especially for anyone who has been hurt by excesses or by dismissive attitudes. Keep the discussion focused on Scripture and on love (1 Corinthians 13), and describe each view as its own members would.
+
+== questions | 6
+q: What do all Christians agree about spiritual gifts, according to this passage? | They come from the one Spirit; every believer has some; they are for the common good; the Spirit leads us to confess Jesus as Lord; they must be used in love.
+q: Why do Pentecostals believe the baptism in the Holy Spirit is a distinct experience after conversion? | Because in Acts believers who already followed Christ later received the Spirit's fullness with outward signs (Acts 2:4; 8:14-17; 19:1-6), and Jesus promised power for witness (Acts 1:8).
+q: What gifts has God given you, and how could you use one this week to serve others? | Answers will vary: teaching, encouragement, hospitality, giving, helping, leadership, prayer, mercy.
+q: How can we hold our own convictions about the gifts while loving believers who see this differently? | By grounding our view in Scripture, describing others fairly, refusing pride or suspicion, and remembering that love is the more excellent way.
+
+== application | 2
+Spend time this week asking God to fill you with his Holy Spirit (Luke 11:13). Ask him which gifts he wants to give or stir up in you, and use them in love to build up others. Pray in faith for someone who is sick.
+
+== prayer | 2
+Holy Spirit, we thank you for the promise of the Father, poured out on all flesh. Fill us afresh with your power and presence. Give us your gifts as you will, and help us use them in love and good order, to exalt Jesus as Lord. Amen.

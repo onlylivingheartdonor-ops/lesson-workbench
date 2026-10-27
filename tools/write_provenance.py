@@ -90,7 +90,7 @@ def main():
                       "(SELECT COUNT(*) FROM subjects WHERE level='category'), "
                       "(SELECT COUNT(*) FROM review_queue), (SELECT COUNT(*) FROM spot_checks)").fetchone()
     out += ["", f"Subjects: {tot[0]:,} Nave's topics, {tot[1]:,} sub-headings, {tot[2]} top-level categories "
-                f"(waiting for Dave). Review list: {tot[3]:,} links. Spot checks recorded: {tot[4]}.", "",
+                f"(approved by Dave; every topic placed, see ingest/categories.py). Review list: {tot[3]:,} links. Spot checks recorded: {tot[4]}.", "",
             "| Related-subject link type | Count |", "|---|---|"]
     for rel, n in con.execute("SELECT relation, COUNT(*) FROM subject_relations GROUP BY relation"):
         out.append(f"| {rel} | {n:,} |")

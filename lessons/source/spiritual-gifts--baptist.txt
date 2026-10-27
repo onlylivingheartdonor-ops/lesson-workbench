@@ -1,0 +1,68 @@
+code: spiritual-gifts--baptist
+family: spiritual-gifts
+version: tradition:baptist
+issue: spiritual-gifts
+title: Gifts of the Spirit
+big_idea: The one Spirit gives every believer gifts for the common good; many Baptists hold that the miraculous sign gifts marked the apostles' age, while the Spirit's gifts for service continue in every church.
+topic: Gifts from God
+also: Holy Spirit; Tongues (the Gift); Charism; Church
+audience: adults
+minutes: 45
+translation: KJV
+passage: 1 Corinthians 12:1-11
+
+== opening | 4
+Ask: "If you could ask God for one spiritual gift, what would it be, and why?" Let people answer. Then ask: "How do you know what gifts God has given you?" Today we look at Paul's teaching on spiritual gifts. All Christians share most of it, though they differ about some of the gifts today.
+
+== scripture | 3
+Read the passage aloud. Ask the class to listen for how many times Paul says "the same Spirit."
+
+== background | 5
+The church at Corinth was richly gifted (1:7) but proud and divided. Some prized spectacular gifts, especially speaking in tongues, as signs of spiritual superiority. Chapters 12-14 correct this. Chapter 12 teaches that all the gifts come from one Spirit for the good of the whole body; chapter 13 says that love matters more than any gift; chapter 14 gives practical rules for orderly worship.
+
+Paul uses several words for the gifts: "spiritual gifts" (v. 1), "gifts" (Greek charismata, gifts of grace, v. 4), "administrations" or ministries (v. 5), and "operations" or workings (v. 6). The list in verses 8-10 includes wisdom, knowledge, faith, healing, miracles, prophecy, discerning of spirits, tongues and interpretation.
+
+== point | 7 | The Spirit leads us to confess Jesus as Lord
+Paul begins with a test: "no man can say that Jesus is the Lord, but by the Holy Ghost" (v. 3). The Spirit's first and greatest work is to bring people to honour Jesus. Any claimed spiritual experience that does not exalt Christ is not from the Holy Spirit.
+verses: 1 Corinthians 12:1-3; John 16:13-14; 1 John 4:1-3
+quote: 51152 | The design of the passage is to give them some simple general guide by which they could at once recognize the operations of the Spirit of God
+blank: No man can say that Jesus is the Lord, but by the Holy ____. | Ghost (Spirit)
+blank: The Spirit's first work is to ____ Jesus. | honour (glorify)
+
+== point | 7 | One Spirit, many gifts, for the common good
+"There are diversities of gifts, but the same Spirit" (v. 4). Every believer is given some "manifestation of the Spirit ... to profit withal," that is, for the common good (v. 7). Gifts are not trophies to display but tools to serve others. No one has every gift, and no one has none.
+verses: 1 Corinthians 12:4-7; Romans 12:4-8; 1 Peter 4:10-11
+quote: 43781 | Whatever gifts God has bestowed, or in what various ways soever the Spirit of God may have manifested himself, it is all for the common benefit of the Church.
+quote: 24652 | Gifts and graces, charismata and charis, greatly differ.
+blank: There are diversities of gifts, but the same ____. | Spirit
+blank: Gifts are given for the common ____. | good
+
+== point | 9 | The Spirit's gifts for service today
+Many Baptists have taught that the miraculous "sign" gifts in this list (tongues, prophecy as new revelation, and gifts of healing and miracles) had a special purpose in the apostles' time: to confirm the gospel message before the New Testament was complete (Hebrews 2:3-4; 2 Corinthians 12:12). The church is built on the foundation of the apostles and prophets (Ephesians 2:20), and Scripture is now our complete guide. The Spirit still works powerfully. Every believer receives him at conversion (1 Corinthians 12:13) and is given gifts for service, such as teaching, encouraging, giving, leading, helping and showing mercy (Romans 12:6-8). God still heals and works wonders in answer to prayer, as he wills. Baptist churches today vary, and some are open to all the gifts, but all test everything by Scripture.
+verses: Hebrews 2:3-4; Ephesians 2:20; 1 Corinthians 12:13; Romans 12:6-8
+quote: 95968 | The signs of that Spirit in those days were visible and audible.
+quote: 95968 | when the river first came into its bed, it came like the tide in Morecambe Bay, breast-high, with a roar and a rush. But it was quiet after that.
+blank: Every believer receives the Spirit at ____. | conversion
+blank: The Spirit gives gifts for ____ in every church. | service
+note: Alexander Maclaren, the Baptist preacher, uses the picture of a river: it came in with a roar at Pentecost and then flowed quietly. Note that Maclaren also cautions that 1 Corinthians 13:8 ("tongues, they shall cease") is about the life to come rather than a date in church history; Baptists who hold that the sign gifts ceased usually rest their case on Hebrews 2:3-4 and Ephesians 2:20.
+
+== differ | 0 | Where Christians differ
+Christians agree that the Holy Spirit gives gifts to every believer for the good of the church; that the Spirit leads us to confess Jesus as Lord; that gifts must be used in love and in good order (1 Corinthians 14:40); that God hears and answers prayer for the sick; and that every claim to speak for God must be tested by Scripture. They differ over whether the more extraordinary gifts listed in verses 8-10 (prophecy, tongues, interpretation, gifts of healing and miracles) continue in the church today in the same way as in the apostles' time, and over whether there is a "baptism in the Holy Spirit" after conversion, marked by speaking in tongues. Here are the main views of the five traditions, each described as its own teachers would describe it. Within most traditions, individual churches and believers vary.
+view: baptist
+view: wesleyan
+view: reformed
+view: lutheran
+view: pentecostal
+note: This topic can stir strong feelings, especially for anyone who has been hurt by excesses or by dismissive attitudes. Keep the discussion focused on Scripture and on love (1 Corinthians 13), and describe each view as its own members would.
+
+== questions | 6
+q: What do all Christians agree about spiritual gifts, according to this passage? | They come from the one Spirit; every believer has some; they are for the common good; the Spirit leads us to confess Jesus as Lord; they must be used in love.
+q: Why have many Baptists believed the miraculous sign gifts belonged especially to the apostles' time? | Because Scripture describes them as signs confirming the apostles' message (Hebrews 2:3-4; 2 Corinthians 12:12) and the church is built on the apostolic foundation (Ephesians 2:20), now given to us in the completed Scriptures.
+q: What gifts has God given you, and how could you use one this week to serve others? | Answers will vary: teaching, encouragement, hospitality, giving, helping, leadership, prayer, mercy.
+q: How can we hold our own convictions about the gifts while loving believers who see this differently? | By grounding our view in Scripture, describing others fairly, refusing pride or suspicion, and remembering that love is the more excellent way.
+
+== application | 2
+Ask God to show you the gifts he has given you for serving others, and ask two Christian friends what they see in you. Choose one way to use your gift this week in your church or community.
+
+== prayer | 2
+Holy Spirit, thank you for living in every believer and for giving us gifts to serve one another. Help us honour Jesus as Lord, use our gifts in love, and build up your church. Keep us faithful to your word in all things. Amen.

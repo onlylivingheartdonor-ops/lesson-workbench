@@ -3,7 +3,7 @@ SUBJECT: Prayer   (Nave's topic; id 13863)
   Sub-headings: Miscellany of minor sub-topics; Unclassified scriptures relating to; Answer to,
   promise; Answered; Confession in; Importunity in; Intercessory; Of wicked people not heard; Pleas
   offered in; Thanksgiving and, before receiving food
-  Other matching subjects: Lord's Prayer; Prayerfulness; Prayerlessness
+  Other matching subjects: Lord's Prayer; Prayerfulness; Prayerlessness; Prayer and Worship
 ====================================================================================================
 
 Linked verses (Nave's) - 707 references
@@ -56,20 +56,27 @@ Linked verses (Nave's) - 707 references
       find in Sodom fifty righteous within the city, then I will spare all the place for their
       sakes. ...
 
-Commentary - 2226 linked notes from 4 authors
+Commentary - 2606 linked notes from 8 authors
 ---------------------------------------------
-  Jamieson-Fausset-Brown  (632 notes)
+  Jamieson-Fausset-Brown  (627 notes)
     - Jamieson-Fausset-Brown on Psalms 55:16-18   [structural, confidence 0.87]
         16-18. God answers his constant and repeated prayers.
     - Jamieson-Fausset-Brown on Psalms 109:7   [structural, confidence 0.87]
         7. The condemnation is aggravated when prayer for relief is treated as a sin.
-  Albert Barnes  (305 notes)
-    - Albert Barnes on Mark 9:29   [structural, confidence 0.87]
+  Albert Barnes (NT)  (305 notes)
+    - Albert Barnes (NT) on Mark 9:29   [structural, confidence 0.87]
         Verse 29. (l) "by prayer" Eph 6:18 (m) "and fasting" 1Cor 9:27
-    - Albert Barnes on Acts 20:36   [structural, confidence 0.87]
+    - Albert Barnes (NT) on Acts 20:36   [structural, confidence 0.87]
         Verse 36. He kneeled down. The usual attitude of prayer. It is the proper posture of a
         suppliant. It indicates reverence and humility; and is represented in the Scriptures as the
         common attitude of devotion, 2Chr 6:13, Dan 6:10, Lk ...
+  Albert Barnes (OT)  (329 notes)
+    - Albert Barnes on Psalms 86:6   [structural, confidence 0.87]
+        6. Give ear, O Loed, tinto my 'prayer, etc. See Notes on Ps. v. 1.
+    - Albert Barnes on Psalms 130:2   [structural, confidence 0.87]
+        2. Lord, hear my voice. This is the prayer; this is what he cried. It is the language of
+        earnest pleading, [...] Let thine ears he attentive to the voice of my supplications. Do not
+        turn away from me; do ...
   Adam Clarke  (876 notes)
     - Adam Clarke on Daniel 10:12   [structural, confidence 0.87]
         Verse 12 I am come for thy words - On account of thy prayers I am sent to comfort and
@@ -77,7 +84,7 @@ Commentary - 2226 linked notes from 4 authors
     - Adam Clarke on Psalms 102:17   [structural, confidence 0.87]
         Verse 17 The prayer of the destitute - הערער haarar of him who is laid in utter ruin, who is
         entirely wasted.
-  Matthew Henry  (413 notes)
+  Matthew Henry  (407 notes)
     - Matthew Henry: 2 Kings 20 (chapter introduction)   [structural, confidence 0.87]
         In this chapter we have, I. Hezekiah's sickness, and his recovery from that, in answer to
         prayer, in performance of a promise, in the use of means, and confirmed with a sign, ver.
@@ -86,9 +93,38 @@ Commentary - 2226 linked notes from 4 authors
         In this chapter we have, I. The peaceable times Israel enjoyed under the government of two
         judges, Tola and Jair, ver. 1-5. II. The troublesome times that ensued. 1. Israel's sin that
         brought them into trouble, ver. 6. 2. The ...
+  John A. Broadus  (38 notes)
+    - John A. Broadus on Matthew 6:12   [structural, confidence 0.87]
+        12. Debts. This term is here used for transgressions, sins. In Aramaic, the native language
+        of our Lord and the Evangelists, the word debt (chob) is very often used for sin. See
+        numerous examples from the Targums in Buxtorf. This ...
+    - John A. Broadus on Matthew 6:9-10   [structural, confidence 0.87]
+        to pass,' in Com. Ver.), and the same expres sion as in 26: 42, and Acts 21: 14. This of
+        course involves the idea that moral creatures are to do his will, as in 7: 21; 12: 50 (where
+        the ...
+  Alexander Maclaren  (22 notes)
+    - A Sheaf of Prayer Arrows (part 1 of 2) (Psalm lxxxvi. 1-5)   [ai, confidence 0.83]
+        'Bow down Thine ear, O Lord, hear me; for I am poor and needy. 2. Preserve my soul, for I am
+        holy: O Thou my God, save Thy servant that trusteth in Thee. 3. Be merciful unto me, O Lord:
+        ...
+    - The Mediator's Threefold Prayer (part 1 of 2) (Exodus xxxiii. 12-23)   [ai, confidence 0.83]
+        'And Moses said unto the Lord, See, Thou sayest unto me, Bring up this people: and Thou hast
+        not let me know whom Thou wilt send with me. Yet Thou hast said, I know thee by name, and
+        thou hast ...
+  Martin Luther, Galatians  (2 notes)
+    - Martin Luther on Galatians 1:8   [structural, confidence 0.52]
+        But though that we, or an angel from heaven, preach unto you otherwise than that we have
+        preached unto you, let him be accursed. Here Paul casteth out very flames of fire, and his
+        zeal is so fervent, that he ...
+    - Martin Luther on Galatians 1:9   [structural, confidence 0.52]
+        As we said before, so say we now again, if any man preach unto you otherwise than that you
+        have received, let him, be accursed. He repeateth the self-same thing, only changing the
+        persons. Before he cursed himself, his brethren, ...
 
 Dictionary and encyclopedia articles - 8 shown
 ----------------------------------------------
+  ISBE: Prayer, Lord's   [structural, confidence 0.95]
+      See LORD'S PRAYER, THE.
   ISBE: Prayer, Hours of   [structural, confidence 0.95]
       See HOURS OF PRAYER.
   ISBE: Prayer   [structural, confidence 0.95]
@@ -111,36 +147,35 @@ Dictionary and encyclopedia articles - 8 shown
   ISBE: Manasses, the Prayer of   [ai, confidence 0.73]
       1. Name 2. Canonicity and Position 3. Contents 4. Original Language 5. Authenticity 6. Author
       and Motive 7. Date 8. Text and Versions (1) Greek (2) Latin LITERATURE The Prayer ...
-  ISBE: Prayer of Manasses   [structural, confidence 0.70]
-      See MANASSES, THE PRAYER OF.
 
 Sermons and devotional works - 8 shown
 --------------------------------------
-  E. M. Bounds, The Reality of Prayer: Prayer—a Privilege, Princely, Sacred (part 1 of 2)   [ai, confidence 0.87]
-      PRAYER—A PRIVILEGE, PRINCELY, SACRED _I am the creature of a day, passing through life as an
-      arrow through the air. I am a spirit come from God and returning to ...
-  D. L. Moody, Prevailing Prayer: The Prayers of the Bible (part 1 of 2)   [ai, confidence 0.86]
+  D. L. Moody, Prevailing Prayer: The Prayers of the Bible (part 1 of 2)   [ai, confidence 0.85]
       Those who have left the deepest impression on this sin-cursed earth have been men and women of
       prayer. You will find that PRAYER has been the mighty power that has ...
-  J. C. Ryle, Practical Religion: Prayer (part 7 of 8)   [ai, confidence 0.85]
+  E. M. Bounds, The Reality of Prayer: Prayer—a Privilege, Princely, Sacred (part 1 of 2)   [ai, confidence 0.85]
+      PRAYER—A PRIVILEGE, PRINCELY, SACRED _I am the creature of a day, passing through life as an
+      arrow through the air. I am a spirit come from God and returning to ...
+  J. C. Ryle, Practical Religion: Prayer (part 7 of 8)   [ai, confidence 0.84]
       (_e_) I commend to you, in the next place, the importance of _earnestness_ in prayer. It is
       not necessary that a man should shout, or scream, or be very loud, ...
-  E. M. Bounds, The Reality of Prayer: Jesus Christ, the Divine Teacher of Prayer (part 1 of 2)   [ai, confidence 0.84]
+  E. M. Bounds, The Reality of Prayer: Jesus Christ, the Divine Teacher of Prayer (part 1 of 2)   [ai, confidence 0.82]
       JESUS CHRIST, THE DIVINE TEACHER OF PRAYER _A friend of mine in his journey is come to me, and
       I have nothing to set before him! He knocks again. “Friend! ...
-  E. M. Bounds, The Reality of Prayer: The Holy Spirit and Prayer (part 2 of 2)   [ai, confidence 0.83]
-      The same truth comes to the front very prominently in Philip’s revival at Samaria. Though
-      filled with joy by believing in Christ, and though received into the Church by water ...
-  E. M. Bounds, The Reality of Prayer: God Has Everything to Do with Prayer (part 2 of 2)   [ai, confidence 0.82]
+  E. M. Bounds, The Reality of Prayer: God Has Everything to Do with Prayer (part 1 of 2)   [ai, confidence 0.81]
+      GOD HAS EVERYTHING TO DO WITH PRAYER _Christ is all. We are complete in Him. He is the answer
+      to every need, the perfect Savior. He needs no decoration to ...
+  E. M. Bounds, The Reality of Prayer: God Has Everything to Do with Prayer (part 2 of 2)   [ai, confidence 0.81]
       Prayer gives efficiency and utility to the promises. The mighty ongoing of God’s purposes
       rests on prayer. The representatives of the Church in Heaven and of all creation before the
       ...
-  E. M. Bounds, The Reality of Prayer: God Has Everything to Do with Prayer (part 1 of 2)   [ai, confidence 0.82]
-      GOD HAS EVERYTHING TO DO WITH PRAYER _Christ is all. We are complete in Him. He is the answer
-      to every need, the perfect Savior. He needs no decoration to ...
-  E. M. Bounds, The Reality of Prayer: The Gethsemane Prayer (part 2 of 2)   [ai, confidence 0.82]
-      Satan will have for each of us his hour and power of darkness and for each of us the bitter
-      cup and the fearful spirit of gloom. We can pray ...
+  E. M. Bounds, The Essentials of Prayer: Prayer, Praise and Thanksgiving (part 1 of 2)   [ai, confidence 0.81]
+      PRAYER, PRAISE AND THANKSGIVING “Dr. A. J. Gordon describes the impression made upon his mind
+      by intercourse with Joseph Rabinowitz, whom Dr. Delitzsch considered the most remarkable
+      Jewish convert since ...
+  J. C. Ryle, Practical Religion: Prayer (part 3 of 8)   [ai, confidence 0.81]
+      There is everything on God's part to make prayer easy, if men will only attempt it. "All
+      things are ready" on His side. (Luke xiv. 17.) Every objection is anticipated. ...
 
 Original-language words typical of these verses (Strong's)
 ----------------------------------------------------------
@@ -155,8 +190,8 @@ Related subjects
 ----------------
   Nave's 'See also': Afflictions and Adversities; Blessing; Deliverance; Enemy; Enquiring of God;
   Hand; Importunity; Imprecation
-  Discussed together in commentaries/dictionaries: Lord's Prayer (98); Psalms (102); Faith (97);
-  Intercession (26); Thankfulness (27); Afflictions and Adversities (53); David (92); Praise (58)
+  Discussed together in commentaries/dictionaries: Lord's Prayer (127); Psalms (158); David (117);
+  Faith (106); Intercession (29); Thankfulness (27); Afflictions and Adversities (57); Praise (73)
   Share many verses: Afflictions and Adversities (275); Capernaum (82); Bethany (57); Intercession
   (144); Psalms (263); God (333); Jephthah (32); Eliezer (43)
 

@@ -1,0 +1,68 @@
+code: spiritual-gifts--wesleyan
+family: spiritual-gifts
+version: tradition:wesleyan
+issue: spiritual-gifts
+title: Gifts of the Spirit
+big_idea: The one Spirit gives every believer gifts for the common good; Wesleyans emphasize the Spirit's work of holy love, and are open to the extraordinary gifts while valuing the fruit of the Spirit above them.
+topic: Gifts from God
+also: Holy Spirit; Tongues (the Gift); Charism; Church
+audience: adults
+minutes: 45
+translation: KJV
+passage: 1 Corinthians 12:1-11
+
+== opening | 4
+Ask: "If you could ask God for one spiritual gift, what would it be, and why?" Let people answer. Then ask: "How do you know what gifts God has given you?" Today we look at Paul's teaching on spiritual gifts. All Christians share most of it, though they differ about some of the gifts today.
+
+== scripture | 3
+Read the passage aloud. Ask the class to listen for how many times Paul says "the same Spirit."
+
+== background | 5
+The church at Corinth was richly gifted (1:7) but proud and divided. Some prized spectacular gifts, especially speaking in tongues, as signs of spiritual superiority. Chapters 12-14 correct this. Chapter 12 teaches that all the gifts come from one Spirit for the good of the whole body; chapter 13 says that love matters more than any gift; chapter 14 gives practical rules for orderly worship.
+
+Paul uses several words for the gifts: "spiritual gifts" (v. 1), "gifts" (Greek charismata, gifts of grace, v. 4), "administrations" or ministries (v. 5), and "operations" or workings (v. 6). The list in verses 8-10 includes wisdom, knowledge, faith, healing, miracles, prophecy, discerning of spirits, tongues and interpretation.
+
+== point | 7 | The Spirit leads us to confess Jesus as Lord
+Paul begins with a test: "no man can say that Jesus is the Lord, but by the Holy Ghost" (v. 3). The Spirit's first and greatest work is to bring people to honour Jesus. Any claimed spiritual experience that does not exalt Christ is not from the Holy Spirit.
+verses: 1 Corinthians 12:1-3; John 16:13-14; 1 John 4:1-3
+quote: 51152 | The design of the passage is to give them some simple general guide by which they could at once recognize the operations of the Spirit of God
+blank: No man can say that Jesus is the Lord, but by the Holy ____. | Ghost (Spirit)
+blank: The Spirit's first work is to ____ Jesus. | honour (glorify)
+
+== point | 7 | One Spirit, many gifts, for the common good
+"There are diversities of gifts, but the same Spirit" (v. 4). Every believer is given some "manifestation of the Spirit ... to profit withal," that is, for the common good (v. 7). Gifts are not trophies to display but tools to serve others. No one has every gift, and no one has none.
+verses: 1 Corinthians 12:4-7; Romans 12:4-8; 1 Peter 4:10-11
+quote: 43781 | Whatever gifts God has bestowed, or in what various ways soever the Spirit of God may have manifested himself, it is all for the common benefit of the Church.
+quote: 24652 | Gifts and graces, charismata and charis, greatly differ.
+blank: There are diversities of gifts, but the same ____. | Spirit
+blank: Gifts are given for the common ____. | good
+
+== point | 9 | Seek the gifts that build up, and the love that matters most
+Wesleyans emphasize above all the Spirit's work of making believers holy and filling their hearts with love for God and neighbour (Galatians 5:22-23). Paul tells the church to "covet earnestly the best gifts" (12:31) and to "desire spiritual gifts" (14:1), especially those that build up the church. John Wesley believed the extraordinary gifts had become rare mainly because the church had grown cold and formal, not because God had withdrawn them, and he did not rule them out. Methodists today hold a range of views: many expect the Spirit to work mostly through ordinary gifts of service, while a charismatic stream welcomes the extraordinary gifts. All agree that gifts without love are nothing.
+verses: 1 Corinthians 12:31; 1 Corinthians 14:1, 12; Galatians 5:22-23; Acts 2:17-18
+quote: 43810 | We should earnestly desire spiritual gifts
+quote: 43821 | seek that ye may get those by which ye may excel in edifying the Church.
+blank: Covet earnestly the best ____. | gifts
+blank: The Spirit's greatest work is filling us with holy ____. | love
+note: Adam Clarke, the Methodist commentator, treats tongues in 1 Corinthians 14 as a real supernatural gift to be regulated for the church's edification, and urges believers to seek the gifts that build up the church most.
+
+== differ | 0 | Where Christians differ
+Christians agree that the Holy Spirit gives gifts to every believer for the good of the church; that the Spirit leads us to confess Jesus as Lord; that gifts must be used in love and in good order (1 Corinthians 14:40); that God hears and answers prayer for the sick; and that every claim to speak for God must be tested by Scripture. They differ over whether the more extraordinary gifts listed in verses 8-10 (prophecy, tongues, interpretation, gifts of healing and miracles) continue in the church today in the same way as in the apostles' time, and over whether there is a "baptism in the Holy Spirit" after conversion, marked by speaking in tongues. Here are the main views of the five traditions, each described as its own teachers would describe it. Within most traditions, individual churches and believers vary.
+view: baptist
+view: wesleyan
+view: reformed
+view: lutheran
+view: pentecostal
+note: This topic can stir strong feelings, especially for anyone who has been hurt by excesses or by dismissive attitudes. Keep the discussion focused on Scripture and on love (1 Corinthians 13), and describe each view as its own members would.
+
+== questions | 6
+q: What do all Christians agree about spiritual gifts, according to this passage? | They come from the one Spirit; every believer has some; they are for the common good; the Spirit leads us to confess Jesus as Lord; they must be used in love.
+q: Why do Wesleyans put the fruit of the Spirit (love, joy, peace ...) ahead of the extraordinary gifts? | Because Paul says that gifts without love are nothing (1 Corinthians 13:1-3); the Spirit's central work is holiness of heart and life.
+q: What gifts has God given you, and how could you use one this week to serve others? | Answers will vary: teaching, encouragement, hospitality, giving, helping, leadership, prayer, mercy.
+q: How can we hold our own convictions about the gifts while loving believers who see this differently? | By grounding our view in Scripture, describing others fairly, refusing pride or suspicion, and remembering that love is the more excellent way.
+
+== application | 2
+Pray this week for the Holy Spirit to fill you with love for God and others, and ask him which gifts he would have you use to build up your church. Read Galatians 5:22-23 each day and ask where the Spirit is growing his fruit in you.
+
+== prayer | 2
+Holy Spirit, fill us with your love. Make us holy in heart and life. We desire the gifts that build up your church; give them as you will, and help us use them in love for the glory of Jesus Christ. Amen.

@@ -1,0 +1,67 @@
+code: baptism
+family: baptism
+version: all_views
+issue: baptism
+title: Baptized into Christ
+big_idea: Jesus commanded baptism for his disciples and it speaks of our union with Christ; Christians share these truths while differing honestly over who should be baptized, how, and what baptism does.
+topic: Baptism
+also: Jesus, the Christ; Regeneration; Church
+audience: adults
+minutes: 45
+translation: KJV
+passage: Matthew 28:18-20; Romans 6:3-4
+
+== opening | 4
+Ask the class, if they are comfortable sharing: "Do you remember your baptism, or have you been told about it? What do you remember, or what were you told?" Some will remember a river or a baptistry; others were baptized as babies and have only photographs. Some may not have been baptized at all. Explain that baptism is something Jesus commanded, and today we look at what it means.
+note: Be gentle with anyone who has not been baptized or whose experience differs from the class's. The goal is understanding, not embarrassment.
+
+== scripture | 3
+Read both passages aloud: first Jesus' command (Matthew 28:18-20), then Paul's explanation of what baptism means (Romans 6:3-4).
+
+== background | 5
+Matthew 28:18-20, often called the Great Commission, are Jesus' last words in Matthew's Gospel. With all authority in heaven and earth, he sends his followers to make disciples of all nations, "baptizing them in the name of the Father, and of the Son, and of the Holy Ghost," and teaching them to obey all he commanded.
+
+In Romans 6 Paul answers a question: if we are saved by grace, should we keep on sinning? His answer points to baptism. Those baptized into Christ were baptized into his death, and they are to walk in "newness of life." Christians in every tradition treasure these verses, even where they understand baptism's details differently.
+
+== point | 6 | Commanded by Christ for his disciples
+Baptism was not invented by the church. Jesus himself commanded it, as part of making disciples of all nations, in the name of the Father, the Son and the Holy Spirit. Christians of every tradition baptize because Jesus told us to, and they use these words.
+verses: Matthew 28:18-20; Acts 2:41; Acts 8:12
+quote: 97127 | Baptism consists in applying water to a person "in the name of the Father and of the Son and of the Holy Ghost," as Christ has commanded.
+blank: Baptize them in the name of the Father, and of the Son, and of the Holy ____. | Ghost (Spirit)
+blank: Christians baptize because ____ commanded it. | Jesus
+
+== point | 6 | Baptized into Christ's death and resurrection
+Paul says that "so many of us as were baptized into Jesus Christ were baptized into his death" (Romans 6:3). Baptism is about union with Christ: belonging to him, sharing in what his death and resurrection accomplished, and being marked as his.
+verses: Romans 6:3-4; Galatians 3:27; Colossians 2:12
+quote: 67769 | sealed with the seal of heaven, and as it were formally entered and articled, to all the benefits and all the obligations of Christian discipleship
+quote: 43228 | To be baptized into Christ, is to receive the doctrine of Christ crucified
+blank: So many of us as were baptized into Jesus Christ were baptized into his ____. | death
+blank: Baptism speaks of our ____ with Christ. | union
+
+== point | 4 | Called to walk in newness of life
+Baptism looks forward as well as back. "Like as Christ was raised up from the dead by the glory of the Father, even so we also should walk in newness of life" (Romans 6:4). Whatever our tradition, the baptized are called to live as people who belong to the risen Christ.
+verses: Romans 6:4-11; 2 Corinthians 5:17; Colossians 3:1-3
+quote: 50573 | by our very profession made in baptism we have renounced sin, and have pledged ourselves to live to God.
+blank: We also should walk in ____ of life. | newness
+blank: The baptized are called to live as people who belong to the risen ____. | Christ
+
+== differ | 8 | Where Christians differ
+Christians agree that Jesus commanded baptism, that it is done with water in the name of the Father, Son and Holy Spirit, that it is linked with repentance, faith, forgiveness and union with Christ, and that true baptism is not repeated. They differ on three questions: who should be baptized (believers only, or also the children of believers), how (immersion, or also pouring and sprinkling), and what baptism does (a means through which God gives grace, a sign and seal of his covenant, or an act of obedience that testifies to grace already received). Here are the main views of the five traditions, each described as its own teachers describe it. Sincere, Bible-believing Christians hold each of them.
+view: baptist
+view: wesleyan
+view: reformed
+view: lutheran
+view: pentecostal
+note: Encourage the class to describe other traditions' views as their own members would. Many Christians from these traditions worship and serve together and recognise one another as brothers and sisters in Christ.
+
+== questions | 5
+q: What do all Christians agree about baptism, according to today's passages? | Jesus commanded it; it is done in the name of the Father, Son and Holy Spirit; it is linked with discipleship, faith and union with Christ; it calls us to new life.
+q: Each tradition points to particular verses. Why do sincere Christians reading the same Bible reach different conclusions about baptism? | The New Testament does not answer every question directly (for example, whether the "households" in Acts included infants), so Christians weigh different texts and patterns (covenant continuity, the order of faith and baptism) differently.
+q: How can we hold our own convictions about baptism while showing love to Christians who practise it differently? | By being clear about what Scripture teaches as we understand it, listening carefully, describing others fairly, and remembering that we share one Lord and one faith.
+q: What does Romans 6 say baptism should mean for the way we live this week? | We have died to sin with Christ and been raised to walk in newness of life; we live as people who belong to him.
+
+== application | 2
+This week, find out what your own church teaches about baptism and why, and look up the key texts for that view. If you have not been baptized, talk with your pastor. Pray for the unity of Christians who differ on this question.
+
+== prayer | 2
+Lord Jesus, you commanded your church to make disciples and baptize them in the name of the Father, the Son and the Holy Spirit. Thank you for uniting us to yourself in your death and resurrection. Help us walk in newness of life. Where your people understand baptism differently, give us humility, love and a shared desire to be faithful to your word. Amen.

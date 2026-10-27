@@ -1,0 +1,69 @@
+code: baptism--lutheran
+family: baptism
+version: tradition:lutheran
+issue: baptism
+title: Baptized into Christ
+big_idea: Jesus commanded baptism for his disciples; Lutheran churches receive it as God's gift, water joined to his Word, through which he gives forgiveness and new life to all who believe, including little children.
+topic: Baptism
+also: Jesus, the Christ; Regeneration; Church
+audience: adults
+minutes: 45
+translation: KJV
+passage: Matthew 28:18-20; Romans 6:3-4
+
+== opening | 4
+Ask the class, if they are comfortable sharing: "Do you remember your baptism, or have you been told about it? What do you remember, or what were you told?" Some will remember a river or a baptistry; others were baptized as babies and have only photographs. Some may not have been baptized at all. Explain that baptism is something Jesus commanded, and today we look at what it means.
+note: Be gentle with anyone who has not been baptized or whose experience differs from the class's. The goal is understanding, not embarrassment.
+
+== scripture | 3
+Read both passages aloud: first Jesus' command (Matthew 28:18-20), then Paul's explanation of what baptism means (Romans 6:3-4).
+
+== background | 5
+Matthew 28:18-20, often called the Great Commission, are Jesus' last words in Matthew's Gospel. With all authority in heaven and earth, he sends his followers to make disciples of all nations, "baptizing them in the name of the Father, and of the Son, and of the Holy Ghost," and teaching them to obey all he commanded.
+
+In Romans 6 Paul answers a question: if we are saved by grace, should we keep on sinning? His answer points to baptism. Those baptized into Christ were baptized into his death, and they are to walk in "newness of life." Christians in every tradition treasure these verses, even where they understand baptism's details differently.
+
+== point | 7 | Commanded by Christ for his disciples
+Baptism was not invented by the church. Jesus himself commanded it, as part of making disciples of all nations, in the name of the Father, the Son and the Holy Spirit. Christians of every tradition baptize because Jesus told us to, and they use these words.
+verses: Matthew 28:18-20; Acts 2:41; Acts 8:12
+quote: 97127 | Baptism consists in applying water to a person "in the name of the Father and of the Son and of the Holy Ghost," as Christ has commanded.
+blank: Baptize them in the name of the Father, and of the Son, and of the Holy ____. | Ghost (Spirit)
+blank: Christians baptize because ____ commanded it. | Jesus
+
+== point | 7 | Baptized into Christ's death and resurrection
+Paul says that "so many of us as were baptized into Jesus Christ were baptized into his death" (Romans 6:3). Baptism is about union with Christ: belonging to him, sharing in what his death and resurrection accomplished, and being marked as his.
+verses: Romans 6:3-4; Galatians 3:27; Colossians 2:12
+quote: 67769 | sealed with the seal of heaven, and as it were formally entered and articled, to all the benefits and all the obligations of Christian discipleship
+quote: 43228 | To be baptized into Christ, is to receive the doctrine of Christ crucified
+blank: So many of us as were baptized into Jesus Christ were baptized into his ____. | death
+blank: Baptism speaks of our ____ with Christ. | union
+
+== point | 9 | Baptism: God's gift through water and the Word
+Lutheran churches teach that baptism is not simply water, but water joined to God's command and promise. Through it God himself acts: he forgives sins, rescues from death and the devil, and gives eternal salvation to all who believe his promise (Mark 16:16; Titus 3:5). Baptism is God's work for us more than our work for him. Faith receives what baptism gives, and God works faith even in little children through his Word, so children are baptized. Water is usually poured. Luther taught that the Christian life is a daily return to baptism: dying to sin in repentance and rising to new life in faith.
+verses: Mark 16:16; Titus 3:5; Acts 2:38-39; 1 Peter 3:21
+quote: 96989 | faith alone makes the person worthy to receive profitably the saving, divine water.
+quote: 97150 | Of Baptism they teach that it is necessary to salvation, and that through Baptism is offered the grace of God, and that children are to be baptized who, being offered to God through Baptism are received into God's grace.
+blank: Baptism is not simply water, but water joined with God's ____. | Word
+blank: Faith ____ the gift God gives in baptism. | receives
+note: The second quotation is Article IX of the Augsburg Confession (1530), the chief confession of the Lutheran churches. The Small Catechism (in the edition in our library) asks, "What gifts or benefits does Baptism confer?" and answers: "It works forgiveness of sins, delivers from death and the devil, and confers everlasting salvation" on all who believe God's promise.
+
+== differ | 0 | Where Christians differ
+Christians agree that Jesus commanded baptism, that it is done with water in the name of the Father, Son and Holy Spirit, that it is linked with repentance, faith, forgiveness and union with Christ, and that true baptism is not repeated. They differ on three questions: who should be baptized (believers only, or also the children of believers), how (immersion, or also pouring and sprinkling), and what baptism does (a means through which God gives grace, a sign and seal of his covenant, or an act of obedience that testifies to grace already received). Here are the main views of the five traditions, each described as its own teachers describe it. Sincere, Bible-believing Christians hold each of them.
+view: baptist
+view: wesleyan
+view: reformed
+view: lutheran
+view: pentecostal
+note: Encourage the class to describe other traditions' views as their own members would. Many Christians from these traditions worship and serve together and recognise one another as brothers and sisters in Christ.
+
+== questions | 6
+q: What do all Christians agree about baptism, according to today's passages? | Jesus commanded it; it is done in the name of the Father, Son and Holy Spirit; it is linked with discipleship, faith and union with Christ; it calls us to new life.
+q: What do Lutherans mean by calling baptism a "means of grace"? | God uses baptism, water joined to his Word, to give forgiveness and new life; it is God's action and gift, received by faith.
+q: What does Romans 6 say baptism should mean for the way we live this week? | We have died to sin with Christ and been raised to walk in newness of life; we live as people who belong to him.
+q: How can we hold our own convictions about baptism while showing love to Christians who practise it differently? | By being clear about what Scripture teaches as we understand it, listening carefully, describing others fairly, and remembering that we share one Lord and one faith.
+
+== application | 2
+Each morning this week, as you wash your face, remember your baptism, as Luther suggested: thank God that you belong to him, confess your sins, and rise to live the new life he gives.
+
+== prayer | 2
+Heavenly Father, thank you that in baptism you have washed us, forgiven us and made us your children through water and your Word. Help us return to our baptism daily, dying to sin and rising to new life in Christ. Amen.
